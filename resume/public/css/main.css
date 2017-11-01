@@ -59,11 +59,14 @@ body {
   background: #d4d7d8;
   color: #fff;
   font: 400 16px/22px "Roboto", "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  min-height: 1300px;
-  min-width: 940px;
+  min-height: 1350px;
+  min-width: 950px;
 }
 
-
+.paper {
+  height: 1300px;
+  width: 940px;
+}
 
 /* 
 ===========================================================
@@ -100,7 +103,7 @@ Grid
 .container,
 .grid {
   margin: 0 auto;
-  width: 960px; 
+  width: 940px; 
 }
 .container {
   padding-left: 30px;

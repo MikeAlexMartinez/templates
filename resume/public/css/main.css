@@ -118,10 +118,10 @@ Grid
   vertical-align: top;
 }
 .col-5-12 {
-  width: 41.67%;
+  width: 40%;
 }
 .col-7-12 {
-  width: 58.33%;
+  width: 58%;
 }
 
 /* 
@@ -133,7 +133,6 @@ Grid
 .top-nav {
   background: #037ac4;
   width: 100%;
-  height: 3%;
 }
 .top-nav nav {
   list-style: none;
@@ -144,6 +143,7 @@ Grid
 .nav-item {
   padding: 10px;
   display: inline-block;
+  height: 100%;
 }
 .nav-item a {
   font-weight: 300;
@@ -168,9 +168,9 @@ Grid
 .banner {
   background: #2facf9;
   width: 100%;
-  height: 15%;
-  padding: 40px;
-  box-shadow: 0 3px 3px rgba(255, 255, 255, 0.1);
+  height: 200px;
+  padding: 30px 40px;
+  box-shadow: 0 15px 10px 0px rgba(0,0,0,0.2);
 }
 .title {
   display: inline-block;
@@ -178,15 +178,15 @@ Grid
 }
 
 .image-crop {
-  width: 200px;
-  height: 200px;
+  width: 130px;
+  height: 130px;
   position: relative;
   overflow: hidden;
   -webkit-border-radius: 50%;
-  -moz-border-radius: 50%;
-  -ms-border-radius: 50%;
-  -o-border-radius: 50%;
-  border-radius: 50%;
+     -moz-border-radius: 50%;
+      -ms-border-radius: 50%;
+       -o-border-radius: 50%;
+          border-radius: 50%;
   float: right;
 }
 .profile-pic {
@@ -220,7 +220,62 @@ h3 {
   ===========================================================
 */
 
+.main {
+  height: 870px;
+  background: #fff;
+}
 .addressing {
-  background: 
+  height: 870px;
+  width: 372px;
+  background: #efefef;
+}
+.cover-letter {
+  height: 870px;
+  width: 558px;
+  border-left: 1px solid #dedede;
+}
+
+/*
+  ===========================================================
+  Footer
+  ===========================================================
+*/
+
+footer {
+  height: 180px;
+  bottom: 0;
+}
+.social {
+  text-align: center;
+}
+.link {
+  display: inline-block;
+  text-align: center;
+  padding: 20px;
+}
+.link a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 12px;
+}
+
+
+.social {
+  background: #2facf9;
+  height: 130px;
+  width: 100%;
+}
+
+.copy {
+  text-align: center;
+  background: #037ac4;
+  height: 50px;
+  width: 100%;
+}
+.copy p {
+  color: #fff;
+  font-size: 10px;
+  display: inline-block;
+  padding: 15px 60px;
 }
 

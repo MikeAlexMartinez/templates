@@ -22,9 +22,9 @@
         <div class="container group top-nav">
           <nav>
             <ul class="nav-list">
-              <li class="nav-item active-tab"><a href="#">Hello</a></li><!--
-              --><li class="nav-item"><a href="#">Resume</a></li><!--
-              --><li class="nav-item"><a href="#">Portfolio</a></li>
+              <li class="nav-item active-tab"><a href="#" id="hello">Hello</a></li><!--
+              --><li class="nav-item"><a href="#" id="resume">Resume</a></li><!--
+              --><li class="nav-item"><a href="#" id="portfolio">Portfolio</a></li>
             </ul>
           </nav>
         </div>
@@ -43,7 +43,7 @@
       </header>
       
       <!-- Main Hello content -->
-      <div class="main">
+      <div class="main page" id="hello-content">
         <section>
           
           <!-- address information -->
@@ -73,33 +73,66 @@
           </aside><!--
             Cover Letter 
           --><section class="cover-letter col-7-12">
-            <p>Dear Future Employer</p>
+            <p>Dear Future Employer,</p>
 
             <!-- Intro -->
-            <p></p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
 
             <!-- What I'm seeking -->
-
+            <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
             
             <!-- expectations -->
-            
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Mauris rhoncus aenean vel elit scelerisque. Laoreet non curabitur gravida arcu ac tortor. Lorem donec massa sapien faucibus et molestie ac feugiat sed. Et malesuada fames ac turpis.</p>
             
             <!-- What I bring -->
-
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Feugiat vivamus at augue eget. Vel orci porta non pulvinar neque laoreet suspendisse interdum consectetur. Dolor sit amet consectetur adipiscing elit ut. Massa vitae tortor condimentum lacinia quis vel eros.</p>
 
             <!-- end note -->
-
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
 
             <!-- Signature -->
-
+            <img class="signature" src="./images/signature.png">
             
             <!-- Name -->
-
+            <h5 class="sig-name">Michael Martinez</h5>
+            <p class="sig-role">Full Stack Web Developer</p>
 
           </section>
         </section>
       </div>
+
+      <!-- Resume -->
+      <div class="main page" id="resume-content">
+        
+      </div>
       
+      <!-- Portfolio -->
+      <div class="main page" id="portfolio-content">
+        <section class="project">
+          <div class="col-5-12 project-detail">
+
+          </div>
+          <div class="col-7-12 project-pic">
+
+          </div>
+        </section>
+        <section class="project">
+          <div class="col-7-12 project-pic">
+            
+          </div>
+          <div class="col-5-12 project-detail">
+
+          </div>            
+        </section>
+        <section class="project">
+          <div class="col-5-12 project-detail">
+
+          </div>
+          <div class="col-7-12 project-pic">
+
+          </div>
+        </section>  
+      </div>
       
       <!-- Footer -->
       <footer class="grid">
@@ -147,5 +180,8 @@
         </section>
       </footer>
     </section>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
+    <script src="./js/resume.js"></script>
   </body>
 </html>

@@ -8,6 +8,7 @@ function ready() {
 
 function handleNavClick(evt) {
 
+  // isolate reference to DOM element
   const node = evt.target;
 
   // Update class on header navigation menu
@@ -16,8 +17,6 @@ function handleNavClick(evt) {
   
   // Update main section to show correct page
   const target = "#" + $(node).attr('id') + "-content";
-  console.log($(target));
-  
   $('.page').attr('hidden', true);
   $(target).attr('hidden', false);
 }

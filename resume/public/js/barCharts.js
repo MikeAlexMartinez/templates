@@ -6,11 +6,11 @@ const chart = new Chart(ctx, {
 
   // data
   data: {
-    labels: ["Accountancy", "SQL", "Javascript", "NoSQL", "HTML5", "CSS3", "React"],
+    labels: ["Javascript", "Node", "SQL", "NoSQL", "HTML5", "CSS3", "React"],
     datasets: [{
       backgroundColor: '#2facf9',
       borderColor: '#2facf9',
-      data: [100, 87.5, 75, 70, 65, 57.5, 50],
+      data: [95, 87.5, 78.75, 70, 64, 57.5, 50],
     },{
       backgroundColor: '#EDEDED',
       borderColor: '#EDEDED',

@@ -366,6 +366,15 @@ Main Content - Hello
   max-height: 100%;
 }
 
+#doughnuts {
+  height: 30%;
+  width: 100%;
+  padding: 0 40px;
+}
+#doughnuts canvas {
+  display: inline-block;
+  height: 100%;
+}
 
 /*
   ===========================================================

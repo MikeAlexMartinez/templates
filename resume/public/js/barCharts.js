@@ -14,7 +14,7 @@ const chart = new Chart(ctx, {
     },{
       backgroundColor: '#EDEDED',
       borderColor: '#EDEDED',
-      data: [0, 12.5, 25, 30, 35, 42.5, 50],
+      data: [5, 12.5, 21.25, 30, 36, 42.5, 50],
     }]
   },
 

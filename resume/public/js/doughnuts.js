@@ -1,33 +1,48 @@
 const doughnutData = [
   {
-    skill: "Teamwork",
-    percent: 65 
-  },
-  {
     skill: "Accountancy",
-    percent: 90
+    percent: 95
   },
   {
-    skill: "Planning",
-    percent: 70,
+    skill: "Problem-solving",
+    percent: 80
   },
   {
     skill: "Communication",
     percent: 75
   },
   {
-    skill: "Problem-solving",
-    percent: 80
+    skill: "Planning",
+    percent: 70,
+  },
+  {
+    skill: "Teamwork",
+    percent: 65 
   }
 ];
 
 doughnutData.forEach((v, i) => {
-  $(`<canvas id="doughnut-${i}" class="doughnut"></canvas>`).appendTo('#doughnuts');
+
+  // Append doughnut for each data point. 
+  // Use container class to control chart size.
+  $(`<div class="doughnut-container" id="doughnut-container-${i}">
+      <canvas id="doughnut-${i}" class="doughnut"></canvas>
+    </div>`
+  ).appendTo('#doughnuts');
 
   insertDoughnut(v, i);
-})
 
+  addText(v.skill, i);
+});
 
+function addText(skill, n) {
+  
+  const target = `#doughnut-container-${n}`;
+  const text = `<p class="skill-label">${skill}</p>`;
+  
+  $(target).append(text);
+
+};
 
 function insertDoughnut(props, n) {
    
@@ -49,37 +64,18 @@ function insertDoughnut(props, n) {
       }]
   };
 
-  const promisedDeliveryChart = new Chart(document.getElementById(`doughnut-${n}`), {
-    type: 'doughnut',
-    data: data,
-    options: {
-      cutoutPercentage: 75,
-      responsive: true,
-      legend: {
-        display: false
+  const promisedDeliveryChart = new Chart(
+    document.getElementById(`doughnut-${n}`), {
+      type: 'doughnut',
+      data: data,
+      options: {
+        tooltips: false,
+        cutoutPercentage: 75,
+        responsive: true,
+        legend: {
+          display: false
+        },
+        maintainAspectRatio: true,
       }
-    }
-  });
-
-  Chart.pluginService.register({
-      beforeDraw: function (chart) {
-          if (chart.options.centertext) {
-              var width = chart.chart.width,
-                      height = chart.chart.height,
-                      ctx = chart.chart.ctx;
-
-              ctx.restore();
-              var fontSize = (height / 80).toFixed(2); // was: 114
-              ctx.font = fontSize + "em sans-serif";
-              ctx.textBaseline = "middle";
-
-              var text = chart.options.centertext, // "75%",
-                      textX = Math.round((width - ctx.measureText(text).width) / 2),
-                      textY = height / 2 - (chart.titleBlock.height - 15);
-
-              ctx.fillText(text, textX, textY);
-              ctx.save();
-          }
-      }
-  });
+    });
 }

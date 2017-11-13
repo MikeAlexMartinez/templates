@@ -367,13 +367,23 @@ Main Content - Hello
 }
 
 #doughnuts {
-  height: 30%;
   width: 100%;
-  padding: 0 40px;
+  padding: 10px 40px;
+  text-align: center;
 }
-#doughnuts canvas {
+.doughnut-container {
   display: inline-block;
   height: 100%;
+  width: 17.5%;
+  margin: 5px;
+}
+.skill-label {
+  position: absolute;
+  
+  display: block;
+  color: #717171;
+  font-size: 10px;
+
 }
 
 /*

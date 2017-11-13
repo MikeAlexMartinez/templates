@@ -40,7 +40,7 @@ function addText(skill, n) {
   const target = `#doughnut-container-${n}`;
   const text = `<p class="skill-label">${skill}</p>`;
   
-  $(target).append(text);
+  $(target).prepend(text);
 
 };
 

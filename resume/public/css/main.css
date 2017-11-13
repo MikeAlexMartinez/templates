@@ -378,8 +378,8 @@ Main Content - Hello
   margin: 5px;
 }
 .skill-label {
-  position: absolute;
-  
+  position: relative;
+  z-index: 1;
   display: block;
   color: #717171;
   font-size: 10px;

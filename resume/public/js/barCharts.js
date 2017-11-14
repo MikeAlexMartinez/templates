@@ -6,15 +6,15 @@ const chart = new Chart(ctx, {
 
   // data
   data: {
-    labels: ["Javascript", "Node", "SQL", "NoSQL", "HTML5", "CSS3", "React"],
+    labels: ["Javascript", " ", "Node", " ", "SQL", " ", "NoSQL", " ", "HTML5", " ", "CSS3", " ", "React"],
     datasets: [{
       backgroundColor: '#2facf9',
       borderColor: '#2facf9',
-      data: [95, 87.5, 78.75, 70, 64, 57.5, 50],
+      data: [95, 0, 87.5, 0, 78.75, 0, 70, 0, 64, 0, 57.5, 0, 50],
     },{
       backgroundColor: '#EDEDED',
       borderColor: '#EDEDED',
-      data: [5, 12.5, 21.25, 30, 36, 42.5, 50],
+      data: [5, 0, 12.5, 0, 21.25, 0, 30, 0, 36, 0, 42.5, 0, 50],
     }]
   },
 
@@ -42,6 +42,8 @@ const chart = new Chart(ctx, {
           display: false,
         },
         stacked: true,
+        categoryPercentage: 0.75,
+        barPercentage: 1
       }]
     }
   }

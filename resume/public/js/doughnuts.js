@@ -59,7 +59,7 @@ function insertDoughnut(props, n) {
         data: [percent, 100-percent],
         backgroundColor: [
           "#2facf9",
-          "#fff"
+          "#dadada"
         ],
       }]
   };

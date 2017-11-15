@@ -312,26 +312,25 @@ Main Content - Hello
   height: 100%;
   object-fit: cover;
 }
-.project-detail {
+.project-detail-r,
+.project-detail-l {
   color: #717171;
   text-align: left;
   height: 100%;
 }
-.project-detail:nth-child(odd) {
-  box-shadow: 6px 0px 4px 0px rgba(0,0,0,0.15);
-  padding: 35px 20px 20px 50px;
+.project-detail-l {
+  padding: 35px 35px 20px 50px;
 }
-.project-detail:nth-child(even) {
-  box-shadow: -6px 0px 4px 0px rgba(0,0,0,0.15);
-  padding: 35px 50px 20px 20px;
+.project-detail-r {
+  padding: 35px 50px 20px 35px;
 }
-.project-detail h3 {
+.project h3 {
   margin-bottom: 20px; 
 }
-.project-detail p {
+.project p {
   margin-bottom: 20px;
 }
-.project-detail a {
+.project a {
   text-decoration: none;
   color: #037ac4;
 }
@@ -342,10 +341,14 @@ Main Content - Hello
   ===========================================================
 */
 
-#resume-content section h3 {
-  margin-bottom: 20px;
+.left-col h3 {
   margin-top: 20px;
+  margin-bottom: 10px;
 }
+.personal section .top {
+  margin-top: 30px;
+}
+
 .left-col {
   margin-left: 50px;
   margin-right: 20px;
@@ -363,7 +366,7 @@ Main Content - Hello
 }
 .work {
   height: 85%;
-  background-color: #EDEDED;
+  background-color: #fafafa;
 }
 .chart-container {
   width: 250px;

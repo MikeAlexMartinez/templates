@@ -235,6 +235,11 @@ h5 {
   color: #555;
   font-weight: 600;
 }
+h6 {
+  font-size: 16px;
+  font-weight: 400;
+  color: #717171;
+}
 
 /* 
 ===========================================================
@@ -345,7 +350,8 @@ Main Content - Hello
   margin-top: 20px;
   margin-bottom: 10px;
 }
-.personal section .top {
+.personal section .top,
+.work section h3 {
   margin-top: 30px;
 }
 

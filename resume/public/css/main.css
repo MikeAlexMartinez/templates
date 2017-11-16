@@ -77,7 +77,7 @@ body {
   left: 50%;
   margin-left: -480px;
 
-  box-shadow: 20px 20px 10px 0px rgba(0,0,0,0.15);
+  box-shadow: 0px 10px 10px 7px rgba(0,0,0,0.15);
 }
 
 /* 
@@ -225,6 +225,7 @@ h3 {
   color: #2facf9;
   font-size: 20px;
   font-weight: 400;
+  margin-left: 50px;
 }
 h4 {
   color: #2facf9;
@@ -322,6 +323,10 @@ Main Content - Hello
   text-align: left;
   height: 100%;
 }
+.project-detail-l h3, 
+.project-detail-r h3 {
+  margin-left: 0px;
+}
 .project-detail-l {
   padding: 35px 35px 20px 50px;
 }
@@ -350,7 +355,6 @@ Main Content - Hello
   margin-bottom: 10px;
 }
 .personal section .top,
-.work section h3,
 .list h3 top {
   margin-top: 30px;
 }
@@ -358,6 +362,9 @@ Main Content - Hello
 .left-col {
   margin-left: 50px;
   margin-right: 20px;
+}
+.left-col h3 {
+  margin-left: 0px;
 }
 
 .subheader {
@@ -383,7 +390,10 @@ Main Content - Hello
   max-height: 100%;
 }
 
-
+.chart-header {
+  position: relative;
+  top: 20px;
+}
 .skill-label {
   position: relative;
   top: 55px;
@@ -421,9 +431,42 @@ Main Content - Hello
   font-weight: 300;
 }
 
-.list section h3:first {
+.list .top {
   margin-top: 30px;
 }
+.list h3 {
+  margin: 0 50px 30px 50px;
+}
+
+.list-item {
+  border-left: 2px solid #2facf9;
+  margin: 0 50px 0 60px; 
+}
+.list-item .circle {
+  border-radius: 50%;
+  height: 30px;
+  width: 30px;
+  display: inline-block;
+  position: relative;
+  bottom: 15px;
+  right: 16px;
+}
+.list-item .large {
+  background-color: #B5D7EF;
+  opacity: 0.5;
+}
+.list-item .small {
+  background-color: #2facf9;
+  transform: scale(.6);
+  right: 46px;
+}
+.list-item h6,
+.list-item p {
+  margin: 0 20px 0 30px;
+  position: relative; 
+  bottom: 45px;
+}
+
 
 /* 
   ====================
@@ -449,7 +492,8 @@ Main Content - Hello
 .hobby-background {
   height: 80px;
   width: 100%;
-  background: #d2e7f7;
+  background: #B5D7EF;
+  opacity: 0.7;
   border-radius: 50%;
   padding: 10px;
 }

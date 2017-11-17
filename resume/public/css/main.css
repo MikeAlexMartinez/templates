@@ -266,6 +266,7 @@ Main Content - Hello
   box-shadow: -6px 0px 4px 0px rgba(0,0,0,0.15);
 }
 .cover-letter p {
+  font-size: 12px;
   padding: 20px 20px 0px 40px; 
   color: #717171;
 }
@@ -372,6 +373,14 @@ Main Content - Hello
   height: 15%;
   background-color: #86888c;
 }
+.subheader p {
+  display: inline-block;
+  color: #fff;
+  font-size: 20px;
+  font-weight: 300;
+  margin: 30px 70px 0 70px;
+  text-align: center;
+}
 .personal {
   position: relative;
   height: 85%;
@@ -416,7 +425,7 @@ Main Content - Hello
 
 .personal table,
 .list p {
-  font-size: 12px;
+  font-size: 10px;
   color: #717171;
   text-align: left;
 }
@@ -467,6 +476,12 @@ Main Content - Hello
   bottom: 45px;
 }
 
+.list-item:last-child {
+  max-height: 65px;
+}
+.education .list-item {
+  max-height: 60px;
+}
 
 /* 
   ====================

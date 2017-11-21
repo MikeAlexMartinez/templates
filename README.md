@@ -43,6 +43,9 @@ properly.
 - [Autoprefixer](https://github.com/postcss/autoprefixer "AutoPrefixer")
   Autoprefixer is a [PostCSS](https://github.com/postcss/postcss "PostCSS") plugin to parse CSS and add vendor prefixes to CSS 
   rules using values from [Can I Use](http://caniuse.com/). It is recommended by Google and used in Twitter and Taobao.
+- [Gulp](https://gulpjs.com/ "Gulp")
+  Gulp is a build automation tool. I will initially be using this to compile my sass code, but will be looking to extend it's
+  use where appropriate (Testing springs to mind!).
 
 ### By Original Source Code
 

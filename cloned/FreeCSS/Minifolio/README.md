@@ -1,5 +1,16 @@
 # Minifolio
 
+## Used by me
+
+- [Gulp](https://gulpjs.com/ "Gulp")
+  
+  The build automation library.
+
+  Plugins being used are:
+  - [gulp-sass](https://github.com/dlmanning/gulp-sass)  for converting sass
+  - [gulp-mocha](https://github.com/sindresorhus/gulp-mocha)  for running my tests
+
+
 ## Libraries used by the original designer / developer
 
 ### JS Libraries

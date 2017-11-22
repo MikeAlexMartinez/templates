@@ -1,12 +1,9 @@
 /* import libs */
-@import "css/animate";
+@import "lib/animate";
 
 /* vars */
 
 
 
-/* base */
-
-
-
-/* pages */
+/* Application */
+@import "modules/all";

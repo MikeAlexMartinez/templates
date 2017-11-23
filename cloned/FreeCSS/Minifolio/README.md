@@ -10,6 +10,17 @@
   - [gulp-sass](https://github.com/dlmanning/gulp-sass)  for converting sass
   - [gulp-mocha](https://github.com/sindresorhus/gulp-mocha)  for running my tests
 
+- [Normalize.css](http://necolas.github.io/normalize.css/ "normalize.css")  for reseting my CSS
+  across different browsers.
+
+- [Font-Awesome v4.7](http://fontawesome.io/ "Font Awesome")  For easy to embed fonts.
+  (Used by original template developer)
+
+- [Waypoints](http://imakewebthings.com/waypoints/ "Waypoints")
+  (Used by original template developer)
+
+- [Fancybox V2](http://fancyapps.com/fancybox/ "Fancybox Version 2")
+  (Used by original template developer)
 
 ## Libraries used by the original designer / developer
 
@@ -59,3 +70,7 @@
   ```
   To use drop a link to the CSS in your header and then add the `` animate `` class to your
   target element, as well as the chosen animation you require.
+
+- [Font-Awesome v4.7](http://fontawesome.io/ "Font Awesome")  For easy to embed fonts.
+
+  These are used to add in the social sharing fonts.

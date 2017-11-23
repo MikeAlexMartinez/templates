@@ -1,1 +1,6 @@
 /* header styles */
+.header {
+  background-color: $header-bg-color;
+  min-height: $header-height;
+  width: 100%;
+}

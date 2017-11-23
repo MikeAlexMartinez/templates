@@ -16,6 +16,9 @@ Key animations / interactivity that I need to create are:
 
 #### To do List:
 1. Create basic layout of each page.
+    - Layout
+    - Styling
+    - Grid
 2. Add content
 3. Add functionality
 

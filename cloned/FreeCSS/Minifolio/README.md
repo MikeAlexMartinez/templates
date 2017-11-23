@@ -1,5 +1,24 @@
 # Minifolio
 
+## Challenges
+
+Key challenges when creating this webpage are the fact that it's responsive, and a number of elements 
+on the page change depending on the screen size. Other challenges involve creating the smooth, well
+styled animations that bring life to this site.
+
+Key animations / interactivity that I need to create are:
+- The Nav bar which fades in and out on scroll (when the screen width is > 768px);
+- Responsive features of webpage (layout of project pictures & expandable nav items);
+- Fade in each of the listed projects once the projects enter the viewport.
+- On hover over a project the an almost opaque screen covers the picture and the project
+  title is shown.
+- Show magnified picture of project photo on click.
+
+#### To do List:
+1. Create basic layout of each page.
+2. Add content
+3. Add functionality
+
 ## Used by me
 
 - [Gulp](https://gulpjs.com/ "Gulp")

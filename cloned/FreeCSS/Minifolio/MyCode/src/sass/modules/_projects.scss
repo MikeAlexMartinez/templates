@@ -1,0 +1,21 @@
+/*
+====================================
+Projects Flexbox
+====================================
+*/
+
+.projects-container {
+  width: 100%;
+  display: flex;
+
+  & .project {
+    width: 25%;
+    height: auto;
+  
+    & img {
+      max-width: 100%;
+      max-height: 100%;
+    }
+  }
+
+}

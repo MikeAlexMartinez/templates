@@ -14,11 +14,22 @@ Key animations / interactivity that I need to create are:
   title is shown.
 - Show magnified picture of project photo on click.
 
+## Issues encountered
+
+- Setting up font-awesome to work with Sass. 
+  
+  I wanted to be able to work offline when required, and so didn't want to depend on a CDN. 
+  To get Sass working nicely with font-awesome I need to add the font-awesome fonts to the 
+  font folder in my distribution folder, and also needed to add just the sass files to the sass 
+  folder, which I've now done, and then imported it into the top of my sass application.scss file
+  with the other external libraries that I've used.   
+
+
 #### To do List:
 1. Create basic layout of each page.
     - Layout
     - Styling
-    - Grid
+    - With Grid
 2. Add content
 3. Add functionality
 
@@ -30,6 +41,7 @@ Key animations / interactivity that I need to create are:
 
   Plugins being used are:
   - [gulp-sass](https://github.com/dlmanning/gulp-sass)  for converting sass
+  - [gulp-sourcemaps](https://github.com/gulp-sourcemaps/gulp-sourcemaps)  for writing source maps
   - [gulp-mocha](https://github.com/sindresorhus/gulp-mocha)  for running my tests
 
 - [Normalize.css](http://necolas.github.io/normalize.css/ "normalize.css")  for reseting my CSS

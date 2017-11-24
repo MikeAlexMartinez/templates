@@ -1,6 +1,7 @@
 /* import libs */
-@import "lib/animate",
-        "lib/normalize";
+@import "node_modules/animate.css/animate",
+        "node_modules/normalize.css/normalize",
+        "font-awesome/font-awesome";
 
 /* base */
 @import "base/vars",

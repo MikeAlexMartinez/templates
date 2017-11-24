@@ -11,3 +11,9 @@
 .cf {
   zoom: 1; /* For IE 6/7 (trigger hasLayout) */
 }
+
+/* text */
+
+h1, h2, h3, h4, h5, h6, p, button {
+  text-align: center;
+}

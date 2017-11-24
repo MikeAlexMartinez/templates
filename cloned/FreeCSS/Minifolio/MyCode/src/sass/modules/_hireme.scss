@@ -9,4 +9,32 @@ Hire me section
   width: 100%;
   padding-top: $section-padding-smaller;
   background: $off-white; 
+
+  h4 {
+    margin-bottom: 0;
+  }
+
+  p {
+    margin: 15px 0;
+  }
+
+  .btn {
+    margin-top: 15px;
+    background-color: $btn-bg-color;
+    padding: 1.5em 3em;
+    text-transform: uppercase;
+    color: $header-text-color;
+    border: none;
+    border-radius: 2px;
+    font-weight: 600;
+    font-size: 13px;
+    letter-spacing: 5px;
+    
+    &:hover {
+      cursor: pointer;
+      background-color: $btn-bg-color--hover;
+    }
+  }
+
+
 }

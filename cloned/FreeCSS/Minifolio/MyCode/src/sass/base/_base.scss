@@ -12,16 +12,19 @@
   zoom: 1; /* For IE 6/7 (trigger hasLayout) */
 }
 
-/* text */
+/* Typography */
 
-h1, h2, h3, h4, h5, h6, p, button {
+@import url(http://fonts.googleapis.com/css?family=Roboto:300,400,500,600,700);
+@import url(http://fonts.googleapis.com/css?family=Roboto%20Slab:300,400,500,600,700);
+
+body {
   text-align: center;
+  color: $content-text-color;
+  font-family: "Roboto";
+  font-weight: 400;
 }
 
-
-.btn {
-  background-color: $btn-bg-color;
-  padding: 1em 2em;
-  text-transform: uppercase;
-  color: $white;
+h4 {
+  font-weight: 400;
+  font-size: 28px;
 }

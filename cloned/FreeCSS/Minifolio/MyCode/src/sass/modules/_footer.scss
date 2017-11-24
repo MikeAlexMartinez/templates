@@ -3,4 +3,20 @@
   height: $section-height-smaller;
   padding-top: $section-padding-smaller;
   width: 100%;
+
+  font-weight: 300;
+  font-size: 12px;
 }
+
+.social-item {
+  font-size: 16px;
+  display: inline-block;
+  background: $icon-bg-grey;
+  margin: 4px;
+  height: 28px;
+  width: 28px;
+  border-radius: 50%;
+  line-height: 30px;
+  color: $off-white;
+}
+

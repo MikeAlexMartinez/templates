@@ -3,4 +3,51 @@
   background-color: $header-bg-color;
   min-height: $section-height-large;
   width: 100%;
+  color: $header-text-color;
+
+  h1 {
+    margin-top: 15%;
+    font-family: "Roboto Slab", sans-serif;
+    font-weight: 700;
+    font-size: $header-font-size;
+  }
+
+  h3 {
+    font-weight: 500;
+    font-size: 18px;
+    letter-spacing: 0.3em;
+  }
+
+  .navigation {
+
+    height: $nav-height;
+
+    .brand-logo {
+      float: left;
+    }
+
+    ul {
+      list-style: none;
+      float: right;
+      margin: 0 100px;
+      height: 100%;
+    
+      a {
+        text-decoration: none;
+      }
+
+      li {
+        display: inline-block;
+        height: 100%;
+        line-height: 100%;
+        vertical-align: middle;
+        text-transform: uppercase;
+        letter-spacing: 0.3em;
+        font-weight: 300;
+        font-size: 13px;
+        margin-left: 50px;
+      }
+    }
+
+  }
 }

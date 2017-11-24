@@ -1,7 +1,11 @@
 $purple: #65349c;
 $white: #fff;
 $off-white: #fafafa;
+$grey: #3d3d3d;
 $green: #3bc492;
+
+$nav-height: 100px;
+$nav-height-active: 80px;
 
 $section-height-large: 750px;
 $section-height-small: 400px;
@@ -9,8 +13,15 @@ $section-height-smaller: 250px;
 
 $section-padding-smaller: 75px;
 
+$header-font-size: 80px;
+
 $header-bg-color: $purple;
 $content-bg-color: $white;
 $footer-bg-color: $white;
 $hireme-bg-color: $off-white;
 $btn-bg-color: $green;
+$btn-bg-color--hover: $grey;
+$icon-bg-grey: $grey;
+
+$header-text-color: $white;
+$content-text-color: $grey;

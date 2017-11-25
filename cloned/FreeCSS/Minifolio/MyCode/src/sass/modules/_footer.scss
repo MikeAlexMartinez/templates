@@ -17,6 +17,12 @@
   width: 28px;
   border-radius: 50%;
   line-height: 30px;
-  color: $off-white;
+  
+  a {
+    text-decoration: none;
+    cursor: pointer;
+    color: $off-white;
+  }
 }
+
 

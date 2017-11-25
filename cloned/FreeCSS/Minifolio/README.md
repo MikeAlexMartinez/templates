@@ -24,6 +24,8 @@ Key animations / interactivity that I need to create are:
   folder, which I've now done, and then imported it into the top of my sass application.scss file
   with the other external libraries that I've used.   
 
+- Creating responsive navbar
+
 
 #### To do List:
 1. Create basic layout of each page.

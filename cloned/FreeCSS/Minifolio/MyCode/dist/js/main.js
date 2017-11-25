@@ -1,13 +1,31 @@
 // Hide projects
 $(document).ready(function() {
-
+  
   hideProjects();
+  
+  const delay = 75;
+  [{
+    id: 'projects-container-top',
+    difference: function(n, length) {
+      return delay * n;
+    },
+    class: 'fadeInLeft'
+  },
+  {
+    id: 'projects-container-bottom',
+    difference: function(n, l) {
+      return (l*delay) - (delay * n);
+    },
+    class: 'fadeInRight'
+  }]
 
   ['projects-container-top','projects-container-bottom'].forEach((v,i) => {
     registerWaypoint(v,i);
   });
 
 });
+
+const test = 'testing';
 
 function registerWaypoint(e,i) {
   const target = `projectWaypoint${i}`;
@@ -18,7 +36,7 @@ function registerWaypoint(e,i) {
     handler: function() {
       fadeInProjects(e);
     },
-    offset: '100%'
+    offset: '75%'
   });
 }
 
@@ -31,7 +49,7 @@ const navWaypoint = new Waypoint({
 });
 
 function hideProjects() {
-  $('.project').css('opacity', 0);
+  $('.project').addClass('hidden');
 }
 
 function checkFixed() {
@@ -44,16 +62,14 @@ function checkFixed() {
 }
 
 function fadeInProjects(id) {
-  const gap = 100;
+  const gap = 50;
   console.log(id);
 
   $(`#${id} .project`).each(function(i, e) {
     const delay = gap * (i + 1);
-    
     setTimeout(function() {
       $(e).removeClass('hidden');
       $(e).addClass('fadeInLeft');
     }, delay);
   });
 }
-

@@ -5,13 +5,17 @@
 
     <!-- My CSS -->
     <link href="css/application.css" rel="stylesheet" type"text/css">
+
+    <!-- Animate.css -->
+    <link href="css/vendor/animate.css" rel="stylesheet" type="text/css">
+
   </head>
   <body>
     
     <!-- Header -->
     <div class="header">
       <!-- navigation -->
-      <nav class="navigation">
+      <nav id="navigation" class="navigation">
         <div class="brand-logo">
           <img src="images/logo.png">
         </div>
@@ -24,7 +28,7 @@
     </div>
 
     <!-- Hi I'm Michael -->
-    <section class="banner">
+    <section class="banner" id="banner">
       <h1>Hey, I'm Michael</h1>
       <h3>Looking for a web application developer?</h3>
       <h3>Scroll to see my work.</h3>
@@ -42,36 +46,36 @@
       <section class="portfolio">
         
         <!-- fadein from left to right -->
-        <div class="projects-container">
+        <div class="projects-container" id="projects-container-top">
           
-          <div class="project">
+          <div class="project hidden animate">
             <img src="images/work-1.jpg">
           </div>
-          <div class="project">
+          <div class="project hidden animate">
             <img src="images/work-2.jpg">
           </div>
-          <div class="project">
+          <div class="project hidden animate">
             <img src="images/work-3.jpg">
           </div>
-          <div class="project">
+          <div class="project hidden animate">
             <img src="images/work-4.jpg">
           </div>
         
         </div><!--
 
           fadein from right to left
-        --><div class="projects-container">
+        --><div class="projects-container"  id="projects-container-bottom">
             
-          <div class="project">
+          <div class="project hidden animate">
             <img src="images/work-5.jpg">
           </div>
-          <div class="project">
+          <div class="project hidden animate">
             <img src="images/work-6.jpg">
           </div>
-          <div class="project">
+          <div class="project hidden animate">
             <img src="images/work-7.jpg">
           </div>
-          <div class="project">
+          <div class="project hidden animate">
             <img src="images/work-8.jpg">
           </div>
         
@@ -125,6 +129,13 @@
       </div>
     </section>
   
+
+    <!-- My javascript -->
+    <script src="./js/vendor/jquery-v1.12.5.js"></script>
+    <script src="./js/vendor/jquery.fancybox-v2.1.4.js"></script>
+    <script src="./js/vendor/noframework.waypoints.js"></script>
+    <script src="./js/main.js"></script>
+
   </body>
 
 </html>

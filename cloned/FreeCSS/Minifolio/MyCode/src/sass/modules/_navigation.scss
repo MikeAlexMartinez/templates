@@ -1,13 +1,16 @@
+$trans: 0.2s linear; 
+
 .navigation {
   z-index: 1;
   position: fixed;
   top: 0;
-  left: 0; 
+  left: 0;
   width: 100%;
   
   height: $nav-height;
   padding: $nav-height-padding;
-  
+  transition: padding-top $trans, padding-bottom $trans, height $trans;
+
   .brand-logo {
     float: left;
   }
@@ -32,5 +35,13 @@
       font-size: 13px;
       margin-left: 50px;
     }
+  }
+
+  &.fixed {
+    height: $nav-height-fixed;
+    padding-top: $nav-height-padding-fixed;
+    padding-bottom: $nav-height-padding-fixed;
+
+    background: $nav-bg-fixed;
   }
 }

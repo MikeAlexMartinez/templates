@@ -44,4 +44,17 @@ $trans: 0.2s linear;
 
     background: $nav-bg-fixed;
   }
+
+  @media #{$smaller-device} {
+      
+  }
+  
+  @media #{$small-device} {
+    
+  }
+  
+  @media #{$medium-device} {
+    
+  }
+
 }

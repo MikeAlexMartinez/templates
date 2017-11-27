@@ -22,10 +22,14 @@
  *
  **/
 
-@media all and (min-width: 768px) and (max-width: 1024px) {
+@media #{$smaller-device} {
 
 }
 
-@media all and (min-width: 1025px) and (max-width: 1199px) {
+@media #{$small-device} {
+  
+}
+
+@media #{$medium-device} {
   
 }

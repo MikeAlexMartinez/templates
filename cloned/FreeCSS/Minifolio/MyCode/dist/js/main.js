@@ -52,7 +52,7 @@ function registerWaypoint(v,i) {
       // destroy waypoint to prevent unnecessary rerunning of function
       this.destroy();
     },
-    offset: '75%'
+    offset: '85%'
   });
 }
 

@@ -13,16 +13,39 @@ Projects Flexbox
 
 .projects-container {
   width: 100%;
-  display: flex;
   visibility: hidden;
   cursor: pointer;
-  
+
+  justify-content: center;
+
   .project {
+    display: inline-block;
     position: relative;
     width: 25%;
+    height: auto;
     overflow: hidden;
-    margin: 1px;
+    padding: 1px;
+    
+    @media #{$medium-device} {
+      min-width: 50%;
+      height: auto;
+      
+    }
+    
+    @media #{$small-device} {
+      min-width: 50%;
+      height: auto;
+    }
+    
+    @media #{$smaller-device} {
+      min-width: 100%;
+      height: auto;
 
+      img {
+        min-width: 100%;
+      }
+
+    }
     
     &:hover {
       background-color: $nav-bg-fixed;
@@ -31,7 +54,7 @@ Projects Flexbox
     
     & img {
       max-width: 100%;
-      max-height: 95%;
+      height: auto;
       overflow: hidden;
       display: block;
       

@@ -1,5 +1,11 @@
+/* breakpoints */
+$smaller-device: 'all and (max-width: 767px)';
+$small-device: 'all and (min-width: 768px) and (max-width: 1024px)';
+$medium-device: 'all and (min-width: 1025px) and (max-width: 1199px)';
+$wide-device: 'all and (min-width: 1200px)';
+
 $purple: #65349c;
-$purple-overlay: rgba(64, 35, 97, 0.9);
+$purple-overlay: rgba(64, 35, 97, 0.8);
 $white: #fff;
 $bg-grey: rgba(49, 49, 49, 0.50);
 $off-white: #fafafa;

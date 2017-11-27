@@ -1,13 +1,14 @@
-// Hide projects
 $(document).ready(function() {
   
-  // hideProjects();
-  
   const delay = 75;
-
+  
+  // create independent project container
+  // objects to define waypoints, and distinct
+  // timings.
   const projectContainers = [{
     id: 'projects-container-top',
     difference: function(n, l) {
+      // fadein project from left to right
       return delay * n;
     },
     class: 'animated fadeIn'
@@ -15,20 +16,30 @@ $(document).ready(function() {
   {
     id: 'projects-container-bottom',
     difference: function(n, l) {
+      // fadein projects from right to left
       return (l*delay) - (delay * n);
     },
     class: 'animated fadeIn'
   }];
-
-
+  
+  
   projectContainers.forEach((v, i) => {
     registerWaypoint(v,i);
   });
 
 });
 
-const test = 'testing';
+// banner - fixed on scroll waypoint
+const navWaypoint = new Waypoint({
+  element: document.getElementById('banner'),
+  handler: function(direction) {
+    checkFixed();
+  },
+  offset: -1
+});
 
+// register independent waypoints for both banks of project 
+// containers 
 function registerWaypoint(v,i) {
   const target = `projectWaypoint${i}`;
   
@@ -38,25 +49,14 @@ function registerWaypoint(v,i) {
       // function to fade in projects with appropriate delays
       fadeInProjects(v);
 
-      // destroy waypoint to prevent rerunning of function
+      // destroy waypoint to prevent unnecessary rerunning of function
       this.destroy();
     },
     offset: '75%'
   });
 }
 
-const navWaypoint = new Waypoint({
-  element: document.getElementById('banner'),
-  handler: function(direction) {
-    checkFixed();
-  },
-  offset: -1
-});
-
-function hideProjects() {
-  // $('.project').addClass('hidden');
-}
-
+// banner waypoint handler function
 function checkFixed() {
   const scrollPos = $(document).scrollTop();
   if (scrollPos === 0) {
@@ -66,17 +66,17 @@ function checkFixed() {
   }
 }
 
+// project container waypoint handler function
 function fadeInProjects(v) {
-  console.log(v.id);
   
   const selector = $(`#${v.id} .project`);
   const l = selector.size();
 
+  // fadeIn each project with different delay
+  // time.
   selector.each(function(i, e) {
     const delay = v.difference(i, l);
     const classVal = v.class;
-
-    console.log(delay, classVal);
 
     setTimeout(function() {
       $(e).addClass(classVal);

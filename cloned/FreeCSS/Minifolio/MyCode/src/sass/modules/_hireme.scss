@@ -29,6 +29,8 @@ Hire me section
     font-weight: 600;
     font-size: 13px;
     letter-spacing: 5px;
+
+    transition: background-color 0.15s linear;
     
     &:hover {
       cursor: pointer;

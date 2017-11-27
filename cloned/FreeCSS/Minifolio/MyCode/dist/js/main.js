@@ -28,7 +28,11 @@ $(document).ready(function() {
 
   // toggle menu icon
   $('#menu-icon').click(function() {
+
+    // for smaller screens show alternate menu
     $(this).toggleClass('open');
+    $('#links').toggleClass('visible');
+    $('#links').toggleClass('show');
   });
 
 });

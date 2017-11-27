@@ -168,38 +168,60 @@ $trans: 0.2s linear;
 
   @media all and (max-width: 1024px) {
     .links {
-      display: absolute;
+      display: none;
       opacity: 0;
+      background-color: #000;
+
+      transition: opacity 0.5s linear;
+    }
+    .show {
+      opacity: 0.9;
     }
     .links.visible {
+      
+      z-index: 2;
+      display: block;
+      position: fixed;
+      top:0;
+      left: 0;      
       height: 100%;
       width: 100%;
+      
 
+      text-align: center;
+
+      
       ul {
         list-style: none;
-        float: right;
-        margin: 0 100px;
-        height: 100%;
+        margin: 30% 0;
+        float: none;
         
         a {
           cursor: pointer;
         }
         
         li {
-          text-decoration: none;
-          color: $header-text-color;
           display: inline-block;
+          width: 100%;
+          margin: 2% 0;
+          
+          text-decoration: none;
           text-transform: uppercase;
+          color: $faded-white;
+
           letter-spacing: 0.3em;
           font-weight: 300;
-          font-size: 13px;
-          margin-left: 50px;
-        }    
+          font-size: 24px;
+        
+          &:hover {
+            color: $white;
+          }
+        } 
       }
     }
 
     .menu {
-      z-index: 2;
+      z-index: 3;
       display: block;
       float: right;
     }

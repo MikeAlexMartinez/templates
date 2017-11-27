@@ -22,9 +22,13 @@ $(document).ready(function() {
     class: 'animated fadeIn'
   }];
   
-  
   projectContainers.forEach((v, i) => {
     registerWaypoint(v,i);
+  });
+
+  // toggle menu icon
+  $('#menu-icon').click(function() {
+    $(this).toggleClass('open');
   });
 
 });

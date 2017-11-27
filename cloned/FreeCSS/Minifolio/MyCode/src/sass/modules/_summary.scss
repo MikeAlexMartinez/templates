@@ -5,13 +5,25 @@ Summary
 */
 
 .summary {
-  height: $section-height-smaller;
+  min-height: $section-height-smaller;
  
   p {
     display: inline-block;
     margin: 100px 150px;
     line-height: 1.75em;
     font-size: 18px;  
+    
+    @media #{$medium-device} {
+      margin: 10% 10%;
+    } 
+  
+    @media #{$small-device} {
+      margin: 10% 10%;
+    }
+  
+    @media #{$smaller-device} {
+      margin: 10% 10%;
+    }
   }
 
 }

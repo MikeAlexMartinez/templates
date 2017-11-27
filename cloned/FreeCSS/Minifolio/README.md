@@ -24,9 +24,21 @@ Key animations / interactivity that I need to create are:
   folder, which I've now done, and then imported it into the top of my sass application.scss file
   with the other external libraries that I've used.   
 
-- Creating responsive navbar
+- Creating stickied navbar on scroll
 
   Achieved with waypoint.js and CSS transitions
+
+- Animating the menu transition
+
+  Thanks to Jesse Couch's [hamburger animations codepen](https://codepen.io/designcouch/pen/Atyop)
+
+- Animating project hover
+
+  Achieved with CSS transitions.
+
+- Fading in projects on initial scroll
+
+  Achieved with waypoint, jquery and some javascript.
 
 
 #### To do List:

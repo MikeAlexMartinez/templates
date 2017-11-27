@@ -7,18 +7,70 @@ Projects Flexbox
 .projects-container {
   width: 100%;
   display: flex;
-
-  & .project {
-    width: 25%;
-    height: auto;
+  visibility: hidden;
   
+  .project {
+    position: relative;
+    width: 25%;
+    overflow: hidden;
+    margin: 1px;
+
+    
+    &:hover {
+      background-color: $nav-bg-fixed;
+      opacity: 0.5;
+    }
+    
     & img {
       max-width: 100%;
-      max-height: 100%;
+      max-height: 95%;
+      overflow: hidden;
+      display: block;
+      
+      transition: transform 0.2s linear;
     }
-  }
+    
+    &:hover img {
+      transform: scale(1.2);
+    } 
+    
+    .overlay {
+      position: absolute;
+      top: 0;
+      height: 100%;
+      width: 100%;
+      color: $white;
 
-  .hidden {
-    opacity: 0;
+      transition: background-color 0.1s linear;
+      
+      .title,
+      .text {
+        position: relative;
+        height: 50%;
+        width: 100%;
+      }
+      .title h5 {
+        margin: 5px 0;
+        display: inline-block;
+        position: absolute;
+        bottom: 0px;
+      }
+      .text p {
+        margin: 5px 0;
+        display: inline-block;
+        position: absolute;
+        top: 0px;
+      }
+    }
+
+    .overlay:hover {
+      background-color: $project-overlay;
+    }
+
   }
+  
+}
+
+.animated {
+  visibility: visible;
 }

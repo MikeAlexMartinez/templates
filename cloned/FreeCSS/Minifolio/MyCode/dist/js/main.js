@@ -1,25 +1,27 @@
 // Hide projects
 $(document).ready(function() {
   
-  hideProjects();
+  // hideProjects();
   
   const delay = 75;
-  [{
+
+  const projectContainers = [{
     id: 'projects-container-top',
-    difference: function(n, length) {
+    difference: function(n, l) {
       return delay * n;
     },
-    class: 'fadeInLeft'
+    class: 'animated fadeIn'
   },
   {
     id: 'projects-container-bottom',
     difference: function(n, l) {
       return (l*delay) - (delay * n);
     },
-    class: 'fadeInRight'
-  }]
+    class: 'animated fadeIn'
+  }];
 
-  ['projects-container-top','projects-container-bottom'].forEach((v,i) => {
+
+  projectContainers.forEach((v, i) => {
     registerWaypoint(v,i);
   });
 
@@ -27,14 +29,17 @@ $(document).ready(function() {
 
 const test = 'testing';
 
-function registerWaypoint(e,i) {
+function registerWaypoint(v,i) {
   const target = `projectWaypoint${i}`;
-  console.log(target);
-  console.log(window[target]);
+  
   window[target] = new Waypoint({
-    element: document.getElementById(e),
+    element: document.getElementById(v.id),
     handler: function() {
-      fadeInProjects(e);
+      // function to fade in projects with appropriate delays
+      fadeInProjects(v);
+
+      // destroy waypoint to prevent rerunning of function
+      this.destroy();
     },
     offset: '75%'
   });
@@ -49,7 +54,7 @@ const navWaypoint = new Waypoint({
 });
 
 function hideProjects() {
-  $('.project').addClass('hidden');
+  // $('.project').addClass('hidden');
 }
 
 function checkFixed() {
@@ -61,15 +66,20 @@ function checkFixed() {
   }
 }
 
-function fadeInProjects(id) {
-  const gap = 50;
-  console.log(id);
+function fadeInProjects(v) {
+  console.log(v.id);
+  
+  const selector = $(`#${v.id} .project`);
+  const l = selector.size();
 
-  $(`#${id} .project`).each(function(i, e) {
-    const delay = gap * (i + 1);
+  selector.each(function(i, e) {
+    const delay = v.difference(i, l);
+    const classVal = v.class;
+
+    console.log(delay, classVal);
+
     setTimeout(function() {
-      $(e).removeClass('hidden');
-      $(e).addClass('fadeInLeft');
+      $(e).addClass(classVal);
     }, delay);
   });
 }

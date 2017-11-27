@@ -26,6 +26,8 @@ Key animations / interactivity that I need to create are:
 
 - Creating responsive navbar
 
+  Achieved with waypoint.js and CSS transitions
+
 
 #### To do List:
 1. Create basic layout of each page.

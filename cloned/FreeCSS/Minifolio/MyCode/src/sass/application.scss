@@ -1,13 +1,13 @@
+/* base */
+@import "base/vars",
+"base/base",
+"base/media_queries";
+
+/* Application */
+@import "modules/all";
+
 /* import libs */
 @import "node_modules/animate.css/animate",
         "node_modules/normalize.css/normalize",
         "font-awesome/font-awesome",
         "fancybox/jquery.fancybox.scss";
-
-/* base */
-@import "base/vars",
-        "base/base",
-        "base/media_queries";
-
-/* Application */
-@import "modules/all";

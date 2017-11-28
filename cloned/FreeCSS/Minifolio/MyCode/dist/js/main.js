@@ -38,6 +38,7 @@ $(document).ready(function() {
   // fancybox code for project image viewing
   $('.fancybox').fancybox({
     helpers: {
+      // Create dark overlay behing project image
       overlay : {
         css : {
           'background': 'rgba(58, 42, 45, 0.95)'

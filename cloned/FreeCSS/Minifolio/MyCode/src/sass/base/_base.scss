@@ -34,5 +34,11 @@ h4 {
 }
 
 .content {
-  margin-top: $section-height-large; 
+  margin-top: $section-height-large;
+
+  @media all and (max-width: 767px) {
+    
+    margin-top: $section-height-small;
+    
+  }
 }

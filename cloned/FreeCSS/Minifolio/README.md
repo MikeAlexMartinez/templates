@@ -28,15 +28,20 @@ Key animations / interactivity that I need to create are:
 
   Achieved with waypoint.js and CSS transitions
 
-- Animating the menu transition
+- Animating the menu transition for smaller screens
 
   Thanks to Jesse Couch's [hamburger animations codepen](https://codepen.io/designcouch/pen/Atyop)
+  for providing a super useful example of different hamburger transitions.
+
+  A difficulty was getting the menu to fade in gradually instead of instantly. The reason this wasn't
+  working at first was because I was using 'display: none' to hide the page which makes it difficult 
+  to use css transitions to manage the timing of the fade in animation. 
 
 - Animating project hover
 
   Achieved with CSS transitions.
 
-- Fading in projects on initial scroll
+- Fading in projects on initial scroll down the page
 
   Achieved with waypoint, jquery and some javascript.
 

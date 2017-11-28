@@ -3,8 +3,8 @@ $(document).ready(function() {
   const delay = 75;
   
   // create independent project container
-  // objects to define waypoints, and distinct
-  // timings.
+  // objects to define waypoints, and distinct functions
+  // to calculate delays.
   const projectContainers = [{
     id: 'projects-container-top',
     difference: function(n, l) {
@@ -32,7 +32,18 @@ $(document).ready(function() {
     // for smaller screens show alternate menu
     $(this).toggleClass('open');
     $('#links').toggleClass('visible');
-    $('#links').toggleClass('show');
+
+  });
+
+  // fancybox code for project image viewing
+  $('.fancybox').fancybox({
+    helpers: {
+      overlay : {
+        css : {
+          'background': 'rgba(58, 42, 45, 0.95)'
+        }
+      }
+    }
   });
 
 });

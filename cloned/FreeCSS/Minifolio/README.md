@@ -77,6 +77,12 @@ Key animations / interactivity that I need to create are:
 - [Fancybox V2](http://fancyapps.com/fancybox/ "Fancybox Version 2")
   (Used by original template developer)
 
+- [Pug](https://pugjs.org/api/getting-started.html)
+  Pug is a high-performance template engine heavily influenced by Haml and implemented with JavaScript for Node.js and browsers.
+
+- [Express.js](https://expressjs.com/)
+  A Fast, unopinionated, minimalist web framework for Node.js.
+
 ## Libraries used by the original designer / developer
 
 ### JS Libraries

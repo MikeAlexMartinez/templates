@@ -1,6 +1,33 @@
+doctype html
 html
-  head
-    title= title
+  include includes/head.pug
+  
   body
-    h1 #{start} You're #{name}
-    img(src="./images/work-1.jpg")
+    include includes/header.pug
+
+    //- Main banner
+    section(class="banner" id="banner")
+      h1 Hey, I'm Michael
+      h3 Looking for a web application developer?
+      h3 Scroll to see my work.
+    
+    //- Main content
+    section(class="content")
+      
+      //- main text content
+      section(class="summary cf")
+        p Donec sed odio dui. Nulla vitae elit libero, a pharetra augue. Nullam id dolor id nibh ultricies vehicula ut id elit. Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Aenean lacinia bibendum nulla sed consectetur. Cras mattis consectetur purus sit amet avida at eget metus.
+      
+      //- project Demo
+      section(class="portfolio")
+
+        div(class="projects-container" id="projects-container-top")
+          each p in projects
+            p= p.title
+            p= p.detail
+
+      include includes/hireme.pug
+      
+      include includes/footer.pug
+
+      include includes/js.pug

@@ -11,9 +11,16 @@ app.set('view engine', 'pug');
 // This is where static files are served from
 app.use(express.static('./MyCode/dist'));
 
+const projects = [
+  {
+    title: "Project Title",
+    detail: "This is the project detail"
+  }
+];
+
 // home route
 app.get('/', function homePage(req, res) {
-  res.render('home', { title: 'puglify', start: 'Hey!', name: 'Michael!'});
+  res.render('home', { projects: projects});
 });
 
 app.get('/contact', function contactPage(req, res) {

@@ -24,14 +24,34 @@
     line-height: 1em;
   } 
 
+  &.small {
+    min-height: $section-height-small;
+
+    h1 {
+      margin-top: 150px;
+      font-weight: 500;
+      font-size: $small-header-font-size;
+    }
+
+    @media all and (max-width: 767px) {
+      
+      min-height: $section-height-smaller;
+      
+      h1 {
+        margin-top: 130px;
+        font-weight: 400;
+      }
+    }  
+  }
+
   @media all and (max-width: 767px) {
     
-    min-height: $section-height-small;
+    min-height: $section-height-medium;
     
     h1 {
-      margin-top: 200px;
+      margin-top: 150px;
       font-weight: 600;
-      font-size: $small-header-font-size;
+      font-size: $medium-header-font-size;
     }
   }
 }

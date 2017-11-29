@@ -37,13 +37,13 @@ Key animations / interactivity that I need to create are:
   working at first was because I was using 'display: none' to hide the page which makes it difficult 
   to use css transitions to manage the timing of the fade in animation. 
 
-- Animating project hover
+- Animating project image hover
 
   Achieved with CSS transitions.
 
 - Fading in projects on initial scroll down the page
 
-  Achieved with waypoint, jquery and some javascript.
+  Achieved with waypoint, jquery and some of my own javascript to control the fadeIn timings.
 
 
 #### To do List:

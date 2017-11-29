@@ -1,6 +1,10 @@
 /*! fancyBox v2.1.4 fancyapps.com | fancyapps.com/fancybox/#license */
 
-$image-path: '../img/' !default;
+/** 
+ * Updated this default path due to my directory structure being different to 
+ * that of the default fancybox structure.
+ **/
+$image-path: '../../images/' !default;
 
 .fancybox-wrap,
 .fancybox-skin,

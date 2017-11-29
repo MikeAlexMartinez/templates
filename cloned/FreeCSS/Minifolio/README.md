@@ -69,19 +69,27 @@ Key animations / interactivity that I need to create are:
   across different browsers.
 
 - [Font-Awesome v4.7](http://fontawesome.io/ "Font Awesome")  For easy to embed fonts.
+  
   (Used by original template developer)
 
 - [Waypoints](http://imakewebthings.com/waypoints/ "Waypoints")
+  
   (Used by original template developer)
 
 - [Fancybox V2](http://fancyapps.com/fancybox/ "Fancybox Version 2")
+  
   (Used by original template developer)
 
 - [Pug](https://pugjs.org/api/getting-started.html)
+  
   Pug is a high-performance template engine heavily influenced by Haml and implemented with JavaScript for Node.js and browsers.
 
+  Pug allows me to write minimal, maintainable code that is compiled to html and can be reused and repurposed across different pages.
+
 - [Express.js](https://expressjs.com/)
-  A Fast, unopinionated, minimalist web framework for Node.js.
+  is a Fast, unopinionated, minimalist web framework for Node.js.
+
+  Allows me to compile and combine my pug templates with data   
 
 ## Libraries used by the original designer / developer
 

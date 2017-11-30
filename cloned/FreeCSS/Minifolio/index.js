@@ -1,5 +1,5 @@
 const express = require('express');
-const formidable = require('express-formidable');
+//const formidable = require('express-formidable');
 
 // initiate express app
 const app = express();
@@ -13,7 +13,7 @@ app.set('view engine', 'pug');
 app.use(express.static('./MyCode/dist'));
 
 // Use express-formidable to parse and process forms
-app.use(formidable());
+//app.use(formidable());
 
 // Project Portfolio
 const projects = [
@@ -107,19 +107,7 @@ app.get('/about', function contactPage(req, res) {
 });
 
 app.post('/submitform', (req, res) => {
-  const fields = req.fields;
-  console.log(fields);
-
-  // Check fields
-
-  // Set Date
-
-  // Post to database
-
-  // Send response
-
-
-  res.status(200).end(JSON.stringify(fields));
+  console.log("form posted");
 });
 
 app.listen(3000, () => console.log('App listening on port 3000!'));

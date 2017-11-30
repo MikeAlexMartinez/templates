@@ -1,0 +1,35 @@
+// about - profile styles
+
+.profile {
+
+  font-size: 18px;
+
+  .img {
+    img {
+      max-height: 175px;
+      max-width: 175px;
+      border-radius: 50%;
+
+    }
+    
+    margin-bottom: 50px;
+  }
+
+  .name {
+    font-size: $about-name-font-size;
+    font-weight: 600;
+  }
+
+  .role {
+    margin-bottom: 25px;
+  }
+
+  .about-me {
+    text-align: left;
+
+    padding: 50px 100px;
+    line-height: 30px;
+  }
+
+  margin-bottom: 100px;
+}

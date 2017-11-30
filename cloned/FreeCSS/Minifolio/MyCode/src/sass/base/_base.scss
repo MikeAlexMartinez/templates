@@ -36,6 +36,10 @@ h4 {
 .content {
   margin-top: $section-height-large;
 
+  &.small {
+    margin-top: $section-height-medium;
+  }
+
   @media all and (max-width: 767px) {
     
     margin-top: $section-height-small;

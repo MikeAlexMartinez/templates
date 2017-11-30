@@ -91,15 +91,15 @@ app.get('/', function homePage(req, res) {
   const top = projects.filter((v) => v.section === 'top');
   const bottom = projects.filter((v) => v.section === 'bottom'); 
 
-  res.render('home', { projectsTop: top, projectsBottom: bottom, socialItems: socialItems});
+  res.render('home', { projectsTop: top, projectsBottom: bottom, socialItems: socialItems, title: "Minifolio - Home"});
 });
 
 app.get('/contact', function contactPage(req, res) {
-  res.render('contact', { title: 'puglify', start: 'Hey!', name: 'Michael!'});
+  res.render('contact', { title: "Minifolio - Contact", socialItems: socialItems});
 });
 
 app.get('/about', function contactPage(req, res) {
-  res.render('about', { title: 'puglify', start: 'Hey!', name: 'Michael!'});
+  res.render('about', { title: "Minifolio - About", socialItems: socialItems});
 });
 
 app.listen(3000, () => console.log('App listening on port 3000!'));

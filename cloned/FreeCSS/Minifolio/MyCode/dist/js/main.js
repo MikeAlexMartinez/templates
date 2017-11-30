@@ -22,9 +22,25 @@ $(document).ready(function() {
     class: 'animated fadeIn'
   }];
   
-  projectContainers.forEach((v, i) => {
-    registerWaypoint(v,i);
-  });
+  // Only run this code on the homepage (where there's a project portfolio)
+  if ($('.projects-container').length) {
+    projectContainers.forEach((v, i) => {
+      registerWaypoint(v,i);
+    });
+
+    // fancybox code for project image viewing
+    $('.fancybox').fancybox({
+      helpers: {
+        // Create dark overlay behing project image
+        overlay : {
+          css : {
+            'background': 'rgba(58, 42, 45, 0.95)'
+          }
+        }
+      }
+    });
+
+  }
 
   // toggle menu icon
   $('#menu-icon').click(function() {
@@ -33,18 +49,6 @@ $(document).ready(function() {
     $(this).toggleClass('open');
     $('#links').toggleClass('visible');
 
-  });
-
-  // fancybox code for project image viewing
-  $('.fancybox').fancybox({
-    helpers: {
-      // Create dark overlay behing project image
-      overlay : {
-        css : {
-          'background': 'rgba(58, 42, 45, 0.95)'
-        }
-      }
-    }
   });
 
 });

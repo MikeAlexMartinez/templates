@@ -1,0 +1,21 @@
+extends layout.pug
+
+include includes/mixins.pug
+
+block banner
+  // banner
+  section(class="banner small" id="banner")
+    h1 Contact
+
+block content
+  // Main content
+  section(class="content")
+    // Main text summary
+    section(class="summary cf")
+      p I'm a web developer keen to work with others to create beautiful, fast, user-friendly websites. 
+      p If you would like to reach out to me please use the form below.
+
+    // contact form
+    section(class="form")
+      form(class="form-group" action="#")
+        input(type="text" placeholder="name" name="name")

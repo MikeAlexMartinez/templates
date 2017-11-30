@@ -37,12 +37,34 @@ h4 {
   margin-top: $section-height-large;
 
   &.small {
-    margin-top: $section-height-medium;
+    margin-top: $section-height-small;
   }
 
   @media all and (max-width: 767px) {
     
     margin-top: $section-height-small;
     
+  }
+}
+
+.btn {
+  display: inline-block;
+  margin-top: 15px;
+  background-color: $btn-bg-color;
+  padding: 1.5em 3em;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: $header-text-color;
+  border: none;
+  border-radius: 2px;
+  font-weight: 600;
+  font-size: 13px;
+  letter-spacing: 5px;
+
+  transition: background-color 0.15s linear;
+  
+  &:hover {
+    cursor: pointer;
+    background-color: $btn-bg-color--hover;
   }
 }

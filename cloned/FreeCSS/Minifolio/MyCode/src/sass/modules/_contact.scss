@@ -1,10 +1,50 @@
 .contact {
+  font-size: 22px;
+  line-height: 40px;
+
+  padding: 50px 300px;
+}
+
+.contact-form {
+  background-color: $off-white;
   
-  .summary& {
-
+  .entry {
     font-size: 18px;
-    line-height: 30px;
+    
+    display: block;
+    margin-left: 33.333%;
+    margin-bottom: 50px;
+    width: 33.333%;
 
-    padding: 100px;
+    padding: 18px;
+    border-radius: 3px;
+    
+    border: solid 1px $faded-white;
+
+    background-color: $white;
+    
+  }
+  
+  textarea {
+    min-height: 330px;
+  }
+  
+}
+
+@media all and (max-width: 1025px) {
+  .contact {
+    padding: 50px 150px;
+  }
+  
+  .contact-form .entry {
+    display: block;
+    margin-left: 12.5%;
+    width: 75%;
+  }  
+}
+
+@media all and (max-width: 768px) {
+  .contact {
+    padding: 0 50px 50px 50px;
   }
 }

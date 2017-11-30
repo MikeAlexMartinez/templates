@@ -20,13 +20,14 @@ $trans: 0.2s linear;
 
   .brand-logo {
     float: left;
+    margin-left: 100px;
   }
   
   .links {
     ul {
       list-style: none;
       float: right;
-      margin: 0 100px;
+      margin: 0 100px 0 0;
       height: 100%;
       
       a {
@@ -167,6 +168,10 @@ $trans: 0.2s linear;
   } 
 
   @media all and (max-width: 1024px) {
+    .brand-logo {
+      margin-left: 0px;
+    }
+
     .links {
       position: fixed;
       background-color: #000;

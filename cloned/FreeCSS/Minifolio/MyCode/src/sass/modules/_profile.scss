@@ -1,11 +1,11 @@
 // about - profile styles
 
 .profile {
-
   font-size: 18px;
-
+  
   .img {
     img {
+      margin-top: 100px;
       max-height: 175px;
       max-width: 175px;
       border-radius: 50%;
@@ -31,5 +31,4 @@
     line-height: 30px;
   }
 
-  margin-bottom: 100px;
 }

@@ -1,7 +1,8 @@
 const express = require('express');
+const formidable = require('express-formidable');
 
 // initiate express app
-const app = express()
+const app = express();
 
 // tell express where templates are kept.
 app.set('views', './MyCode/dist/templates');
@@ -10,6 +11,9 @@ app.set('view engine', 'pug');
 
 // This is where static files are served from
 app.use(express.static('./MyCode/dist'));
+
+// Use express-formidable to parse and process forms
+app.use(formidable());
 
 // Project Portfolio
 const projects = [
@@ -100,6 +104,22 @@ app.get('/contact', function contactPage(req, res) {
 
 app.get('/about', function contactPage(req, res) {
   res.render('about', { title: "Minifolio - About", socialItems: socialItems});
+});
+
+app.post('/submitform', (req, res) => {
+  const fields = req.fields;
+  console.log(fields);
+
+  // Check fields
+
+  // Set Date
+
+  // Post to database
+
+  // Send response
+
+
+  res.status(200).end(JSON.stringify(fields));
 });
 
 app.listen(3000, () => console.log('App listening on port 3000!'));

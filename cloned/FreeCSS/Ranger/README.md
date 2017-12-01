@@ -31,7 +31,7 @@ Challenges I forsee in this project will be:
     
   3. (minimised) Hamburger menu animation on hover, (increase padding), and transition into X on click.
 
-Hopefully the rest will be straight forward! But I will update 
+Hopefully the rest will be straight forward! But I will update as (and when) I encounter problems!
 
 
 ## Structure
@@ -167,22 +167,34 @@ to a point in the page.
 
 ## Libraries Used by Me
 
-
-
+- nothing yet..
 
 ## Libraries used by the original designer / developer
 
 ### JS Libraries
 
+- jquery
+
+- modernizr
+
+- respond
+
+- waypoints
+
+- jQuery 'easing'
+
 ### Mixed Libraries
+
+- owl carousel
+
+- Bootstrap.css
 
 ### CSS Libraries
 
 - Animate.css
 
-- Bootstrap.css
-
-- owl carousel
-
 - Simple line icons
 
+- Icomoon
+
+- Bootstrap SASS - compass, mincer, sprockets

@@ -113,7 +113,10 @@ app.post('/submitform', (req, res) => {
 
   console.log(message);
 
-  res.status(302).send(JSON.stringify(message));
+  message["success"] = "Message received! I will get back to you ASAP  ( ^_0)";
+
+
+  res.status(201).send(message);
 
 });
 

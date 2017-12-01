@@ -41,6 +41,33 @@ $(document).ready(function() {
     });
 
   }
+  
+  // load handler for contact from on contact page
+  if ($('#contactForm').length) {
+
+    $('#contactForm').submit(function(evt) {
+      evt.preventDefault();
+
+      const data = {
+        source: $('#form-source').val(),
+        name: $('#form-name').val(),
+        email: $('#form-email').val(),
+        message: $('#form-message').val(),
+      };
+
+      const posting = $.post('/submitForm', data, "json");
+
+      posting.done(function(data) {
+        if(data.success) {
+          $('#toast').addClass('success');
+          $('#toast').html(`<p class="message">${data.success}</p>`);
+        } else {
+          $('#toast').addClass('error');
+          $('#toast').html(`<p class="message">${data.error}</p>`);
+        }
+      });
+    });
+  }
 
   // toggle menu icon
   $('#menu-icon').click(function() {

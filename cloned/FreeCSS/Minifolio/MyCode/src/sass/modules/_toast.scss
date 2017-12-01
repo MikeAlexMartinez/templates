@@ -1,0 +1,48 @@
+.toast {
+  font-size: 18px;
+  opacity: 0;
+  margin-left: 30%;
+  width: 40%;
+
+  margin: 50px;
+  
+  border-radius: 3px;
+  
+  
+  &.success {
+    transition: all 0.8s ease-in;
+
+    opacity: 1;
+    
+    background-color: $success;
+    border: solid 1px $success-border; 
+    
+    opacity: 1;
+
+    .message {
+      padding: 18px;
+    }
+  }
+
+  &.error {
+    transition: all 0.8s ease-in;
+    
+    opacity: 1;
+
+    background-color: $error;
+    border: solid 1px $error-border; 
+
+    opacity: 1;
+
+    .message {
+      padding: 18px;
+    }
+  }
+}
+
+@media all and (max-width: 1200px) {
+  .toast {
+    margin-left: 12.5%;
+    width: 75%;
+  }
+}

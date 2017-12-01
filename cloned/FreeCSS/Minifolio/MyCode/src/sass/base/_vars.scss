@@ -4,6 +4,13 @@ $small-device: 'all and (min-width: 768px) and (max-width: 1024px)';
 $medium-device: 'all and (min-width: 1025px) and (max-width: 1199px)';
 $wide-device: 'all and (min-width: 1200px)';
 
+$success: #99f7c2;
+$success-border: #47ff56;
+$success-text: #00ce11;
+$error: #ff7272;
+$error-border: #ff3838;
+$error-text: #f20000;
+
 $purple: #65349c;
 $purple-overlay: rgba(64, 35, 97, 0.8);
 $purple-menu: rgba(64, 35, 97, 1);

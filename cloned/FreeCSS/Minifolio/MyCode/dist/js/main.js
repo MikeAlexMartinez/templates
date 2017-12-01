@@ -1,29 +1,29 @@
 $(document).ready(function() {
   
-  const delay = 75;
-  
-  // create independent project container
-  // objects to define waypoints, and distinct functions
-  // to calculate delays.
-  const projectContainers = [{
-    id: 'projects-container-top',
-    difference: function(n, l) {
-      // fadein project from left to right
-      return delay * n;
-    },
-    class: 'animated fadeIn'
-  },
-  {
-    id: 'projects-container-bottom',
-    difference: function(n, l) {
-      // fadein projects from right to left
-      return (l*delay) - (delay * n);
-    },
-    class: 'animated fadeIn'
-  }];
-  
   // Only run this code on the homepage (where there's a project portfolio)
   if ($('.projects-container').length) {
+  
+    // create independent project container
+    // objects to define waypoints, and distinct functions
+    // to calculate delays.
+    const delay = 75;
+    const projectContainers = [{
+      id: 'projects-container-top',
+      difference: function(n, l) {
+        // fadein project from left to right
+        return delay * n;
+      },
+      class: 'animated fadeIn'
+    },
+    {
+      id: 'projects-container-bottom',
+      difference: function(n, l) {
+        // fadein projects from right to left
+        return (l*delay) - (delay * n);
+      },
+      class: 'animated fadeIn'
+    }];
+  
     projectContainers.forEach((v, i) => {
       registerWaypoint(v,i);
     });

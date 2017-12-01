@@ -1,5 +1,5 @@
 const express = require('express');
-//const formidable = require('express-formidable');
+const bodyParser = require('body-parser');
 
 // initiate express app
 const app = express();
@@ -12,8 +12,10 @@ app.set('view engine', 'pug');
 // This is where static files are served from
 app.use(express.static('./MyCode/dist'));
 
-// Use express-formidable to parse and process forms
-//app.use(formidable());
+// supports parsing of application/json type post data
+app.use(bodyParser.json());
+// supports parsing of application/x-www-form-urlendcoded post data
+app.use(bodyParser.urlencoded({ extended: true }));
 
 // Project Portfolio
 const projects = [
@@ -99,7 +101,7 @@ app.get('/', function homePage(req, res) {
 });
 
 app.get('/contact', function contactPage(req, res) {
-  res.render('contact', { title: "Minifolio - Contact", socialItems: socialItems});
+  res.render('contact', { title: "Minifolio - Contact", socialItems: socialItems, status: "null"});
 });
 
 app.get('/about', function contactPage(req, res) {
@@ -107,7 +109,12 @@ app.get('/about', function contactPage(req, res) {
 });
 
 app.post('/submitform', (req, res) => {
-  console.log("form posted");
+  const message = req.body;
+
+  console.log(message);
+
+  res.status(302).send(JSON.stringify(message));
+
 });
 
 app.listen(3000, () => console.log('App listening on port 3000!'));

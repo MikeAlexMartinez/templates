@@ -42,7 +42,7 @@ $(document).ready(function() {
 
   }
   
-  // load handler for contact from on contact page
+  // load handler for contact form when on contact page
   if ($('#contactForm').length) {
 
     $('#contactForm').submit(function(evt) {

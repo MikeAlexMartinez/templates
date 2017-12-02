@@ -39,6 +39,24 @@ Hopefully the rest will be straight forward! But I will update as (and when) I e
 - General: The whole page uses animations to stylistically fadeIn content as you scroll 
 to a point in the page.
 
+### Core Components
+
+This page is composed built of 8 sections with content, a header and a footer. See detail below.
+
+Each section is built of groups of elements many of which repeat through the page.
+
+Components I've identified that I will be able to style independently to construct the page are listed below:
+1. featureGroup - Made up of an image and a text block next to eachother. stacked on small devices. The text block within this component
+  is the component mentioned next. featureGroup with an alt tag will switch the text and img blocks around.
+
+2. textGroup1 - This block of text is contained in the featureGroup. Contains a header text element, some smaller text and a btn.
+  All left aligned.
+
+3. textGroup2 - 
+
+
+
+
 - Responsive Nav Bar
 
   Becomes sticky after you scroll to the next segment.

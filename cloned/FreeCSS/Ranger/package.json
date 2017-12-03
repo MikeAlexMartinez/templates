@@ -1,0 +1,22 @@
+{
+  "name": "ranger-clone",
+  "version": "1.0.0",
+  "description": "clone of freecss ranger template",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "michael martinez",
+  "license": "MIT",
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-sass": "^3.1.0",
+    "gulp-sourcemaps": "^2.6.1"
+  },
+  "dependencies": {
+    "express": "^4.16.2",
+    "normalize.css": "^7.0.0",
+    "pug": "^2.0.0-rc.4",
+    "waypoints": "^4.0.1"
+  }
+}

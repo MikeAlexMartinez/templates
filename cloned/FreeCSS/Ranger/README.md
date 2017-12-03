@@ -34,10 +34,9 @@ Challenges I forsee in this project will be:
 Hopefully the rest will be straight forward! But I will update as (and when) I encounter problems!
 
 
-## Structure
+## Page Components, Style and Structure
 
-- General: The whole page uses animations to stylistically fadeIn content as you scroll 
-to a point in the page.
+- General: The whole page uses animations to stylistically fadeIn content as you scroll to a point in the page.
 
 ### Core Components
 
@@ -46,16 +45,24 @@ This page is composed built of 8 sections with content, a header and a footer. S
 Each section is built of groups of elements many of which repeat through the page.
 
 Components I've identified that I will be able to style independently to construct the page are listed below:
-1. featureGroup - Made up of an image and a text block next to eachother. stacked on small devices. The text block within this component
-  is the component mentioned next. featureGroup with an alt tag will switch the text and img blocks around.
+1. featureGroup - Made up of an image and a text block next to eachother. stacked on small devices. The text block within this component is the component mentioned next (textGroup1). featureGroup with an alt tag will switch the text and img blocks around.
 
 2. textGroup1 - This block of text is contained in the featureGroup. Contains a header text element, some smaller text and a btn.
   All left aligned.
 
-3. textGroup2 - 
+3. textGroup2 - This block of text is present in section 2. Where each object has an image, a small header and some text.
 
+4. textGroup3 - This text group has a small image in the left corner and some text. There are six of these in section 5.
 
+5. sectionHeader - This is in sections 2, 3, 5, 6, and 7. It consists of some larger header text and some subheader text.
 
+6. QuoteGroup - This section consists of what appears to be a speech bubble and some text below. speech bubbles are equal width and are of the same height.
+
+7. pricingGroup - These blocks contain pricing information. They have a general style consistent across the four, except when one is 'best value' it is highlighted green.
+
+8. There are button through out the application, mainly with the same styling, except when it's clear. 
+
+### Structure
 
 - Responsive Nav Bar
 

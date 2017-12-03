@@ -1,3 +1,5 @@
+'use strict'
+
 $(document).ready(function() {
   
   // Only run this code on the homepage (where there's a project portfolio)

@@ -3,11 +3,19 @@ mixin socialItem(s)
     a(href=s.link)
       span(class=`${s.icon}`)
 
-mixin textGroup1()
+mixin textGroup1(fG)
+  div(class=`textGroupOne ${fG.style}`)
+    h2= fG.title
+    p= fG.text
 
 mixin featureGroup(fG)
   div(class=`featureGroup ${fG.style}`)
     div.imgContainer
       img(link=`image/${fG.image}`)
     div.textContainer
-      +textGroup1()
+      +textGroup1(fG)
+
+mixin subheader(s)
+  div.subheader
+    h3= s.title
+    h4= s.subheader

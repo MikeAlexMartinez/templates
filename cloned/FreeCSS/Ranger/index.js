@@ -19,10 +19,8 @@ app.use(express.static('./MyCode/dist'));
 
 // home route
 app.get('/', function homePage(req, res) {
-  
-  const socialItems = appData.socialItems;
 
-  res.render('home', {title: "RangerClone - Home", socialItems: footer.socialItems});
+  res.render('home', {title: "RangerClone - Home", data: appData});
 });
 
 app.listen(3000, () => console.log('App listening on port 3000!'));

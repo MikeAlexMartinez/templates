@@ -1,3 +1,18 @@
 .navigation {
-  background-color: #fff;
+
+  .brand {
+    margin: 15px;
+    float: left;
+  }
+
+  ul {
+   
+    float: right;
+
+    li {
+      margin: 15px;
+      display: inline-block;
+      text-decoration: none;
+    }
+  }
 }

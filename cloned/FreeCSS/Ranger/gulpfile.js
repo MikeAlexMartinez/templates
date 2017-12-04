@@ -78,6 +78,7 @@ gulp.task('watch', function() {
   gulp.watch(['./MyCode/src/sass/*.scss',
               './MyCode/src/sass/**/*.scss'
             ], ['sass']);
+  gulp.watch(['./MyCode/src/js/*.js'], ['js:app']);
 });
 
 gulp.task('default', ['sass','js:app', 'js:vendor']);

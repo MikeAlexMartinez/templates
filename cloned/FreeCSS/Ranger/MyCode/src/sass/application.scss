@@ -1,3 +1,8 @@
+/* import libs */
+@import "animate.css/animate",
+        "normalize.css/normalize",
+        "simple-line-icons/scss/simple-line-icons"; // From node_modules
+
 /* base */
 @import "base/vars",
         "base/base";
@@ -7,7 +12,3 @@
 
 /* Sections */
 @import "sections/all";
-
-/* import libs */
-@import "node_modules/animate.css/animate",
-        "node_modules/normalize.css/normalize";

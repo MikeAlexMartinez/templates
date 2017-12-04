@@ -1,0 +1,22 @@
+/* clearfix - source: https://css-tricks.com/snippets/css/clear-fix/ */
+.cf:before,
+.cf:after {
+  content: "";
+  display: table;
+} 
+.cf:after {
+  clear: both;
+}
+.cf {
+  zoom: 1; /* For IE 6/7 (trigger hasLayout) */
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  text-align: center;
+  font-family: $main-font;
+  font-size: $main-font-size;
+}

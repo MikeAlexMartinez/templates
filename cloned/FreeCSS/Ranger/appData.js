@@ -1,38 +1,41 @@
-const socialItems = [
-  {
-    link: "https://www.facebook.com/michaelalexandermartinez",
-    icon: "icon-facebook"
-  },
-  {
-    link: "https://twitter.com/MikeAlMartinez",
-    icon: "icon-twitter"
-  },
-  {
-    link: "https://www.linkedin.com/in/michael-alexander-martinez-b9073742",
-    icon: "icon-linkedin2"
-  },
-  {
-    link: "https://plus.google.com/u/0/106701963549260967393",
-    icon: "icon-google-plus"
-  },
-  {
-    link: "https://github.com/MikeAlexMartinez",
-    icon: "icon-github"
-  },
-];
-
 const sections = {
+  footer: {
+    socialItems: [
+      {
+        link: "https://www.facebook.com/michaelalexandermartinez",
+        icon: "icon-facebook"
+      },
+      {
+        link: "https://twitter.com/MikeAlMartinez",
+        icon: "icon-twitter"
+      },
+      {
+        link: "https://www.linkedin.com/in/michael-alexander-martinez-b9073742",
+        icon: "icon-linkedin2"
+      },
+      {
+        link: "https://plus.google.com/u/0/106701963549260967393",
+        icon: "icon-google-plus"
+      },
+      {
+        link: "https://github.com/MikeAlexMartinez",
+        icon: "icon-github"
+      },
+    ]
+  },
   hero: {
     featureGroups: [
       {
         title: 'App for Android',
         text: '100% Free Fully Responsive HTML5 Bootstrap Template. Crafted with love by the fine folks at FREEHTML5.co',
-        image: 'android.png'
+        image: 'android.png',
+        style: 'default',
       },
       {
         title: 'App for iOS',
         text: '100% Free Fully Responsive HTML5 Bootstrap Template. Crafted with love by the fine folks at FREEHTML5.co',
-        image: 'ios.png'
+        image: 'ios.png',
+        style: 'alt',
       }
     ]
   },

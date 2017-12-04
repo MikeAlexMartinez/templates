@@ -1,14 +1,13 @@
 'use strict'
 
 const express = require('express');
-const favicon = require('serve-favicon');
 const path = require('path');
 
+// data for Ranger home page
 const appData = require('./appData');
 
 // initiate express app
 const app = express();
-
 
 // tell express where templates are kept.
 app.set('views', './MyCode/dist/templates');
@@ -23,7 +22,7 @@ app.get('/', function homePage(req, res) {
   
   const socialItems = appData.socialItems;
 
-  res.render('home', {title: "RangerClone - Home", socialItems: socialItems});
+  res.render('home', {title: "RangerClone - Home", socialItems: footer.socialItems});
 });
 
 app.listen(3000, () => console.log('App listening on port 3000!'));

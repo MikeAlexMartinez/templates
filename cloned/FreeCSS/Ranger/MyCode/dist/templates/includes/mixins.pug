@@ -2,3 +2,12 @@ mixin socialItem(s)
   div(class="socialItem")
     a(href=s.link)
       span(class=`${s.icon}`)
+
+mixin textGroup1()
+
+mixin featureGroup(fG)
+  div(class=`featureGroup ${fG.style}`)
+    div.imgContainer
+      img(link=`image/${fG.image}`)
+    div.textContainer
+      +textGroup1()

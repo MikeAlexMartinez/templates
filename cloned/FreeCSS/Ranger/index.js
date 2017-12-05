@@ -20,7 +20,7 @@ app.use(express.static('./MyCode/dist'));
 // home route
 app.get('/', function homePage(req, res) {
 
-  res.render('home', {title: "RangerClone - Home", data: appData});
+  res.render('home', {title: "RangerClone - Home", data: appData.data });
 });
 
 app.listen(3000, () => console.log('App listening on port 3000!'));

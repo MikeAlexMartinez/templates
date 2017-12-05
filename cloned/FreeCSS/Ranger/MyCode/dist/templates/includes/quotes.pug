@@ -1,0 +1,7 @@
+include ./mixins
+
+section#quotes.quotes
+  +subheader(data.quotes)
+  div.quotesContainer
+    each quote in data.quotes.quoteGroups
+      +quoteGroup(quote)

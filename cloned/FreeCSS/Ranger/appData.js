@@ -11,7 +11,7 @@ const sections = {
       },
       {
         link: "https://www.linkedin.com/in/michael-alexander-martinez-b9073742",
-        icon: "icon-linkedin2"
+        icon: "icon-linkedin"
       },
       {
         link: "https://plus.google.com/u/0/106701963549260967393",
@@ -30,12 +30,14 @@ const sections = {
         text: '100% Free Fully Responsive HTML5 Bootstrap Template. Crafted with love by the fine folks at FREEHTML5.co',
         image: 'android.png',
         style: 'default',
+        button: 'View Case Study',
       },
       {
         title: 'App for iOS',
         text: '100% Free Fully Responsive HTML5 Bootstrap Template. Crafted with love by the fine folks at FREEHTML5.co',
         image: 'ios.png',
         style: 'alt',
+        button: 'View Case Study',
       }
     ]
   },
@@ -45,23 +47,26 @@ const sections = {
     textGroups: [
       {
         icon: 'simple-icon-mustache',
+        color: 'green',
         title: '100% free',
         detail: 'Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean'
       },
       {
         icon: 'simple-icon-heart',
+        color: 'green',
         title: 'Made with love',
         detail: 'Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean'
       },
       {
-        img: 'simple-icon-pc',
+        icon: 'simple-icon-screen-desktop',
+        color: 'blue',
         title: 'Fully responsive',
         detail: 'Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean'
       }
     ]
   },
   screenshots: {
-    title: "Our Services",
+    title: "App Screenshots",
     subheader: "Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.",
     images: [
       'screen-1-1-login.jpg',
@@ -76,22 +81,25 @@ const sections = {
   tour: {
     featureGroups: [
       {
-        header: 'We create beautiful web and mobile apps.',
+        title: 'We create beautiful web and mobile apps.',
         text: 'Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.',
         image: 'screen-1-1-login.jpg',
-        style: 'default'
+        style: 'default',
+        button: 'Learn more',
       },
       {
-        header: 'We create beautiful web and mobile apps.',
+        title: 'We create beautiful web and mobile apps.',
         text: 'Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.',
         image: 'screen-1-8-list.jpg',
-        style: 'alt'
+        style: 'alt',
+        button: 'Learn more',
       },
       {
-        header: 'We create beautiful web and mobile apps.',
+        title: 'We create beautiful web and mobile apps.',
         text: 'Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.',
         image: 'screen-3-7-groups.jpg',
-        style: 'default'
+        style: 'default',
+        button: 'Learn more',
       },
     ]
   },
@@ -100,56 +108,56 @@ const sections = {
     subheader: 'Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.',
     featureGroups: [
       {
-        icon: 'icon-present',
+        icon: 'simple-icon-present',
         title: '100% Free',
-        text: 'Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.',
+        detail: 'Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.',
       },
       {
-        icon: 'icon-eye',
+        icon: 'simple-icon-eye',
         title: 'Retina Ready',
-        text: 'Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.',
+        detail: 'Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.',
       },
       {
-        icon: 'icon-responsive',
-        title: '100% Free',
-        text: 'Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.',
+        icon: 'simple-icon-crop',
+        title: 'Fully Responsive',
+        detail: 'Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.',
       },
       {
-        icon: 'icon-present',
-        title: '100% Free',
-        text: 'Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.',
+        icon: 'simple-icon-speedometer',
+        title: 'Lightweight',
+        detail: 'Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.',
       },
       {
-        icon: 'icon-present',
-        title: '100% Free',
-        text: 'Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.',
+        icon: 'simple-icon-heart',
+        title: 'Made with Love',
+        detail: 'Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.',
       },
       {
-        icon: 'icon-present',
-        title: '100% Free',
-        text: 'Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.',
+        icon: 'simple-icon-umbrella',
+        title: 'Eco Friendly',
+        detail: 'Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.',
       },
     ]
   },
   quotes: {
     title: 'Happy Clients Say...',
     subheader: 'Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.',
-    quotesGroups: [
+    quoteGroups: [
       {
         quote: 'Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.',
-        name: 'John Doe',
+        name: 'John Doe, CEO',
         company: 'FREEHTML5.co',
         role: 'Creative Director',
       },
       {
         quote: 'Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.',
-        name: 'John Doe',
+        name: 'John Doe, CEO',
         company: 'FREEHTML5.co',
         role: 'Creative Director',
       },
       {
         quote: 'Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.',
-        name: 'John Doe',
+        name: 'John Doe, Founder',
         company: 'FREEHTML5.co',
         role: 'Creative Director',
       }
@@ -212,5 +220,5 @@ const sections = {
 };
 
 module.exports = {
-  socialItems: socialItems
+  data: sections
 };

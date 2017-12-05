@@ -7,13 +7,56 @@ mixin textGroup1(fG)
   div(class=`textGroupOne ${fG.style}`)
     h2= fG.title
     p= fG.text
+    button= fG.button
+
+mixin textGroup2(services)
+  each tG in services
+    div.textGroup2
+      div.simpleIcon
+        span(class=`${tG.icon} ${tG.color}`)
+      div.header
+        h5= tG.title
+      div.text
+        p= tG.detail
+
+mixin textGroup3(f)
+  div.textGroup3
+    div.simpleIcon
+      span(class=`${f.icon} default`)
+    div.header
+      h5= f.title
+    div.text
+      p= f.detail
 
 mixin featureGroup(fG)
   div(class=`featureGroup ${fG.style}`)
     div.imgContainer
-      img(link=`image/${fG.image}`)
+      img(src=`images/${fG.image}`)
     div.textContainer
       +textGroup1(fG)
+
+mixin quoteGroup(q)
+  div.quoteGroup
+    div.quote
+      p= q.quote
+      div.point
+    div.speaker
+      p
+        span= q.name
+        = q.company
+      p= q.role
+
+mixin pricingGroup(pG)
+  if pG.bestValue
+    div(class=`pricingGroup bestValue`)
+  else
+    div(class=`pricingGroup`)
+      h6= pG.title
+      div.price
+        p
+          span.dollar= `$`
+          span.val= pG.price
+          span.period= `/mo`
 
 mixin subheader(s)
   div.subheader

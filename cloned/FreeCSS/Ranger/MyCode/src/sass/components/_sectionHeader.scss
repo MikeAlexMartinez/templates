@@ -1,5 +1,21 @@
 .subheader { 
   padding-top: 100px;
-  width: 50%;
-  margin-left: 25%;
+  width: 70%;
+  margin-left: 15%;
+  line-height: 46px;
+  
+  h3 {
+    text-transform: uppercase;
+    font-family: $header-font;
+    font-size: $header-font-size;
+    font-weight: 300;
+    color: $font-faded;
+  }
+
+  h4 {
+    font-family: $main-font;
+    font-size: $subheader-font-size;
+    font-weight: 300;
+    color: $font-lightgrey;
+  }
 }

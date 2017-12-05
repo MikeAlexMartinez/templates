@@ -57,6 +57,12 @@ mixin pricingGroup(pG)
           span.dollar= `$`
           span.val= pG.price
           span.period= `/mo`
+      div.description
+        p= pG.description
+      div.pricingFeatures
+        each f in pG.features
+          p= f
+      button(class=`btn ${pG.bestValue ? 'active' : 'clear'}`) Get Started
 
 mixin subheader(s)
   div.subheader

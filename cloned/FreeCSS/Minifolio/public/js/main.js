@@ -68,6 +68,15 @@ $(document).ready(function() {
           $('#toast').addClass('error');
           $('#toast').html(`<p class="message">${data.error}</p>`);
         }
+      }).fail(function(err) {
+        const res = err.responseJSON;
+        if(res.error && res.error !== '') {
+          $('#toast').addClass('error');
+          $('#toast').html(`<p class="message">${res.error}</p>`);
+        } else {
+          $('#toast').addClass('error');
+          $('#toast').html(`<p class="message">"Error Encountered! Please try again later"</p>`);
+        }
       });
     });
   }

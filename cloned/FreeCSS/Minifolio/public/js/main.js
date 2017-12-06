@@ -57,7 +57,7 @@ $(document).ready(function() {
         message: $('#form-message').val(),
       };
 
-      const posting = $.post('/submitForm', data, "json");
+      const posting = $.post('/api/submitForm', data, "json");
 
       posting.done(function(data) {
         if(data.success) {

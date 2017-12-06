@@ -7,20 +7,20 @@ mixin textGroup1(fG)
   div(class=`textGroupOne ${fG.style}`)
     h2= fG.title
     p= fG.text
-    button= fG.button
+    button.btn.active= fG.button
 
-mixin textGroup2(services)
+mixin textGroupTwo(services)
   each tG in services
-    div.textGroup2
-      div.simpleIcon
+    div.textGroupTwo
+      div(class=`simpleIcon ${tG.color}`)
         span(class=`${tG.icon} ${tG.color}`)
       div.header
         h5= tG.title
       div.text
         p= tG.detail
 
-mixin textGroup3(f)
-  div.textGroup3
+mixin textGroupThree(f)
+  div.textGroupThree
     div.simpleIcon
       span(class=`${f.icon} default`)
     div.header
@@ -29,11 +29,19 @@ mixin textGroup3(f)
       p= f.detail
 
 mixin featureGroup(fG)
+  //- If orientation is missing from fG render
+  //- containers in reverse order 
   div(class=`featureGroup ${fG.style}`)
-    div.imgContainer
-      img(src=`images/${fG.image}`)
-    div.textContainer
-      +textGroup1(fG)
+    if fG.orientation
+      div(class=`imgContainer ${fG.style}`)
+        img(src=`images/${fG.image}`)
+      div(class=`textContainer ${fG.style}`)
+        +textGroup1(fG)
+    else
+      div(class=`textContainer ${fG.style}`)
+        +textGroup1(fG)
+      div(class=`imgContainer ${fG.style}`)
+        img(src=`images/${fG.image}`)
 
 mixin quoteGroup(q)
   div.quoteGroup

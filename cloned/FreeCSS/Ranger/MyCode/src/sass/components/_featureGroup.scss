@@ -1,0 +1,53 @@
+.featureGroup {
+  
+    .imgContainer,
+    .textContainer {
+      display: inline-block;
+    }
+    .imgContainer {
+      width: 40%;
+      padding: 100px 100px 100px 10%;
+      height: 700px;
+      
+      &.alt {
+        padding: 100px 100px 100px 50px; 
+      }
+
+      img {
+        max-height: 100%;
+        max-width: 100%;
+        min-height: 500px;
+        min-width: auto;
+        object-fit: contain;
+  
+        box-shadow: 0px 0px 40px #919191;
+      }
+    }
+    .textContainer {
+      padding-top: 80px;
+      vertical-align: top;
+      width: 40%;
+
+      &.alt {
+        width: 40%;
+        margin-left: 20%; 
+      }
+    }
+  
+    .textGroupOne {
+      text-align: left;
+  
+      h2 {
+        color: #000;
+        font-size: 40px;
+        font-weight: 400;
+      }
+  
+      p {
+        color: $font-lightgrey;
+        font-size: 18px;
+        line-height: 30px;
+  
+      }
+    }
+  }

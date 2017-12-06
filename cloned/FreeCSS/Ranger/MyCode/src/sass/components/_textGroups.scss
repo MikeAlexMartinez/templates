@@ -1,5 +1,23 @@
-.textGroup2 {
+.textGroupTwo {
   display: inline-block;
   width: 30%;
-  padding: 50px 25px; 
+  padding: 50px 30px;
+
+  font-family: $main-font;
+  font-size: 17px;
+  line-height: 30px;
+  font-weight: 400;
+  color: $font-lightgrey;
+
+  h5 {
+    font-family: $main-font;
+    font-size: 20px;
+    line-height: 22px;
+    font-weight: 400;
+    color: $font-faded;
+  }
+}
+
+.textGroupThree {
+  
 }

@@ -53,7 +53,7 @@ const sections = {
       },
       {
         icon: 'simple-icon-heart',
-        color: 'green',
+        color: 'red',
         title: 'Made with love',
         detail: 'Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean'
       },
@@ -86,6 +86,7 @@ const sections = {
         image: 'screen-1-1-login.jpg',
         style: 'default',
         button: 'Learn more',
+        orientation: 'left',
       },
       {
         title: 'We create beautiful web and mobile apps.',
@@ -100,13 +101,14 @@ const sections = {
         image: 'screen-3-7-groups.jpg',
         style: 'default',
         button: 'Learn more',
+        orientation: 'left',
       },
     ]
   },
   features: {
     title: 'Features',
     subheader: 'Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.',
-    featureGroups: [
+    textGroups: [
       {
         icon: 'simple-icon-present',
         title: '100% Free',

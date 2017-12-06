@@ -1,10 +1,10 @@
 /* base */
-@import "base/vars",
+@import "normalize.css/normalize",
+        "base/vars",
         "base/base";
 
 /* import libs */
 @import "animate.css/animate",
-        "normalize.css/normalize",
         "simple-line-icons/scss/simple-line-icons"; // From node_modules
 
 /* Components */

@@ -1,5 +1,6 @@
 include ./mixins.pug
 
 section#tour.tour
-  each fG in data.tour.featureGroups
-    +featureGroup(fG)
+  div.container
+    each fG in data.tour.featureGroups
+      +featureGroup(fG)

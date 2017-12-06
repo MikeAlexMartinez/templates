@@ -11,7 +11,7 @@ module.exports = function fetchDb(cb) {
     cb(),
     (err) => {
       console.error('Please make sure your MongoDB configuration is correct and that service is running');
-      throw error;
+      throw err;
     }
   );
 };

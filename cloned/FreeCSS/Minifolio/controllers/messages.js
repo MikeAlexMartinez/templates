@@ -7,8 +7,8 @@ exports.submit = (req, res) => {
     if(err) {
       console.log("Error connecting to database!");
       const message = req.body;
-      
-      message.error = "Error connecting to database";
+
+      message.error = "Error connecting to database, please retry later.";
       res.status(500).send(message);
     }
 

@@ -12,6 +12,8 @@ const messageSchema = new Schema({
   important: { type: Boolean, default: false },
   replied: { type: Boolean, default: false },
   source: String,
+  success: { type: String, default: '' },
+  error: { type: String, default: '' },
 });
 
 const Message = mongoose.model('Message', messageSchema);

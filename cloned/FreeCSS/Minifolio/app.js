@@ -11,7 +11,7 @@ const bodyParser = require('body-parser');
 const db = require('./controllers/db');
 
 // require routes
-const routes = require('./controllers');
+const routes = require('./routes');
 
 // initiate express app
 const app = express();

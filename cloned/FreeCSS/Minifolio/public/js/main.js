@@ -57,9 +57,10 @@ $(document).ready(function() {
         message: $('#form-message').val(),
       };
 
-      const posting = $.post('/api/submitForm', data, "json");
+      const posting = $.post('/api/message', data, "json");
 
       posting.done(function(data) {
+        console.log(data);
         if(data.success) {
           $('#toast').addClass('success');
           $('#toast').html(`<p class="message">${data.success}</p>`);

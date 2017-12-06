@@ -1,10 +1,10 @@
 const express = require('express')
     , router = express.Router();
 
-const messsages = require('./messages');
+const messages = require('../controllers/messages');
 
 router
   .route('/message')
-  .post(messages);
+  .post(messages.submit);
 
 module.exports = router;

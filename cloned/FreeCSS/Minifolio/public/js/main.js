@@ -61,20 +61,18 @@ $(document).ready(function() {
 
       posting.done(function(data) {
         console.log(data);
+        $('#toast').addClass('success');
         if(data.success && data.success !== '') {
-          $('#toast').addClass('success');
           $('#toast').html(`<p class="message">${data.success}</p>`);
         } else {
-          $('#toast').addClass('error');
-          $('#toast').html(`<p class="message">${data.error}</p>`);
+          $('#toast').html(`<p class="message">"Message Submitted!"</p>`);
         }
       }).fail(function(err) {
+        $('#toast').addClass('error');
         const res = err.responseJSON;
         if(res.error && res.error !== '') {
-          $('#toast').addClass('error');
           $('#toast').html(`<p class="message">${res.error}</p>`);
         } else {
-          $('#toast').addClass('error');
           $('#toast').html(`<p class="message">"Error Encountered! Please try again later"</p>`);
         }
       });

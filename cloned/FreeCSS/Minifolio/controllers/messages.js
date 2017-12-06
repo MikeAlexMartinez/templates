@@ -16,7 +16,6 @@ exports.submit = (req, res) => {
     
     newMessage.source = 'Minifolio';  
     newMessage.date = new Date();
-    console.log(newMessage);
     
     const message = new Message(newMessage);
     

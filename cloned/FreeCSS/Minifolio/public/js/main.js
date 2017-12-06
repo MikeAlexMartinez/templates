@@ -61,7 +61,7 @@ $(document).ready(function() {
 
       posting.done(function(data) {
         console.log(data);
-        if(data.success) {
+        if(data.success && data.success !== '') {
           $('#toast').addClass('success');
           $('#toast').html(`<p class="message">${data.success}</p>`);
         } else {

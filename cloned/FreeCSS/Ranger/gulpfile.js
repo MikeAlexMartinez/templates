@@ -39,13 +39,13 @@ gulp.task('js:vendor', () => {
       .pipe(uglify())
       .on('error', gutil.log)
     .pipe(sourcemaps.write('./maps'))
-    .pipe(gulp.dest('./MyCode/dist/js/'));  
+    .pipe(gulp.dest('./public/js/'));  
 
 });
 
 gulp.task('js:app', () => {
   browserify({
-    entries: ['./MyCode/src/js/main.js'],
+    entries: ['./src/js/main.js'],
     extensions: ['.js'],
     debug: true
   })
@@ -57,7 +57,7 @@ gulp.task('js:app', () => {
       .pipe(uglify())
       .on('error', gutil.log)
     .pipe(sourcemaps.write('./maps'))
-    .pipe(gulp.dest('./MyCode/dist/js/'))
+    .pipe(gulp.dest('./public/js/'))
 });
 
 /** 
@@ -65,20 +65,20 @@ gulp.task('js:app', () => {
  *  sourcmaps to allow for easier debugging.
  **/
 gulp.task('sass', function() {
-  return gulp.src('./MyCode/src/sass/*.scss')
+  return gulp.src('./src/sass/*.scss')
     .pipe(sourcemaps.init())
     .pipe(sass({
       includePaths: ['node_modules']
     }).on('error', sass.logError))
     .pipe(sourcemaps.write())
-    .pipe(gulp.dest('./MyCode/dist/css'));
+    .pipe(gulp.dest('./public/css'));
 });
 
 gulp.task('watch', function() {
-  gulp.watch(['./MyCode/src/sass/*.scss',
-              './MyCode/src/sass/**/*.scss'
+  gulp.watch(['./src/sass/*.scss',
+              './src/sass/**/*.scss'
             ], ['sass']);
-  gulp.watch(['./MyCode/src/js/*.js'], ['js:app']);
+  gulp.watch(['./src/js/*.js'], ['js:app']);
 });
 
 gulp.task('default', ['sass','js:app', 'js:vendor']);

@@ -23,10 +23,11 @@ mixin textGroupThree(f)
   div.textGroupThree
     div.simpleIcon
       span(class=`${f.icon} default`)
-    div.header
-      h5= f.title
-    div.text
-      p= f.detail
+    div.textContainer
+      div.header
+        h5= f.title
+      div.text
+        p= f.detail
 
 mixin featureGroup(fG)
   //- If orientation is missing from fG render

@@ -19,5 +19,23 @@
 }
 
 .textGroupThree {
+  display: inline-block;
+  width: 33%;
   
+  .simpleIcon {
+    vertical-align: top;
+    display: inline-block;
+    height: 100%;
+    width: 40px;
+    padding: 5px;
+    color: $icon-color-default;
+    font-size: 40px;
+  }
+
+  .textContainer {
+    vertical-align: top;
+    text-align: left;
+    display: inline-block;
+    width: 240px;
+  }
 }

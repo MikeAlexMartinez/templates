@@ -1,0 +1,51 @@
+.pricingGroupsContainer {
+  margin-left: 2.5%;
+  width: 95%;
+  
+  .pricingGroup {
+    vertical-align: top;
+    display: inline-block;
+    width: 23%;
+    margin: 1%;
+    padding: 30px 40px;
+    border-radius: 5px;
+    border: solid 2px $font-lightergrey;
+    
+    color: $font-lightgrey;
+    font-size: 17.5px;
+    line-height: 30px;
+
+    .upper {
+      border-bottom: solid 1px $font-lightergrey;
+    }
+
+    h5,
+    .price {
+      color: $black;
+      
+      p {
+        display: inline-block;
+        
+        .dollar {
+          vertical-align: top;
+        }
+        .month {
+          vertical-align: bottom;
+        }
+        
+        .value {
+          line-height: 36px;
+          font-size: 36px;
+          position: static;
+        }
+      }
+      
+    }
+    
+    h5 {
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+    }
+  }
+}

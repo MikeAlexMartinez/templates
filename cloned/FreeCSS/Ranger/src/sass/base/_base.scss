@@ -27,23 +27,26 @@
 .container,
 .grid {
 	
+	margin: 0 auto;
+	width: 1250px;
+	padding-bottom: 70px;
+	
+	@media all and (max-width: 899px) {
+		padding: 50px;
+		width: 100%;
+	}
+	@media all and (min-width: 1000px) and (max-width: 1250px) {
+		margin: 0 auto;
+		width: 1000px;
+	}
 	@media all and (min-width: 1250x) {
 		margin: 0 auto;
 		width: 1250px;
 	}
 
-	@media all and (min-width: 1000px) and (max-width: 1250px) {
-		margin: 0 auto;
-		width: 1000px;
-	}
 
-	@media all and (max-width: 899px) {
-		margin: 50px;
-		width: 100%;
-	}
 
 }
-.grid,
 .col-1-3,
 .col-2-3 {
   padding-left: 15px;

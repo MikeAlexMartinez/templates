@@ -1,2 +1,5 @@
+(function() {
+  'use strict';
+  console.log("__testing_jquery__");
 
-console.log("__testing_jquery__");
+})()

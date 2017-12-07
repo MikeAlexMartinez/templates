@@ -1,14 +1,10 @@
-.textGroupTwo {
-  display: inline-block;
-  width: 30%;
-  padding: 50px 30px;
-
+%font-styling {
   font-family: $main-font;
   font-size: 17px;
   line-height: 30px;
   font-weight: 400;
   color: $font-lightgrey;
-
+  
   h5 {
     font-family: $main-font;
     font-size: 20px;
@@ -18,15 +14,25 @@
   }
 }
 
+
+.textGroupTwo {
+  display: inline-block;
+  width: 30%;
+  padding: 0 30px 50px 30px;
+
+  @extend %font-styling;
+}
+
 .textGroupThree {
   display: inline-block;
   width: 33%;
-  
+  margin-bottom: 50px;
+
   .simpleIcon {
     vertical-align: top;
     display: inline-block;
     height: 100%;
-    width: 40px;
+    width: 50px;
     padding: 5px;
     color: $icon-color-default;
     font-size: 40px;
@@ -36,6 +42,18 @@
     vertical-align: top;
     text-align: left;
     display: inline-block;
-    width: 240px;
+    width: 290px;
+    margin-left: 20px;
+    
+    @extend %font-styling;
+    
+    h5 {
+      margin-top: 0;
+      margin-bottom: 0; 
+    }
+
+    p {
+      margin-top: 5px;
+    }
   }
 }

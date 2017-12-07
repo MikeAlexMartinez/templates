@@ -167,12 +167,12 @@ const sections = {
   },
   pricing: {
     title: 'Pricing',
-    subheader: 'Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean',
+    subheader: 'Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.',
     pricingGroups: [
       {
         title: 'Starter',
         price: 7,
-        decription: 'Basic customer support for individuals',
+        description: 'Basic customer support for individuals',
         features: [
           '10 projects',
           '20 Pages',
@@ -184,7 +184,7 @@ const sections = {
       {
         title: 'Regular',
         price: 19,
-        decription: 'Basic customer support for small businesses',
+        description: 'Basic customer support for small businesses',
         features: [
           '15 projects',
           '40 Pages',
@@ -196,7 +196,7 @@ const sections = {
       {
         title: 'Plus',
         price: 79,
-        decription: 'Premium customer support for medium businesses',
+        description: 'Premium customer support for medium businesses',
         features: [
           'Unlimited projects',
           '100 Pages',
@@ -206,9 +206,9 @@ const sections = {
         bestValue: true
       },
       {
-        title: 'Starter',
+        title: 'Enterprise',
         price: 125,
-        decription: 'Dedicated customer support for large enterprises',
+        description: 'Dedicated customer support for large enterprises',
         features: [
           'Unlimited projects',
           'Unlimited Pages',

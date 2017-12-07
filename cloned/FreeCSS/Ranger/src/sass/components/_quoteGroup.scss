@@ -1,0 +1,70 @@
+.quoteGroup {
+  vertical-align: top;
+  display: inline-block;
+  width: 30%;
+
+  .quote {
+    
+    position: relative;
+    background-color: #fff;
+    border-radius: 10px;
+    
+    margin: 10px;
+    padding: 35px;
+    
+    color: $font-lightgrey;
+    text-align: left;
+    font-style: italic;
+    font-size: 17.5px;
+    line-height: 30px;
+
+    
+    p {
+      margin: 0;
+      padding: 0;
+      quotes: "“" "”" "‘" "’";
+      
+      &:before {
+        content: open-quote;
+      }
+      &:after {
+        content: close-quote;
+      }
+    }
+    
+    &:after {
+      content:'';
+      position: absolute;
+      top: 100%;
+      left: -80%;
+      right: 0;
+      margin: 0 auto;
+      width: 0;
+      height: 0;
+      border-top: solid 15px #fff;
+      border-left: solid 15px transparent;
+      border-right: solid 15px transparent;
+    }
+  }
+
+  .speaker {
+    color: rgba(255, 255, 255, 0.5);
+    font-weight: 400;
+    text-align: left;
+    font-size: 17.5px;
+    line-height: 17.5px;
+    margin: 17px 20px;
+
+    p {
+      margin: 0;
+    }
+    span {
+      color: #fff;
+    }
+    .role {
+      padding-top: 0;
+      font-size: 15px;
+      line-height: 15px;
+    }
+  }
+}

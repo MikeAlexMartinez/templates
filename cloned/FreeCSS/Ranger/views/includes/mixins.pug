@@ -46,28 +46,26 @@ mixin featureGroup(fG)
 
 mixin quoteGroup(q)
   div.quoteGroup
-    div.quote
+    blockquote.quote
       p= q.quote
-      div.point
+      div.point.cf
     div.speaker
       p
         span= q.name
-        = q.company
-      p= q.role
+        = ` ${q.company}`
+      p.role= q.role
 
 mixin pricingGroup(pG)
-  if pG.bestValue
-    div(class=`pricingGroup bestValue`)
-  else
-    div(class=`pricingGroup`)
-      h6= pG.title
+  div(class=`pricingGroup ${pG.bestValue ? 'bestValue' : ''}`)
+    h5= pG.title
+    div.upper
       div.price
-        p
-          span.dollar= `$`
-          span.val= pG.price
-          span.period= `/mo`
+        p.dollar= `$`
+        p.value= pG.price
+        p.month= `/mo`
       div.description
         p= pG.description
+    div.lower
       div.pricingFeatures
         each f in pG.features
           p= f

@@ -1,5 +1,8 @@
-(function() {
-  'use strict';
-  console.log("__testing_jquery__");
+'use strict';
+//=include jquery.js
+//=include owl.carousel.js
+//=include noframework.waypoints.js
 
-})()
+$(document).ready(() => {
+  console.log("__testing__");
+});

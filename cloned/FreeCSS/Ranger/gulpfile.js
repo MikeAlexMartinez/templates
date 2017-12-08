@@ -1,63 +1,27 @@
 'use strict';
 
-const browserify = require('browserify');
 const gulp = require('gulp');
-
-const source = require('vinyl-source-stream');
-const buffer = require('vinyl-buffer');
-
 const uglify = require('gulp-uglify');
-
+const include = require('gulp-include');
 const sass = require('gulp-sass');
 
 const gutil = require('gulp-util');
 const sourcemaps = require('gulp-sourcemaps');
 
 /**
- * The JS gulp task creates two file, one with my source code which will change more
- * frequently and another for vendor files which will allow for longer caching of files.
- */
+ * The JS gulp task
+ **/
 
-/* JS vendor libs */
-const vendorsJs = ['jquery','waypoints/lib/noframework.waypoints','owl.carousel'];
-
-gulp.task('js:vendor', () => {
-  // set up the browserify instance on a task basis
-  const b = browserify({
-    debug: true
-  });
-
-  // require all libs from vendors array
-  vendorsJs.forEach(lib => {
-    b.require(lib);
-  });
-
-  b.bundle()
-    .pipe(source('vendor.js'))
-    .pipe(buffer())
-    .pipe(sourcemaps.init({loadMaps: true}))
-      .pipe(uglify())
-      .on('error', gutil.log)
-    .pipe(sourcemaps.write('./maps'))
-    .pipe(gulp.dest('./public/js/'));  
-
-});
-
-gulp.task('js:app', () => {
-  browserify({
-    entries: ['./src/js/main.js'],
-    extensions: ['.js'],
-    debug: true
-  })
-    .external(vendorsJs)
-    .bundle()
-    .pipe(source('main.js'))
-    .pipe(buffer())
-    .pipe(sourcemaps.init({loadMaps: true}))
-      .pipe(uglify())
-      .on('error', gutil.log)
-    .pipe(sourcemaps.write('./maps'))
-    .pipe(gulp.dest('./public/js/'))
+gulp.task("js", function() {
+  gulp.src("./src/js/main.js")
+    .pipe(include({
+      includePaths: [
+        __dirname + "/node_modules/jquery/dist",
+        __dirname + "/node_modules/owl.carousel/dist",
+        __dirname + "/node_modules/waypoints/lib"
+      ]
+    })).on('error', console.log)
+    .pipe(gulp.dest("./public/js"));
 });
 
 /** 
@@ -78,7 +42,7 @@ gulp.task('watch', function() {
   gulp.watch(['./src/sass/*.scss',
               './src/sass/**/*.scss'
             ], ['sass']);
-  gulp.watch(['./src/js/*.js'], ['js:app']);
+  gulp.watch(['./src/js/*.js'], ['js']);
 });
 
-gulp.task('default', ['sass','js:app', 'js:vendor']);
+gulp.task('default', ['sass','js']);

@@ -1,18 +1,113 @@
 .navigation {
 
-  .brand {
-    margin: 15px;
-    float: left;
+  &.top {
+    color: #fff;
+
+    .brand {
+      margin: 35px;
+      font-size: 36px;
+      float: left;
+
+      margin-left: 10%;
+
+      span {
+        color: $icon-color-default;
+      }
+    }
+  
+    ul {
+     
+      float: right;
+      margin-right: 10%;
+
+      li {
+        position: relative;
+        opacity: 0.5;
+        font-size: 22px;
+        margin: 28px 15px 20px;
+        display: inline-block;
+        text-decoration: none;
+        padding-bottom: 3px;
+
+        transition: opacity 0.2s ease-in-out 0s;
+
+        &:hover {
+          opacity: 1;
+        }
+        &:before {
+          content: "";
+          position: absolute;
+          width: 100%;
+          height: 2px;
+          bottom: 0;
+          left: 0;
+          background-color: $icon-color-default;
+          visibility: hidden;
+          transform: scaleX(0);
+          transition: all 0.2s ease-in-out 0s;
+        }
+        &:hover:before {
+          visibility: visible;
+          transform: scaleX(1);
+        }
+      }
+    }
+    
   }
 
-  ul {
-   
-    float: right;
+  &.fixed {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 3;
+    background-color: #fff;
+    box-shadow: 0px 0px 15px $font-lightgrey;
+    color: $font-lightgrey;
 
-    li {
-      margin: 15px;
-      display: inline-block;
-      text-decoration: none;
+    .brand {
+      color: $icon-color-default;
+      margin: 35px;
+      font-size: 36px;
+      float: left;
+
+      margin-left: 10%;
+    }
+  
+    ul {
+      float: right;
+      margin-right: 10%;
+
+      li {
+        position: relative;
+        font-size: 22px;
+        margin: 28px 15px 20px;
+        display: inline-block;
+        text-decoration: none;
+        padding-bottom: 3px;
+
+        transition: opacity 0.2s ease-in-out 0s;
+
+        &:hover {
+          color: $icon-color-default;
+        }
+        &:before {
+          content: "";
+          position: absolute;
+          width: 100%;
+          height: 2px;
+          bottom: 0;
+          left: 0;
+          background-color: $icon-color-default;
+          visibility: hidden;
+          transform: scaleX(0);
+          transition: all 0.2s ease-in-out 0s;
+        }
+        &:hover:before {
+          visibility: visible;
+          transform: scaleX(1);
+        }
+      }
     }
   }
+
 }

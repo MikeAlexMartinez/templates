@@ -1,0 +1,98 @@
+.pricingGroupsContainer {
+  margin-left: 2.5%;
+  width: 95%;
+  
+  .pricingGroup {
+    position: relative;
+    vertical-align: top;
+    display: inline-block;
+    width: 23%;
+    margin: 1%;
+    padding: 30px 30px;
+    border-radius: 5px;
+    border: solid 2px $font-lightergrey;
+    
+    &.bestValue {
+      border-color: $icon-color-default;
+    }
+
+    color: $font-lightgrey;
+    font-size: 20px;
+    line-height: 30px;
+
+    .bestValue {
+      position: absolute;
+      top: -40px;
+      left: 25%;
+
+      padding: 7.5px 20px;
+      border-radius: 3px;
+      background-color: $icon-color-default;
+
+      color: #fff;
+
+      &:after {
+        content:'';
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        margin: 0 auto;
+        width: 0;
+        height: 0;
+        border-top: solid 15px $icon-color-default;
+        border-left: solid 15px transparent;
+        border-right: solid 15px transparent;
+      }
+    }
+
+    .upper {
+      border-bottom: solid 1px $font-lightergrey;
+    }
+    h5,
+    .price {
+      color: $black;
+    }
+    .price {
+      position: relative;
+      height: 60px;
+      display: inline-block;
+        
+      .dollar {
+        position: absolute;
+        top: -10px;
+        left: -15px;  
+      }
+      .value {
+        line-height: 50px;
+        font-size: 50px;
+        margin: 0;
+      }
+      .month {
+        position: relative;
+        top: 5px;
+        left: 5px;  
+      }
+    }
+    
+    h5 {
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      margin-bottom: 0px;
+      margin-top: 0px;
+    }
+
+    .lower {
+      p {
+        margin: 5px;
+      }
+      p:first-child {
+        margin-top: 15px;
+      }
+      p:last-child {
+        margin-bottom: 15px;
+      }
+    }
+  }
+}

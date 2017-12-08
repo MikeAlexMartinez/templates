@@ -1,0 +1,42 @@
+.footer {
+  color: $font-lightgrey;
+  font-size: 22px;
+  line-height: 25px;
+
+  p {
+    margin: 10px;
+    
+    &:first-child {
+      margin-top: 50px;
+    }
+    
+    span,
+    a {
+      color: $icon-color-default;
+      
+    }
+    a {
+      text-decoration: none;
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+    
+  }
+  
+  .socialItem {
+    margin: 40px 10px 100px 10px;
+    display: inline-block;
+    background-color: $icon-color-default;
+    padding: 14px 16px;
+    border-radius: 50%;
+    
+    p {
+      display: inline-block; 
+    }
+    a {
+      color: #fff;
+      text-decoration: none;
+    }
+  }
+}

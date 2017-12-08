@@ -1,0 +1,32 @@
+.getStarted {
+  position: relative;
+  background-image: url("../images/hero.jpg");
+  background-size: cover;
+  
+  h4 {
+    position: relative;
+    z-index: 2;
+    color: #fff;
+    padding-top: 100px;
+    padding-bottom: 30px; 
+    font-size: 40px;
+    font-weight: 500;
+  }
+
+  button {
+    position: relative;
+    z-index: 2;
+    margin-bottom: 30px;
+  }
+
+  .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: #000;
+    opacity: 0.3;
+  }
+
+}

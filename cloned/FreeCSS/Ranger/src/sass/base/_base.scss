@@ -135,10 +135,15 @@ body {
 		border: solid 1px $font-lightgrey;
 	}
 
+	&.lrg {
+		padding: 20px 32px;
+		font-size: 20px;
+	}
+
 	&:hover {
 		background-color: $btn-hover;
 		color: #fff;
-		transition: all 0.6s ease;
+		transition: all 0.4s linear;
 	}
 
 }

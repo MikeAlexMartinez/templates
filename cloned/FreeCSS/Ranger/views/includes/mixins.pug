@@ -57,11 +57,15 @@ mixin quoteGroup(q)
 
 mixin pricingGroup(pG)
   div(class=`pricingGroup ${pG.bestValue ? 'bestValue' : ''}`)
+    if pG.bestValue
+      div.bestValue Best value
     h5= pG.title
     div.upper
       div.price
         p.dollar= `$`
+      div.price
         p.value= pG.price
+      div.price
         p.month= `/mo`
       div.description
         p= pG.description

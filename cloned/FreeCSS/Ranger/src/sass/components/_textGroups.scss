@@ -1,13 +1,13 @@
 %font-styling {
   font-family: $main-font;
-  font-size: 17px;
+  font-size: $main-font-size;
   line-height: 30px;
   font-weight: 400;
   color: $font-lightgrey;
   
   h5 {
     font-family: $main-font;
-    font-size: 20px;
+    font-size: $main-font-size;
     line-height: 22px;
     font-weight: 400;
     color: $font-faded;

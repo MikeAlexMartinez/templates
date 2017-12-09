@@ -30,13 +30,19 @@
     background-color: $icon-color-default;
     padding: 14px 16px;
     border-radius: 50%;
-    
+
+    transition: background-color 0.5s linear;
+
     p {
       display: inline-block; 
     }
     a {
       color: #fff;
       text-decoration: none;
+    }
+
+    &:hover {
+      background-color: $btn-hover;
     }
   }
 }

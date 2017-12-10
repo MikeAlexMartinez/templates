@@ -15,12 +15,14 @@ $(document).ready(() => {
         navbar.addClass('fixed');
         setTimeout(function() {
           navbar.addClass('show');
+          navbar.removeClass('top')
         }, 300);
       } else {
         navbar.removeClass('show');
         setTimeout(function() {
           navbar.removeClass('fixed');
-        }, 10);
+          navbar.addClass('top');
+        }, 300);
       }
       
     },
@@ -66,7 +68,6 @@ $(document).ready(() => {
   .not('[href="#"]')
   .not('[href="#0"]')
   .click(function(event) {
-    console.log("Click");
     // On-page links
     if (
       location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') 
@@ -96,6 +97,15 @@ $(document).ready(() => {
         });
       }
     }
+  });
+
+  // toggle menu icon
+  $('#menu-icon').click(function() {
+    
+    // for smaller screens show alternate menu
+    $(this).toggleClass('open');
+    $('#links').toggleClass('visible');
+
   });
 
 });

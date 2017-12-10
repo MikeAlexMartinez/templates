@@ -1,8 +1,19 @@
+// Navigation
 div#navigation.navigation.top
+  // Logo
   div.brand 
     | Ranger
     span .
-  div.nav-links
+
+  // Hamburger menu - hidden on widescreen
+  div.menu
+    div#menu-icon
+      span
+      span
+      span
+
+  // Links 
+  div#links.nav-links
     ul
       li#nav-home.active
         a(href="#home") Home

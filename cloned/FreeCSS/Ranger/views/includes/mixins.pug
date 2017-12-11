@@ -83,3 +83,16 @@ mixin subheader(s)
 mixin carouselImages(img)
   div(class=`screenshotImage` style=``)
     img(src=`images/${img}`)
+
+mixin carouselFeatureGroup(fG)
+  //- If orientation is missing from fG render
+  //- containers in reverse order 
+  div(class=`carouselFeatureGroup ${fG.style}`)
+    if fG.orientation
+      div(class=`imgContainer ${fG.style}`)
+      div(class=`textContainer ${fG.style}`)
+        +textGroup1(fG)
+    else
+      div(class=`textContainer ${fG.style}`)
+        +textGroup1(fG)
+      div(class=`imgContainer ${fG.style}`)

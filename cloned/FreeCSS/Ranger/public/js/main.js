@@ -15044,7 +15044,7 @@ https://github.com/imakewebthings/waypoints/blob/master/licenses.txt
 $(document).ready(() => {
   console.log("__testing__");
 
-  const navWaypoint = new Waypoint({
+  /*const navWaypoint = new Waypoint({
     element: document.getElementById('services'),
     handler: function(direction) {
       const navbar = $('#navigation');
@@ -15065,7 +15065,7 @@ $(document).ready(() => {
       
     },
     offset: '13%'
-  });
+  });*/
 
   const segments = ["home", "services", "screenshots", "tour", "features", "testimonial", "pricing"];
 
@@ -15142,7 +15142,8 @@ $(document).ready(() => {
     
     // for smaller screens show alternate menu
     $(this).toggleClass('open');
-    $('#links').toggleClass('visible');
+    $('.linksContainer').toggleClass('hidden');
+    $('.brand-burger-container').toggleClass('unshadow');
 
   });
 
@@ -15150,8 +15151,9 @@ $(document).ready(() => {
   // Hero
   $('#carouselOne').owlCarousel({
     center: true,
-    items: 2,
-  })
+    items: 1,
+  });
+
 
   // screenshots owl carousel code
   const screenshotOwl = $('#carouselTwo');
@@ -15178,8 +15180,8 @@ $(document).ready(() => {
   });
   
   // hack to force showing of owl-carousel dots
-  screenshotOwl.find('.owl-dots').removeClass('disabled');
-  screenshotOwl.on('changed.owl.carousel', function(event) {
+  $('.owl-carousel').find('.owl-dots').removeClass('disabled');
+  $('.owl-carousel').on('changed.owl.carousel', function(event) {
     $(this).find('.owl-dots').removeClass('disabled');
   });
   

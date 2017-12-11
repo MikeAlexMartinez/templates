@@ -1,20 +1,6 @@
 .screenshots {
   background: $bg-darkgrey;
 
-  // Customise owl carousel dot styles
-  .owl-dots {
-    margin-top: 40px;
-    margin-bottom: 40px;
-  }
-  .owl-carousel.owl-theme .owl-dots .owl-dot span {
-    background-color: $font-lightgrey;
-  }
-  .owl-carousel.owl-theme .owl-dots .owl-dot.active span, 
-  .owl-carousel.owl-theme .owl-dots .owl-dot:hover span {
-    background-color: $dot-background-active;
-    border: 2px solid #fff;
-  }
-
   // Screenshots Owl-carousel customisations
   #carouselTwo {
 

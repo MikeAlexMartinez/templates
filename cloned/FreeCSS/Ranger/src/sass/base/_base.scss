@@ -26,13 +26,12 @@
 }
 .container,
 .grid {
-	
 	margin: 0 auto;
 	width: 1250px;
 	padding-bottom: 70px;
 	
 	@media all and (max-width: 899px) {
-		padding: 50px;
+		padding: 0px;
 		width: 100%;
 	}
 	@media all and (min-width: 1000px) and (max-width: 1250px) {
@@ -43,9 +42,6 @@
 		margin: 0 auto;
 		width: 1250px;
 	}
-
-
-
 }
 .col-1-3,
 .col-2-3 {
@@ -68,6 +64,12 @@ body {
   text-align: center;
   font-family: $main-font;
   font-size: $main-font-size;
+}
+.content {
+	@media all and (max-width: 899px) {
+		position: relative;
+		top: -305px;
+	}
 }
 
 /*
@@ -147,3 +149,19 @@ body {
 	}
 
 }
+
+// Customise owl carousel dot styles
+.owl-dots {
+	display: inline-block;
+	margin-top: 40px;
+	margin-bottom: 40px;
+}
+.owl-carousel.owl-theme .owl-dots .owl-dot span {
+	background-color: $font-lightgrey;
+}
+.owl-carousel.owl-theme .owl-dots .owl-dot.active span, 
+.owl-carousel.owl-theme .owl-dots .owl-dot:hover span {
+	background-color: $dot-background-active;
+	border: 2px solid #fff;
+}
+

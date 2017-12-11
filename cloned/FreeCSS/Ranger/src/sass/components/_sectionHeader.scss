@@ -5,6 +5,10 @@
   margin-bottom: 50px;
   line-height: 46px;
   
+  .screenshots & {
+    margin-bottom: 0;
+  }
+
   h3 {
     text-transform: uppercase;
     font-family: $header-font;

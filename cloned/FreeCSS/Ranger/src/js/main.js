@@ -108,6 +108,50 @@ $(document).ready(() => {
 
   });
 
+  // Owl Carousels
+  // Hero
+  $('#carouselOne').owlCarousel({
+    center: true,
+    items: 2,
+  })
+
+  // screenshots owl carousel code
+  const screenshotOwl = $('#carouselTwo');
+  
+  screenshotOwl.owlCarousel({
+    center: true,
+    margin: 30,
+    dots: true,
+    mouseDrag: false,
+    touchDrag: false,
+    pullDrag: false,
+    responsiveClass: true,
+    responsive: {
+      0: {
+        items: 1,
+      },
+      695: {
+        items: 3,
+      },
+      1000: {
+        items: 5,
+      }
+    }
+  });
+  
+  // hack to force showing of owl-carousel dots
+  screenshotOwl.find('.owl-dots').removeClass('disabled');
+  screenshotOwl.on('changed.owl.carousel', function(event) {
+    $(this).find('.owl-dots').removeClass('disabled');
+  });
+  
+  // create on click scrolling
+  const clickScreenshotOwl = $('.owl-item');
+  clickScreenshotOwl.click(function(evt) {
+    const index = clickScreenshotOwl.index(this) -2;
+    
+    screenshotOwl.trigger('to.owl.carousel', [index, 300]);
+  });
 });
 
 function switchNavlink(id) {

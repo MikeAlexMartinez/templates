@@ -39,3 +39,6 @@ $simple-line-font-path: "../fonts/simple-line-icons/";
 $simple-line-font-family: "simple-line-icons";
 /* changed to simple-icon- from icon- to prevent clashes with icomoon */
 $simple-line-icon-prefix: "simple-icon-";
+
+/* Override owl-carousel default styles */
+$dot-background-active: transparent;

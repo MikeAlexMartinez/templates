@@ -15143,7 +15143,7 @@ $(document).ready(() => {
     // for smaller screens show alternate menu
     $(this).toggleClass('open');
     $('.linksContainer').toggleClass('hidden');
-    $('.brand-burger-container').toggleClass('unshadow');
+    $('.brand-container').toggleClass('unshadow');
 
   });
 

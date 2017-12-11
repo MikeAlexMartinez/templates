@@ -94,7 +94,7 @@
   }
 
   .nav-links {
-    right: $px;
+    padding-right: $px;
   }
 }
 
@@ -118,11 +118,12 @@
   & > .container {
     background-color: $bg-purple;
     position: relative;
+    width: 100%;
 
-    .brand-burger-container {
+    .brand-container {
       // hamburger menu not visible on wider screens
       @include hamburger(none);
-      
+      text-align: left;
       position: absolute;
       display: inline-block;
       top: 0px;
@@ -153,11 +154,13 @@
       width: 80%;
 
       & > ul {
+        text-align: right;
         list-style: none;
         
         & > li {
           position: relative;
           display: inline-block;
+          text-align: right;
           padding: 10px 0 3px 0;
           margin: 0 6px;
 
@@ -201,7 +204,7 @@
   @media all and (max-width: 899px) {
 
     & > .container {
-      .brand-burger-container {
+      .brand-container {
         box-shadow: 0 10px 10px 0px rgba(0,0,0,0.15);
         z-index: 9;
         display: block;

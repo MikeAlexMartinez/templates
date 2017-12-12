@@ -4,30 +4,30 @@
 //=include noframework.waypoints.js
 
 $(document).ready(() => {
-  console.log("__testing__");
 
-  /*const navWaypoint = new Waypoint({
+  const navWaypoint = new Waypoint({
     element: document.getElementById('services'),
     handler: function(direction) {
       const navbar = $('#navigation');
-      
+      const content = $('#content');
+
       if(direction === 'down') {
         navbar.addClass('fixed');
-        setTimeout(function() {
+        content.addClass('reflow');
+        setTimeout(function(){
           navbar.addClass('show');
-          navbar.removeClass('top')
-        }, 300);
+        },0.01);
       } else {
         navbar.removeClass('show');
-        setTimeout(function() {
+        setTimeout(function(){
           navbar.removeClass('fixed');
-          navbar.addClass('top');
-        }, 300);
+          content.removeClass('reflow');
+        },0.3);
       }
       
     },
     offset: '13%'
-  });*/
+  });
 
   const segments = ["home", "services", "screenshots", "tour", "features", "testimonial", "pricing"];
 
@@ -41,7 +41,7 @@ $(document).ready(() => {
           switchNavlink(this.element.id);
         }
       },
-      offset: '9%'
+      offset: '10%'
     });
   
   });
@@ -68,6 +68,10 @@ $(document).ready(() => {
   .not('[href="#"]')
   .not('[href="#0"]')
   .click(function(event) {
+    
+    // Once completed toggle
+    toggleNav($('#menu-icon'));
+
     // On-page links
     if (
       location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') 
@@ -94,6 +98,7 @@ $(document).ready(() => {
             $target.attr('tabindex','-1'); // Adding tabindex for elements not focusable
             $target.focus(); // Set focus again
           };
+
         });
       }
     }
@@ -102,10 +107,7 @@ $(document).ready(() => {
   // toggle menu icon
   $('#menu-icon').click(function() {
     
-    // for smaller screens show alternate menu
-    $(this).toggleClass('open');
-    $('.linksContainer').toggleClass('hidden');
-    $('.brand-container').toggleClass('unshadow');
+    toggleNav(this);
 
   });
 
@@ -160,4 +162,13 @@ function switchNavlink(id) {
   const navLinkTarget = `#nav-${id}`;
   $('.nav-links ul li.active').removeClass('active');
   $(navLinkTarget).addClass('active');
+}
+
+function toggleNav(elm) {
+  if(elm) {
+    $(elm).toggleClass('open');
+  }
+  
+  $('.linksContainer').toggleClass('hidden');
+  $('.brand-container').toggleClass('unshadow');
 }

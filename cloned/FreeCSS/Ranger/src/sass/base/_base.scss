@@ -150,10 +150,18 @@ body {
 }
 .owl-carousel.owl-theme .owl-dots .owl-dot span {
 	background-color: $font-lightgrey;
+
+	.home & {
+		background-color: $box-shadow;
+	}
 }
 .owl-carousel.owl-theme .owl-dots .owl-dot.active span, 
 .owl-carousel.owl-theme .owl-dots .owl-dot:hover span {
 	background-color: $dot-background-active;
 	border: 2px solid #fff;
+
+	.home & {
+		border: 2px solid #000;
+	}
 }
 

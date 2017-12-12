@@ -114,8 +114,14 @@ $(document).ready(() => {
   // Owl Carousels
   // Hero
   $('#carouselOne').owlCarousel({
+    nav: true,
+    navText: ['<span id="arrowLeft" class="icon-arrow-left2"></span>','<span id="arrowRight" class="icon-arrow-right2"></span>'],
+    navClass: ['owl-prev-relative', 'owl-next-relative'],
+    loop: true,
     center: true,
     items: 1,
+    autoplay: true,
+    autoplayTimeout: 5000, // 5 seconds
   });
 
 
@@ -152,7 +158,7 @@ $(document).ready(() => {
   // create on click scrolling
   const clickScreenshotOwl = $('.owl-item');
   clickScreenshotOwl.click(function(evt) {
-    const index = clickScreenshotOwl.index(this) -2;
+    const index = clickScreenshotOwl.index(this) + 1;
     
     screenshotOwl.trigger('to.owl.carousel', [index, 300]);
   });

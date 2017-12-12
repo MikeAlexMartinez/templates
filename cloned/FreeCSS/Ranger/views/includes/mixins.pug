@@ -7,7 +7,7 @@ mixin textGroup1(fG)
   div(class=`textGroupOne ${fG.style}`)
     h2= fG.title
     p= fG.text
-    button.btn.active= fG.button
+    button(class=`btn active ${fG.section ? 'lrg' : ''}`)= fG.button
 
 mixin textGroupTwo(services)
   each tG in services

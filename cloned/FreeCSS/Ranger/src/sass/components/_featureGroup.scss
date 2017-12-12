@@ -51,8 +51,41 @@
     }
   }
 
+  // Hero feature group styles
   .home & {
+    h2 {
+      font-weight: 700;
+      margin-bottom: 20px;
+      margin-top: 0;
+      color: #fff;
+      font-size: 50px;
+      line-height: 50px;
+      color: #fff;
+    }
     
+    p {
+      font-size: 30px;
+      line-height: 30px;
+      line-height: 42px;
+      font-weight: 100;
+      margin-bottom: 30px;
+      color: white;
+    }
+
+    img {
+      z-index: 7;
+      transform: scale(1.4);
+      overflow: visible;
+      position: relative;
+      top: 40px;
+
+      box-shadow: none;
+    }
   }
+}
+
+.home .owl-stage-outer,
+.home .owl-carousel.owl-theme {
+	overflow: visible;
 }
 

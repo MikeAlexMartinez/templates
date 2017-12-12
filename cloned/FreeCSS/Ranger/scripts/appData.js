@@ -31,6 +31,8 @@ const sections = {
         image: 'android.png',
         style: 'default',
         button: 'View Case Study',
+        orientation: 'left',
+        section: 'hero',
       },
       {
         title: 'App for iOS',
@@ -38,6 +40,7 @@ const sections = {
         image: 'ios.png',
         style: 'alt',
         button: 'View Case Study',
+        section: 'hero',
       }
     ]
   },

@@ -186,32 +186,32 @@ body {
 		opacity: 0.5;
 	}
 	.owl-prev-relative {
-		padding-right: 20px;
+		padding: 15px;
 	}
 	.owl-next-relative {
-		padding-left: 20px;
+		padding: 15px;
 	}
 
 	&:hover {
 
 		.owl-prev-relative {
 			visibility: visible;
-			left: -44%;
+			left: -40%;
 			transition: all 0.2s linear;
 			
 			&:hover {
 				opacity: 1;
-				left: -42.5%;
+				left: -38.5%;
 			}
 		}
 		.owl-next-relative {
 			visibility: visible;
-			right: -44%;
+			right: -40%;
 			
 			transition: all 0.2s linear;
 			&:hover {
 				opacity: 1;
-				right: -42.5%;
+				right: -38.5%;
 			}
 		}
 	}

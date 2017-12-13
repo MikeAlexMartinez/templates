@@ -62,7 +62,7 @@ Components I've identified that I will be able to style independently to constru
 
 8. There are button through out the application, mainly with the same styling, except when it's clear. 
 
-### Structure
+### Section Details
 
 - Responsive Nav Bar
 

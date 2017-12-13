@@ -175,7 +175,7 @@ const sections = {
       {
         title: 'Starter',
         price: 7,
-        description: 'Basic customer support for individuals',
+        description: 'Basic customer support suitable for individuals',
         features: [
           '10 projects',
           '20 Pages',
@@ -199,7 +199,7 @@ const sections = {
       {
         title: 'Plus',
         price: 79,
-        description: 'Premium customer support for medium businesses',
+        description: 'Premium support for medium sized businesses',
         features: [
           'Unlimited projects',
           '100 Pages',

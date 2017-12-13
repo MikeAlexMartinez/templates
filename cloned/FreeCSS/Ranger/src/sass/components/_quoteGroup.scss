@@ -1,7 +1,25 @@
 .quoteGroup {
   vertical-align: top;
-  display: inline-block;
-  width: 30%;
+  padding-bottom: 30px;
+
+  @media all and (max-width: 750px) {
+    display: block;
+    width: 100%;
+    padding-left: 5%;
+    padding-right: 5%;
+  }
+
+  @media all and (min-width: 750px) and (max-width: 991px) {
+    padding-left: 20%;
+    padding-right: 20%;
+  }
+
+  @media all and (min-width: 992px) {
+    display: inline-block;
+    width: 30%;
+    padding-bottom: 0;
+  }
+
 
   .quote {
     

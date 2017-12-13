@@ -26,19 +26,21 @@
 }
 .container,
 .grid {
-	margin: 0 auto;
-	width: 1250px;
 	padding-bottom: 70px;
 	
-	@media all and (max-width: 899px) {
+	@media all and (max-width: 991px) {
 		padding: 0px;
 		width: 100%;
 	}
-	@media all and (min-width: 900px) and (max-width: 1250px) {
+	@media all and (min-width: 992px) and (max-width: 1250px) {
 		margin: 0 auto;
-		width: 900px;
+		width: 992px;
+
+		.pricing & {
+			width: 100%;
+		}
 	}
-	@media all and (min-width: 1250x) {
+	@media all and (min-width: 1251x) {
 		margin: 0 auto;
 		width: 1250px;
 	}
@@ -49,6 +51,10 @@ body {
   font-family: $main-font;
   font-size: $main-font-size;
 }
+
+// Hacky way to help move adjust content for navigation bar.
+// Needs to be refactored to remove janky reflow on scroll down.
+// Will need to refactor navigation (again! :*( )
 @media all and (max-width: 899px) {
 	.content {
 		position: relative;
@@ -99,13 +105,6 @@ body {
 
 /*
  ======================================================
- Typography
- ======================================================
-*/
-
-
-/*
- ======================================================
  Reusable Elements
  ======================================================
 */
@@ -137,7 +136,7 @@ body {
 	&:hover {
 		background-color: $btn-hover;
 		color: #fff;
-		transition: all 0.4s linear;
+		transition: all 0.2s linear;
 	}
 
 	.home &:hover {

@@ -202,7 +202,7 @@
   }
 
   // collapsible here
-  @media all and (max-width: 899px) {
+  @media all and (max-width: 991px) {
 
     & > .container {
       .brand-container {
@@ -278,10 +278,10 @@
   }
   
   // expanded with minimal padding
-  @media all and (min-width: 900px) and (max-width: 999px) {
+  @media all and (min-width: 900px) and (max-width: 991px) {
     @include margin(5px);
   }
-  @media all and (min-width: 1000px) and (max-width: 1200px) {
+  @media all and (min-width: 992px) and (max-width: 1200px) {
     @include margin(20px);
   }
   // expanded with extended padding 
@@ -328,7 +328,7 @@
   &.show > .container {
     background-color: #fff;
 
-    @media all and (max-width: 899px) {
+    @media all and (max-width: 991px) {
       background-color: transparent;
     }
   }
@@ -338,7 +338,7 @@
     transition: top 0.2s ease-in-out;
     box-shadow: 0 5px 5px 0px rgba(0,0,0,0.15);
     
-    @media all and (max-width: 899px) {
+    @media all and (max-width: 991px) {
       box-shadow: none;
     }
   

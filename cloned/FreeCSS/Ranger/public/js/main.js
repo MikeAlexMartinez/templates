@@ -15105,48 +15105,17 @@ $(document).ready(() => {
   // Remove links that don't actually link to anything
   .not('[href="#"]')
   .not('[href="#0"]')
-  .click(function(event) {
-    
-    // Once completed toggle
-    toggleNav($('#menu-icon'));
+  .click(scrollTo);
 
-    // On-page links
-    if (
-      location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') 
-      && 
-      location.hostname == this.hostname
-    ) {
-      // Figure out element to scroll to
-      var target = $(this.hash);
-      target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
-      // Does a scroll target exist?
-      if (target.length) {
-        // Only prevent default if animation is actually gonna happen
-        event.preventDefault();
-        $('html, body').animate({
-          scrollTop: target.offset().top
-        }, 500, function() {
-          // Callback after animation
-          // Must change focus!
-          var $target = $(target);
-          $target.focus();
-          if ($target.is(":focus")) { // Checking if the target was focused
-            return false;
-          } else {
-            $target.attr('tabindex','-1'); // Adding tabindex for elements not focusable
-            $target.focus(); // Set focus again
-          };
-
-        });
-      }
-    }
+  // Allow parent element of a[href] elements to trigger scroll to
+  // animation
+  $('#links ul li').click(function(evt) {
+    $(this).children().trigger('click');
   });
 
   // toggle menu icon
   $('#menu-icon').click(function() {
-    
     toggleNav(this);
-
   });
 
   // Owl Carousels
@@ -15201,6 +15170,51 @@ $(document).ready(() => {
     screenshotOwl.trigger('to.owl.carousel', [index, 300]);
   });
 });
+
+// This code handles smooth scrolling animation.
+// src: https://css-tricks.com/snippets/jquery/smooth-scrolling/
+// Select all links with hashes
+function scrollTo(event) {
+  
+  // Prevent click event on a element from firing the click event
+  // on the parent element. 
+  // (As this will retrigger the click on this element)
+  event.stopPropagation();
+  
+  // Once completed toggle
+  toggleNav($('#menu-icon'));
+
+  // On-page links
+  if (
+    location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') 
+    && 
+    location.hostname == this.hostname
+  ) {
+    // Figure out element to scroll to
+    var target = $(this.hash);
+    target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+    // Does a scroll target exist?
+    if (target.length) {
+      // Only prevent default if animation is actually gonna happen
+      event.preventDefault();
+      $('html, body').animate({
+        scrollTop: target.offset().top
+      }, 500, function() {
+        // Callback after animation
+        // Must change focus!
+        var $target = $(target);
+        $target.focus();
+        if ($target.is(":focus")) { // Checking if the target was focused
+          return false;
+        } else {
+          $target.attr('tabindex','-1'); // Adding tabindex for elements not focusable
+          $target.focus(); // Set focus again
+        };
+
+      });
+    }
+  }
+}
 
 function switchNavlink(id) {
   const navLinkTarget = `#nav-${id}`;

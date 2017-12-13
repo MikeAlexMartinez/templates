@@ -92,6 +92,10 @@ Components I've identified that I will be able to style independently to constru
 
   Text next to image, similar to "what we do segments".
 
+  small device: text grouping above picture and centred.
+
+  Other screens, next to eachother, image is flexible in size (img container is a width percentage)
+
 - Section 2 - Our Services
 
   off-white background
@@ -108,7 +112,8 @@ Components I've identified that I will be able to style independently to constru
 
   Navy-grey background
 
-  Heading and large summary text (As with section 2, except different colors)
+  Heading and large summary text (As with section 2, except 
+  different colors)
 
   different background color to segment above.
 
@@ -116,7 +121,7 @@ Components I've identified that I will be able to style independently to constru
 
   Not much adjustment for smaller screen size,  
 
-- Section 4 - "What we do"
+- Section 4 - "Tour"
 
   off-white bg
 
@@ -129,7 +134,8 @@ Components I've identified that I will be able to style independently to constru
 
   image alongside text,
 
-  small: image stacked before
+  small: image stacked before text grouping, Text grouping stays 
+  left aligned.
 
 - Section 5 - Features
 
@@ -140,12 +146,11 @@ Components I've identified that I will be able to style independently to constru
   sub section is block of 6 elements with same styling.
   
   initially:
-    2 rows of 3.
+    larger 2 rows of 3.
 
-    3 rows of 2.
+    small 3 rows of 2.
 
-    Then 6 of 1.
-
+    Extreme small (<500) Then 6 of 1.
   
 - Section 6 - Happy Clients say...
 

@@ -11,9 +11,15 @@
       
     .owl-stage .owl-item {
 
+      
       .screenshotImage {
         box-shadow: 0px 0px 30px #000;
         overflow: visible;
+        
+        @media all and (max-width: 685px) {
+          box-shadow: none;
+          padding: 0 30px;
+        }
       }
 
       transform: scale(0.85);

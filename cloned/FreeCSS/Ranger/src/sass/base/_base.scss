@@ -40,7 +40,7 @@
 			width: 100%;
 		}
 	}
-	@media all and (min-width: 1251x) {
+	@media all and (min-width: 1251px) {
 		margin: 0 auto;
 		width: 1250px;
 	}
@@ -144,8 +144,11 @@ body {
 		border: solid 1px $icon-color-default;
 	}
 }
-
-// Customise owl carousel dot styles
+/*
+ ======================================================
+ Customise Owl Carousel
+ ======================================================
+*/
 .owl-dots {
 	display: inline-block;
 	margin-top: 40px;
@@ -174,48 +177,53 @@ body {
 	}
 }
 
-.home .owl-carousel.owl-theme {
-
-	.owl-prev-relative,
-	.owl-next-relative {
-		visibility: hidden;
-		position: relative;
-		background-color: transparent !important;
-		top: -450px;
-		transform: scale(2);
-		opacity: 0.5;
+.home {
+	.owl-stage-outer,
+	.owl-carousel.owl-theme {
+		padding-bottom: 80px;
 	}
-	.owl-prev-relative {
-		padding: 15px;
-	}
-	.owl-next-relative {
-		padding: 15px;
-	}
-
-	&:hover {
-
+	.owl-carousel.owl-theme {
+		.owl-prev-relative,
+		.owl-next-relative {
+			visibility: hidden;
+			position: relative;
+			background-color: transparent !important;
+			top: -450px;
+			transform: scale(2);
+			opacity: 0.5;
+		}
 		.owl-prev-relative {
-			visibility: visible;
-			left: -40%;
-			transition: all 0.2s linear;
-			
-			&:hover {
-				opacity: 1;
-				left: -38.5%;
-			}
+			padding: 15px;
 		}
 		.owl-next-relative {
-			visibility: visible;
-			right: -40%;
-			
-			transition: all 0.2s linear;
-			&:hover {
-				opacity: 1;
-				right: -38.5%;
+			padding: 15px;
+		}
+
+		&:hover {
+
+			.owl-prev-relative {
+				visibility: visible;
+				left: -42%;
+				transition: all 0.2s linear;
+				
+				&:hover {
+					opacity: 1;
+					left: -41%;
+				}
+			}
+			.owl-next-relative {
+				visibility: visible;
+				right: -42%;
+				
+				transition: all 0.2s linear;
+				&:hover {
+					opacity: 1;
+					right: -41.0%;
+				}
 			}
 		}
-	}
-	.owl-nav {
-		margin-top: 0;
+		.owl-nav {
+			margin-top: 0;
+		}
 	}
 }

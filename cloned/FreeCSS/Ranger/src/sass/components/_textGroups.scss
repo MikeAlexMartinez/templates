@@ -24,6 +24,10 @@
     padding-top: 25px;
     padding-right: 20%;
     padding-left: 20%;
+
+    &:last-child {
+      padding-bottom: 50px;
+    }
   }
 
   @media all and (min-width: 992px) {

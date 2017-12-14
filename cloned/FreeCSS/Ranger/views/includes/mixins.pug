@@ -33,16 +33,10 @@ mixin featureGroup(fG)
   //- If orientation is missing from fG render
   //- containers in reverse order 
   div(class=`featureGroup ${fG.style}`)
-    if fG.orientation
-      div(class=`imgContainer ${fG.style}`)
-        img(src=`images/${fG.image}`)
-      div(class=`textContainer ${fG.style}`)
-        +textGroup1(fG)
-    else
-      div(class=`textContainer ${fG.style}`)
-        +textGroup1(fG)
-      div(class=`imgContainer ${fG.style}`)
-        img(src=`images/${fG.image}`)
+    div(class=`imgContainer ${fG.style}`)
+      img(src=`images/${fG.image}`)
+    div(class=`textContainer ${fG.style}`)
+      +textGroup1(fG)
 
 mixin quoteGroup(q)
   div.quoteGroup

@@ -1,0 +1,35 @@
+{
+  "name": "deft-clone",
+  "version": "1.0.0",
+  "description": "clone of freecss deft template",
+  "main": "app.js",
+  "scripts": {
+    "dev": "npm-run-all -p gulp-watch serve",
+    "gulp-watch": "gulp watch",
+    "serve": "nodemon ./app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "michael martinez",
+  "license": "MIT",
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-browserify": "^0.5.1",
+    "gulp-include": "^2.3.1",
+    "gulp-sass": "^3.1.0",
+    "gulp-sourcemaps": "^2.6.1",
+    "gulp-uglify": "^3.0.0",
+    "gulp-util": "^3.0.8",
+    "npm-run-all": "^4.1.2",
+    "vinyl-buffer": "^1.0.0",
+    "vinyl-source-stream": "^1.1.0"
+  },
+  "dependencies": {
+    "animate.css": "^3.5.2",
+    "express": "^4.16.2",
+    "jquery": "^1.9.1",
+    "normalize.css": "^7.0.0",
+    "pug": "^2.0.0-rc.4",
+    "serve-favicon": "^2.4.5",
+    "waypoints": "^4.0.1"
+  }
+}

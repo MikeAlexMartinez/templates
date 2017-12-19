@@ -89,8 +89,8 @@ $(document).ready(() => {
     loop: true,
     center: true,
     items: 1,
-    autoplay: true,
-    autoplayTimeout: 5000, // 5 seconds
+    // autoplay: true,
+    // autoplayTimeout: 5000, // 5 seconds
   });
 
 

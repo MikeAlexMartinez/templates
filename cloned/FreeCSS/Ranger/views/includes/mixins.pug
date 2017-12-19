@@ -81,14 +81,14 @@ mixin carouselImages(img)
 mixin carouselFeatureGroup(fG)
   //- If orientation is missing from fG render
   //- containers in reverse order 
-  div(class=`featureGroup ${fG.style}`)
+  div(class=`carouselFeatureGroup ${fG.style}`)
     if fG.orientation
       div(class=`imgContainer ${fG.style}`)
-        img(src=`images/${fG.image}`)
+        img(src=`images/${fG.image}` class="mobile-img")
       div(class=`textContainer ${fG.style}`)
         +textGroup1(fG)
     else
       div(class=`textContainer ${fG.style}`)
         +textGroup1(fG)
       div(class=`imgContainer ${fG.style}`)
-        img(src=`images/${fG.image}`)
+        img(src=`images/${fG.image}` class="mobile-img")

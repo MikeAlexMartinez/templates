@@ -40,21 +40,11 @@
         display: block;
       }
     }
-
-    .home & {
-      @media all and (max-width: 695px) {
-        display: block;
-      }
-    }
   }
+
   .imgContainer {
-    min-height: 700px;
     max-height: 100%;
     width: 30%;
-
-    .home & {
-      padding: 0 10% 0 2%;
-    }
 
     &.alt {
       padding: 0 2% 0 10%;
@@ -76,9 +66,6 @@
 
     img {
       object-fit: contain;
-      .home & {
-        max-height: 750px;
-      }
 
       .tour & {
         box-shadow: 0px 0px 40px #919191;
@@ -131,40 +118,4 @@
       line-height: 30px;
     }
   }
-
-  // Hero feature group styles
-  .home & {
-    h2 {
-      font-weight: 700;
-      margin-bottom: 20px;
-      margin-top: 0;
-      color: #fff;
-      font-size: 50px;
-      line-height: 50px;
-      color: #fff;
-    }
-    
-    p {
-      font-size: 30px;
-      line-height: 30px;
-      line-height: 42px;
-      font-weight: 100;
-      margin-bottom: 30px;
-      color: white;
-    }
-
-    @media all and (max-width: 695px) {
-      .textGroupOne {
-        width: 100%;
-      }
-      h2 {
-        font-size: 30px;
-      }
-      p {
-        font-size: 24px;
-      }
-    }
-  }
 }
-
-

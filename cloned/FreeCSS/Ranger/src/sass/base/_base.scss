@@ -179,16 +179,11 @@ body {
 	}
 }
 
-
-
 .home {
 
-	.owl-dots,
-	.owl-nav {
-		background-color: transparent;
-	}
-
 	.owl-carousel.owl-theme {
+		max-height: 70vh;
+
 		.owl-prev-relative,
 		.owl-next-relative {
 			visibility: hidden;
@@ -228,8 +223,9 @@ body {
 				}
 			}
 		}
-		.owl-nav {
-			margin-top: 0;
-		}
+	}
+	.owl-carousel .owl-stage-outer {
+		overflow: visible;
+		height: 70vh;
 	}
 }

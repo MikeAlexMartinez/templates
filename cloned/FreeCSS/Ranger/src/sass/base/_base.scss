@@ -144,6 +144,7 @@ body {
 		border: solid 1px $icon-color-default;
 	}
 }
+
 /*
  ======================================================
  Customise Owl Carousel
@@ -229,3 +230,14 @@ body {
 		height: 70vh;
 	}
 }
+
+/*
+ ======================================================
+ waypoints styling
+ ======================================================
+*/
+
+.hide {
+	visibility: hidden;
+}
+

@@ -93,6 +93,10 @@ $(document).ready(() => {
     autoplayTimeout: 5000, // 5 seconds
   });
 
+  // fade in hero
+  $('.carouselFeatureGroup').removeClass('hide');
+  $('.carouselFeatureGroup').addClass('animated fadeIn');
+
 
   // screenshots owl carousel code
   const screenshotOwl = $('#carouselTwo');
@@ -131,6 +135,145 @@ $(document).ready(() => {
     
     screenshotOwl.trigger('to.owl.carousel', [index, 300]);
   });
+
+  // fadein waypoints
+
+  /*-- Services -------------------------------- */
+  // Services header
+  const servicesHeader = new Waypoint({
+    element: document.getElementById("services"),
+    handler: function(direction) {
+      $('#services .subheader').removeClass('hide');
+      $('#services .subheader').addClass('animated fadeInUp');
+    },
+    offset: '90%'
+  });
+
+  // Services text boxes
+  const servicesItems = new Waypoint({
+    element: document.getElementById("services"),
+    handler: function(direction) {
+      const delay = 100;
+      const select = '#services .textGroupTwo';
+      const animation = 'animated fadeInUp';
+
+      fadeInItems(select, animation, delay);
+    },
+    offset: '40%'
+  });
+
+  /*-- Screenshots ----------------------------- */
+  // Header
+  const screenshotsHeader = new Waypoint({
+    element: document.getElementById("screenshots"),
+    handler: function(direction) {
+      $('#screenshots .subheader').removeClass('hide');
+      $('#screenshots .subheader').addClass('animated fadeIn');
+    },
+    offset: '60%'
+  })
+  // Screenshot images
+  const screenshotsItems = new Waypoint({
+    element: document.getElementById("screenshots"),
+    handler: function(direction) {
+      const delay = 50;
+      const select = '#screenshots .screenshotImage .hide';
+      const animation = 'animated fadeIn';
+
+      fadeInItems(select, animation, delay);
+    },
+    offset: '40%'
+  });
+
+  /*-- Tour ----------------------------- */  
+  // Images
+  const tourImages = $('#tour .hide');
+
+  tourImages.each(function(i, e) {
+
+    const animate = `animated ${i === 1 ? 'fadeInRight' : 'fadeInLeft'}`; 
+    const elm = $(e);
+
+    window[`tourImage-${i}`] = new Waypoint({
+      element: elm[0],
+      handler: function(direction) {
+        elm.removeClass('hide');
+        elm.addClass(animate);
+      },
+      offset: '80%'
+    });
+
+  });
+
+  /*-- Features ----------------------------- */  
+  // Header
+  const featuresHeader = new Waypoint({
+    element: document.getElementById("features"),
+    handler: function(direction) {
+      $('#features .subheader').removeClass('hide');
+      $('#features .subheader').addClass('animated fadeIn');
+    },
+    offset: '60%'
+  })
+  // Each 
+  const featuresItems = new Waypoint({
+    element: document.getElementById("features"),
+    handler: function(direction) {
+      const delay = 200;
+      const select = '#features .featuresContainer .hide';
+      const animation = 'animated fadeIn';
+
+      fadeInItems(select, animation, delay);
+    },
+    offset: '40%'
+  });
+
+  /*-- Testimonial ------------------------- */  
+  // Header
+  const quotesHeader = new Waypoint({
+    element: document.getElementById("testimonial"),
+    handler: function(direction) {
+      $('#testimonial .subheader').removeClass('hide');
+      $('#testimonial .subheader').addClass('animated fadeIn');
+    },
+    offset: '60%'
+  })
+  // Each 
+  const quotesItems = new Waypoint({
+    element: document.getElementById("testimonial"),
+    handler: function(direction) {
+      const delay = 150;
+      const select = '#testimonial .quotesContainer .hide';
+      const animation = 'animated fadeIn';
+
+      fadeInItems(select, animation, delay);
+    },
+    offset: '40%'
+  });
+
+  /*-- Pricing ------------------------- */  
+  // Header
+  const pricingHeader = new Waypoint({
+    element: document.getElementById("pricing"),
+    handler: function(direction) {
+      $('#pricing .subheader').removeClass('hide');
+      $('#pricing .subheader').addClass('animated fadeIn');
+    },
+    offset: '60%'
+  })
+  // Each 
+  const pricingItems = new Waypoint({
+    element: document.getElementById("pricing"),
+    handler: function(direction) {
+      const delay = 150;
+      const select = '#pricing .pricingGroupsContainer .hide';
+      const animation = 'animated fadeIn';
+
+      fadeInItems(select, animation, delay);
+    },
+    offset: '40%'
+  });
+
 });
 
 // This code handles smooth scrolling animation.
@@ -191,4 +334,18 @@ function toggleNav(elm) {
   
   $('.linksContainer').toggleClass('hidden');
   $('.brand-container').toggleClass('unshadow');
+}
+
+// waypoint fadein items at different speeds
+function fadeInItems(select, animate, delay) {
+  const selector = $(`${select}`);
+
+  // fadeIn each project with different delay
+  // time.
+  selector.each(function(i, e) {
+    setTimeout(function() {
+      $(e).removeClass('hide');
+      $(e).addClass(animate);
+    }, delay * i);
+  });
 }

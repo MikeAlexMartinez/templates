@@ -108,7 +108,11 @@ Components I've identified that I will be able to style independently to constru
   For small screen size, three sections stack, otherwise they have 
   consistent sizes on the screen.
 
+  Fade up animation on waypoint.
+
 - Section 3 - App Screenshots
+
+  Fade in.
 
   Navy-grey background
 
@@ -122,6 +126,9 @@ Components I've identified that I will be able to style independently to constru
   Not much adjustment for smaller screen size,  
 
 - Section 4 - "Tour"
+
+  fade image in from left (or right for alt.) 
+
 
   off-white bg
 
@@ -139,6 +146,10 @@ Components I've identified that I will be able to style independently to constru
 
 - Section 5 - Features
 
+  header fadein.
+
+  features fadein across (delay each fadein)
+
   very light greeny blue.
 
   Same Heading and large summary styling as services
@@ -153,6 +164,10 @@ Components I've identified that I will be able to style independently to constru
     Extreme small (<500) Then 6 of 1.
   
 - Section 6 - Happy Clients say...
+
+  header fadein.
+
+  objects fadein from left to right.
 
   Same heading and large summary styling. With different colors.
 

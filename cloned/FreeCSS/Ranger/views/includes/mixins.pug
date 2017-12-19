@@ -11,7 +11,7 @@ mixin textGroup1(fG)
 
 mixin textGroupTwo(services)
   each tG in services
-    div.textGroupTwo
+    div.textGroupTwo.hide
       div(class=`simpleIcon ${tG.color}`)
         span(class=`${tG.icon} ${tG.color}`)
       div.header
@@ -20,7 +20,7 @@ mixin textGroupTwo(services)
         p= tG.detail
 
 mixin textGroupThree(f)
-  div.textGroupThree
+  div.textGroupThree.hide
     div.simpleIcon
       span(class=`${f.icon} default`)
     div.textContainer
@@ -34,12 +34,12 @@ mixin featureGroup(fG)
   //- containers in reverse order 
   div(class=`featureGroup ${fG.style}`)
     div(class=`imgContainer ${fG.style}`)
-      img(src=`images/${fG.image}`)
+      img(src=`images/${fG.image}` class=`${fG.imgStyle}`)
     div(class=`textContainer ${fG.style}`)
       +textGroup1(fG)
 
 mixin quoteGroup(q)
-  div.quoteGroup
+  div.quoteGroup.hide
     blockquote.quote
       p= q.quote
       div.point.cf
@@ -50,7 +50,7 @@ mixin quoteGroup(q)
       p.role= q.role
 
 mixin pricingGroup(pG)
-  div(class=`pricingGroup ${pG.bestValue ? 'bestValue' : ''}`)
+  div(class=`pricingGroup hide ${pG.bestValue ? 'bestValue' : ''}`)
     if pG.bestValue
       div.bestValue Best value
     h5= pG.title
@@ -70,18 +70,18 @@ mixin pricingGroup(pG)
       button(class=`btn ${pG.bestValue ? 'active' : 'clear'}`) Get Started
 
 mixin subheader(s)
-  div.subheader
+  div.subheader.hide
     h3= s.title
     h4= s.subheader
 
 mixin carouselImages(img)
-  div(class=`screenshotImage` style=``)
-    img(src=`images/${img}`)
+  div(class=`screenshotImage`)
+    img(src=`images/${img}` class="hide")
 
 mixin carouselFeatureGroup(fG)
   //- If orientation is missing from fG render
   //- containers in reverse order 
-  div(class=`carouselFeatureGroup ${fG.style}`)
+  div(class=`carouselFeatureGroup ${fG.style}`).hide
     if fG.orientation
       div(class=`imgContainer ${fG.style}`)
         img(src=`images/${fG.image}` class="mobile-img")

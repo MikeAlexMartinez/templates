@@ -88,6 +88,7 @@ const sections = {
         text: 'Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.',
         image: 'screen-1-1-login.jpg',
         style: 'default',
+        imgStyle: 'hide',
         button: 'Learn more',
         orientation: 'left',
       },
@@ -96,6 +97,7 @@ const sections = {
         text: 'Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.',
         image: 'screen-1-8-list.jpg',
         style: 'alt',
+        imgStyle: 'hide',
         button: 'Learn more',
       },
       {
@@ -103,6 +105,7 @@ const sections = {
         text: 'Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.',
         image: 'screen-3-7-groups.jpg',
         style: 'default',
+        imgStyle: 'hide',
         button: 'Learn more',
         orientation: 'left',
       },

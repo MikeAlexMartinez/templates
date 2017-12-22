@@ -12,4 +12,4 @@ router
   .route('/subscribe')
   .post(subscribe.submit);
 
-module.exports = router;
+module.exports = router;  

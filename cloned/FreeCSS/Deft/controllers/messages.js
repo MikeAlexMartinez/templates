@@ -3,6 +3,8 @@ const db = require('./db');
 const Message = require('../models/message');
 
 exports.submit = (req, res) => {
+  console.log("message request received");
+
   db((err) => {
     if (err) {
       console.log("Error connecting to database!");
@@ -22,18 +24,24 @@ exports.submit = (req, res) => {
     const saved = (m) => {
       console.log("Message saved succesfully");
       
-      m.success = "Message received! I will get back to you ASAP  ( ^_0)"; 
-      console.log(m);
+      const response = {
+        message: "Message received! I will get back to you ASAP  ( ^_0)",
+        type: "success",
+      }
       
       mongoose.disconnect();
-      res.status(201).send(m);
+      res.status(201).send(response);
     };
     
     const error = (err) => {
-      message.error = "We encountered an error, please try again later!";
       
+      const response = {
+        message: "We encountered an error, please try again later!",
+        type: "error",
+      }
+
       mongoose.disconnect();
-      res.status(500).send(message);
+      res.status(500).send(repsonse);
     }
     
     message.save()

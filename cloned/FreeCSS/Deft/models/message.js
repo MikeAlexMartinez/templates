@@ -11,9 +11,7 @@ const messageSchema = new Schema({
   validated: { type: Boolean, default: false },
   important: { type: Boolean, default: false },
   replied: { type: Boolean, default: false },
-  source: String,
-  success: { type: String, default: '' },
-  error: { type: String, default: '' },
+  source: String
 });
 
 const Message = mongoose.model('Message', messageSchema);

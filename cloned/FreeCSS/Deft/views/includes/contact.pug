@@ -17,11 +17,11 @@ section#contact.contact
         =' ' + data.contactForm.email
   div.contactForm
     form(class="form-group" action="" id="contactForm")
-      input(id="form-source" class="hidden" type="text" value="templates/deft" name="source" hidden)
+      input(id="contact-source" class="hidden" type="text" value="templates/deft" name="source" hidden)
       div.formSide.left
-        input(id="form-name" class="entry" type="text" placeholder="Name" name="name" required)
-        input(id="form-email" class="entry" type="email" placeholder="Email" name="email" required)
+        input(id="contact-name" class="entry" type="text" placeholder="Name" name="name" required)
+        input(id="contact-email" class="entry" type="email" placeholder="Email" name="email" required)
       div.formSide.right
-        textarea(id="form-message" class="entry" type="text" placeholder="Message" name="message" rows="4" required)
+        textarea(id="contact-message" class="entry" type="text" placeholder="Message" name="message" rows="4" required)
       button(type="submit" class="btn") Send
       div#toast.toast

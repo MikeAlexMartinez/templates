@@ -71,9 +71,9 @@
       display: block;
       width: 100%;
 
-      #form-name,
-      #form-email,
-      #form-message {
+      #contact-name,
+      #contact-email,
+      #contact-message {
         width: 100%;
         margin-bottom: 2%;
       }
@@ -83,17 +83,17 @@
       display: inline-block;
       width: 50%;
 
-      #form-message {
+      #contact-message {
         width: 100%;
         padding-bottom: 8%;
       }
-      #form-name,
-      #form-email {
+      #contact-name,
+      #contact-email {
         width: 96%;
         margin-right: 4%;
         margin-bottom: 4%;
       }
-      #form-email {
+      #contact-email {
         margin-bottom: 6%;
       }
     }

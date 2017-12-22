@@ -92,10 +92,10 @@ $(document).ready(() => {
     console.log("New message Submited!");
 
     const data = {
-      source: $('#form-source').val(),
-      name: $('#form-name').val(),
-      email: $('#form-email').val(),
-      message: $('#form-message').val(),
+      source: $('#contact-source').val(),
+      name: $('#contact-name').val(),
+      email: $('#contact-email').val(),
+      message: $('#contact-message').val(),
     };
 
     const posting = $.post('/api/message', data, "json");
@@ -118,8 +118,8 @@ $(document).ready(() => {
     console.log("New Subscriber Submited!");
 
     const data = {
-      source: $('#form-source').val(),
-      email: $('#form-email').val(),
+      source: $('#subscribe-source').val(),
+      email: $('#subscribe-email').val(),
       active: true,
     };
 
@@ -130,6 +130,10 @@ $(document).ready(() => {
       
     }).fail(function(err) {
       console.log(err);
+
+      const message = err.responseJSON.message;
+
+      console.log(message);
 
     });
   });

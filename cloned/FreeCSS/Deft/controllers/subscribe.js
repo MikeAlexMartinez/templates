@@ -1,8 +1,10 @@
 const mongoose = require('mongoose');
 const db = require('./db');
-const Message = require('../models/subscribe');
+const Subscription = require('../models/subscribe');
 
 exports.submit = (req, res) => {
+  console.log("subscribe request received");
+
   db((err) => {
     if (err) {
       console.log("Error connecting to database!");
@@ -12,33 +14,53 @@ exports.submit = (req, res) => {
       res.status(500).send(message);
     }
 
-    const newSubscriber = req.body;
+    let newSubscriber = req.body;
     
     newSubscriber.source = 'Deft';  
     newSubscriber.date = new Date();
     
-    const subscriber = new Message(newSubscriber);
-    
+    const subscriber = new Subscription(newSubscriber);
+
     const saved = (m) => {
       console.log("Message saved succesfully");
       
-      m.success = "Message received! I will get back to you ASAP  ( ^_0)"; 
-      console.log(m);
+      const response = {
+        message: "Great! You've been added to our mailing list! ( ^_0)",
+        type: "success",
+      }
       
       mongoose.disconnect();
-      res.status(201).send(m);
+      res.status(201).send(response);
     };
     
     const error = (err) => {
-      message.error = "We encountered an error, please try again later!";
-      
-      mongoose.disconnect();
-      res.status(500).send(message);
+      console.log("==========================================");
+      console.log(err.code);
+
+      const response = {
+        message: "We encountered an error, please try again later",
+        type: "error",
+      }
+
+      if (err.code === 11000) {
+        response.message = "Uh Oh! This email address is already subscribed ( -_-)";
+
+        disconnect(409, response);
+        return;
+      } 
+
+      console.log("this still runs!");
+      disconnect(500, response);
+
+      function disconnect(status, response) {
+        mongoose.disconnect();
+        res.status(status).send(response);
+      }
     }
     
-    message.save()
-      .then(saved)
-      .catch(error);
+    subscriber.save()
+    .then(saved)
+    .catch(error);
   });
   
 };

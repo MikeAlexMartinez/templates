@@ -1,3 +1,5 @@
 section#gallery.gallery
-  div.container
-    h1 this is a gallery
+  div.grid.masonry
+    .grid-sizer
+    for p in data.gallery.projects
+      +project(p)

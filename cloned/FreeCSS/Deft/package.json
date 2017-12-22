@@ -25,9 +25,11 @@
   },
   "dependencies": {
     "animate.css": "^3.5.2",
+    "animsition": "^4.0.2",
     "express": "^4.16.2",
     "ionicons": "^3.0.0",
     "jquery": "^1.9.1",
+    "masonry-layout": "^4.2.0",
     "normalize.css": "^7.0.0",
     "pug": "^2.0.0-rc.4",
     "serve-favicon": "^2.4.5",

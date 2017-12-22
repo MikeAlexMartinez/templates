@@ -11088,7 +11088,16 @@ $(document).ready(() => {
     $('#rightSide').removeClass('hide');
   });
 
-
+  /**
+   * 
+   * @param {jquery element} target 
+   * @param { Object } move 
+   * @param {number} speed 
+   * 
+   * Handles smooth scroll of move element, to the 
+   * target with no offset at the defined speed.
+   * 
+   */
   function scrollToTop(target, move, speed) {
     move.animate({
       scrollTop: target.offset().top
@@ -11096,5 +11105,56 @@ $(document).ready(() => {
       target.focus();
     });
   }
+
+  /**
+   * contact form handling
+   * 
+   **/
+  $('#contactForm').submit(function(evt) {
+    evt.preventDefault();
+    console.log("New message Submited!");
+
+    const data = {
+      source: $('#form-source').val(),
+      name: $('#form-name').val(),
+      email: $('#form-email').val(),
+      message: $('#form-message').val(),
+    };
+
+    const posting = $.post('/api/message', data, "json");
+
+    posting.done(function(data) {
+      console.log(data);
+      
+    }).fail(function(err) {
+      console.log(err);
+
+    });
+  });
+
+   /**
+   * subscribe form handling
+   * 
+   **/
+  $('#subscribeForm').submit(function(evt) {
+    evt.preventDefault();
+    console.log("New Subscriber Submited!");
+
+    const data = {
+      source: $('#form-source').val(),
+      email: $('#form-email').val(),
+      active: true,
+    };
+
+    const posting = $.post('/api/subscribe', data, "json");
+
+    posting.done(function(data) {
+      console.log(data);
+      
+    }).fail(function(err) {
+      console.log(err);
+
+    });
+  });
 
 });

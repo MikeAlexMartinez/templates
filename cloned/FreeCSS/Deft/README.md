@@ -6,20 +6,20 @@ This is the third template I intend on cloning. I really love the design of this
 
 There are a number of pages included in this file, but they represent different pages for different purposes. For this exercise I will focus on the Agency.html page.
 
-## Page Components, Style and Structure
+My biggest challenge in this exercise was creating the smooth overlays for various elements. This includes the toast messages, the image info on hover, and also the toast
+messages. To overcome this I became more comfortable using container divs, and the overflow property to create the illusion of elements sliding into segments of the page.
 
-- General: Unlike the other two templates that I've cloned thus far, this template is fairly distinct. It uses a number of different libraries that I'm yet to encounter
-and also has a different page structure, with the look and feel of a half scrollable SPA.
-
-The left of the page is fixed and fairly plain in design while all the content and links are on the right hand side of the page. The projects on being clicked slide in additional project detail
-once the relevant section is clicked. It also has a contact form, which I'll wire up like I did with the Minifolio template, and have any messages flow through to my actual database (will be mongodb).
+An improvement I should/could make would be to perfect the spacing between the masonry grid object. The white areas between images aren't all equal in size, and it would be cleaner 
+to look at if they were.
 
 ### General
 
 The Deft template is made of a number of segments. 
 
-Depending on the screensize the shape of the segments will vary. The 'title' segment will either be fixed to the left half of the screen on wider devices (1025px and above) with all the other segments
-being found on the right hand side, which is scrollable.
+Depending on the screensize the shape of the segments will vary. The 'title' segment will either be fixed to the left half of the screen on wider devices (1025px and above) with all the other segments being found on the right hand side, which is scrollable.
+
+Other responsive breakpoints are that the masonry pictures will be almost full screen at the small screen breakpoint, and the contact form boxes will also be full width (excluding 
+margin);
 
 ### Sections
 
@@ -88,7 +88,14 @@ being found on the right hand side, which is scrollable.
 
 ## Libraries Used by Me
 
-- nothing yet..
+- [jQuery](http://jquery.com/ "jQuery")
+
+- [Masonry.js](https://masonry.desandro.com/)
+
+- [ionicons](http://ionicons.com/)
+
+- I am yet to integrate imagesloaded into the project, although it is advisable as the absense of an image can affect 
+the layout of the masonry grid.
 
 ## Libraries used by the original designer / developer
 

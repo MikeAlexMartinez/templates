@@ -1,7 +1,6 @@
 'use strict';
 //=include jquery.js
 //=include masonry.pkgd.min.js
-//=include animsition.min.js
 
 $(document).ready(() => {
   console.log("Testing");

@@ -25,7 +25,7 @@ exports.submit = (req, res) => {
       console.log("Message saved succesfully");
       
       const response = {
-        message: "Great! You've been added to our mailing list! ( ^_0)",
+        message: "You've been added to my mailing list! ( ^_0)",
         type: "success",
       }
       
@@ -43,7 +43,7 @@ exports.submit = (req, res) => {
       }
 
       if (err.code === 11000) {
-        response.message = "Uh Oh! This email address is already subscribed ( -_-)";
+        response.message = "This email address is already subscribed ( -_-)";
 
         disconnect(409, response);
         return;

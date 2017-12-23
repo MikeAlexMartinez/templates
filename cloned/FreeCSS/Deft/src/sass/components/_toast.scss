@@ -2,9 +2,9 @@
   position: absolute;
   z-index: 5;
   width: 100%;
-  height: 100%;
   
-  bottom: -100%;
+  height: 45px;
+  bottom: -45px;
   left: 0;
   
   padding: $entry-padding;
@@ -16,29 +16,33 @@
   border-radius: 5px;
   border: none;
   
-  transition: bottom 0.1s linear;
+  &.success,
+  &.error,
+  &.warning {
+    bottom: 0;
   
+    transition: all 0.1s linear;
+
+    &.exit {
+      bottom: 45px;
+
+      transition: all 0.1s linear;
+    }
+  }
+
+
   &.success {
     color: $text-submit-success;
     background-color: $bg-submit-success;
-    bottom: 0;
-  
-    transition: bottom 0.1s linear;
   }
 
   &.error {
     color: $text-submit-error;
     background-color: $bg-submit-error;
-    bottom: 0;
-  
-    transition: bottom 0.1s linear;
   }
 
   &.warning {
     color: $text-submit-warning;
     background-color: $bg-submit-warning;
-    bottom: 0;
-  
-    transition: bottom 0.1s linear;
   }
 } 

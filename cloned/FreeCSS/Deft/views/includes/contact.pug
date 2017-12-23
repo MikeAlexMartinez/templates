@@ -23,4 +23,6 @@ section#contact.contact
         input(id="contact-email" class="entry" type="email" placeholder="Email" name="email" required)
       div.formSide.right
         textarea(id="contact-message" class="entry" type="text" placeholder="Message" name="message" rows="4" required)
-      button(type="submit" class="btn") Send
+      div.buttonContainer
+        button(type="submit" class="btn") Send
+        div#contactToast.toast

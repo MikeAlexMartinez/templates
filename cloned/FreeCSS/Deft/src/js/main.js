@@ -28,16 +28,16 @@ $(document).ready(() => {
     const speed = 1000;
 
     // targets for wider screens
-    let target = $('#rightSide');
+    let scrollTo = $('#rightSide');
     let move = $('html, body');
 
     if(width < 1025) {
       // change targets for smaller screens
-      target = $('#title');
+      scrollTo = $('#title');
     }
 
     // animate the page
-    scrollToTop(target, move, speed);
+    scrollToTop(scrollTo, move, speed);
   });
 
   /**
@@ -46,11 +46,19 @@ $(document).ready(() => {
    **/
   $('.imgInfo .btn').click((evt) => {
 
+    // get width of viewport
+    const width = $( window ).width();
     const node = $(evt.target);
     const target = $(`#${node.attr('target')}`);
+    let scrollTo = $('#rightSide');
+
+    if(width < 1025) {
+      // change targets for smaller screens
+      scrollTo = $('#title');
+    }
 
     // scroll to top when not at the top.
-    scrollToTop($('#title'), $('html, body'), 300);
+    scrollToTop(scrollTo, $('html, body'), 300);
 
     // Slide in project detail
     target.addClass('show');
@@ -67,9 +75,9 @@ $(document).ready(() => {
 
   /**
    * 
-   * @param {jquery element} target 
+   * @param { Object } target 
    * @param { Object } move 
-   * @param {number} speed 
+   * @param { Number } speed 
    * 
    * Handles smooth scroll of move element, to the 
    * target with no offset at the defined speed.
@@ -128,14 +136,39 @@ $(document).ready(() => {
     posting.done(function(data) {
       console.log(data);
       
+      showToast('subscribe', 'success', data.message);
+
     }).fail(function(err) {
       console.log(err);
 
       const message = err.responseJSON.message;
 
-      console.log(message);
+      if(status === 409) {
+        showToast('subscribe', 'warning', message);
+      } else {
+        showToast('subscribe', 'error', message);
+      }
 
     });
+  
   });
 
+
+
 });
+
+function showToast(section, status, message) {
+  const target = $(`#${section}Toast`);
+  
+  target.html(message);
+  target.addClass(status);
+
+  setTimeout(() => {
+    target.addClass('exit');
+  }, 5000);
+
+  setTimeout(() => {
+    target.removeClass(`${status} exit`);
+    target.html('');
+  }, 6000);
+}

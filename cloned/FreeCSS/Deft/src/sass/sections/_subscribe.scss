@@ -9,8 +9,11 @@
   }
 
   #subscribeForm {
+    z-index: 6;
     position: relative;
     margin-top: 100px;
+    overflow: hidden;
+    min-height: 45px;
 
     button {
       position: absolute;

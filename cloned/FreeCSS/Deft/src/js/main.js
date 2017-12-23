@@ -109,12 +109,14 @@ $(document).ready(() => {
     const posting = $.post('/api/message', data, "json");
 
     posting.done(function(data) {
-      console.log(data);
       
+      showToast('contact','success', data.message);
+    
     }).fail(function(err) {
-      console.log(err);
-
+      
+      showToast('contact','error', err.responseJSON.message);
     });
+
   });
 
    /**
@@ -134,16 +136,14 @@ $(document).ready(() => {
     const posting = $.post('/api/subscribe', data, "json");
 
     posting.done(function(data) {
-      console.log(data);
       
       showToast('subscribe', 'success', data.message);
 
     }).fail(function(err) {
-      console.log(err);
 
       const message = err.responseJSON.message;
 
-      if(status === 409) {
+      if(err.status === 409) {
         showToast('subscribe', 'warning', message);
       } else {
         showToast('subscribe', 'error', message);
@@ -165,7 +165,7 @@ function showToast(section, status, message) {
 
   setTimeout(() => {
     target.addClass('exit');
-  }, 5000);
+  }, 3500);
 
   setTimeout(() => {
     target.removeClass(`${status} exit`);

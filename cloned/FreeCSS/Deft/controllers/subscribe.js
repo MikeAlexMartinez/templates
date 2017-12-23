@@ -25,7 +25,7 @@ exports.submit = (req, res) => {
       console.log("Message saved succesfully");
       
       const response = {
-        message: "You've been added to my mailing list! ( ^_0)",
+        message: "You've been added to my mailing list! ( ^_^)",
         type: "success",
       }
       

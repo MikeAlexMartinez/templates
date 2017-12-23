@@ -1,14 +1,11 @@
 .toast {
   position: absolute;
-  z-index: 5;
   width: 100%;
   
   height: 45px;
   bottom: -45px;
   left: 0;
-  
-  padding: $entry-padding;
-  
+    
   padding: $entry-padding;
   border-radius: 5px;
   font-size: 1.2em;
@@ -21,12 +18,12 @@
   &.warning {
     bottom: 0;
   
-    transition: all 0.1s linear;
+    transition: all 0.25s linear;
 
     &.exit {
       bottom: 45px;
 
-      transition: all 0.1s linear;
+      transition: all 0.25s linear;
     }
   }
 

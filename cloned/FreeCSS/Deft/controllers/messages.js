@@ -25,7 +25,7 @@ exports.submit = (req, res) => {
       console.log("Message saved succesfully");
       
       const response = {
-        message: "Message received! I will get back to you ASAP  ( ^_0)",
+        message: "Message received! Check your inbox ( ^_^)",
         type: "success",
       }
       

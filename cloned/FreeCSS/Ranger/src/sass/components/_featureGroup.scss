@@ -1,53 +1,121 @@
 .featureGroup {
-  
-    .imgContainer,
-    .textContainer {
-      display: inline-block;
-    }
-    .imgContainer {
-      width: 40%;
-      padding: 100px 100px 100px 10%;
-      height: 700px;
-      
-      &.alt {
-        padding: 100px 100px 100px 50px; 
-      }
 
-      img {
-        max-height: 100%;
-        max-width: 100%;
-        min-height: 500px;
-        min-width: 280px;
-        object-fit: contain;
-  
-        box-shadow: 0px 0px 40px #919191;
-      }
+  .tour & {
+    & {
+      padding: 25px;
     }
-    .textContainer {
-      padding-top: 80px;
-      vertical-align: top;
-      width: 40%;
-
-      &.alt {
-        width: 40%;
-        margin-left: 20%; 
-      }
+    &.alt,
+    &:first-child {
+      padding: 50px 0 25px 0;
     }
-  
-    .textGroupOne {
-      text-align: left;
-  
-      h2 {
-        color: #000;
-        font-size: 40px;
-        font-weight: 400;
-      }
-  
-      p {
-        color: $font-lightgrey;
-        font-size: $main-font-size;
-        line-height: 30px;
-  
+    &:last-child {
+      padding: 25px 0 50px 0;
+    }
+    &.alt {
+      @media all and (min-width: 992px) {
+        position: relative;
+        height: 600px;
+        width: 100%;
+        
+        .imgContainer,
+        .textContainer {
+          position: absolute;
+        }
+        .imgContainer {
+          right: 10%;
+        }
+        .textContainer {
+          left: 10%;
+        }
       }
     }
   }
+
+  .imgContainer,
+  .textContainer {
+    display: inline-block;
+
+    .tour & {
+      @media all and (max-width: 991px) {
+        display: block;
+      }
+    }
+  }
+
+  .imgContainer {
+    max-height: 100%;
+    width: 30%;
+
+    &.alt {
+      padding: 0 2% 0 10%;
+    }
+
+    .tour & {
+
+      @media all and (max-width: 991px) {
+        display: block;
+        min-width: 70%;
+        height: auto;
+        margin: 0 auto;
+
+        &.alt {
+          padding: 2% 10% 2% 2%;
+        }
+      }
+    }
+
+    img {
+      object-fit: contain;
+
+      .tour & {
+        box-shadow: 0px 0px 40px #919191;
+        max-height: 450px;
+      }
+    }
+  }
+  .textContainer {
+    vertical-align: top;
+    width: 40%;
+    margin-left: 6.5%;
+
+    .tour & {
+
+      @media all and (max-width: 991px) {
+        display: block;
+        
+        min-width: 70%;
+        max-width: 800px;
+        height: auto;
+        margin: 0 auto 50px auto;
+      }
+    }
+
+    .tour & {
+      
+      @media all and (max-width: 695px) {
+        display: block;
+        
+        min-width: 70%;
+        max-width: 600px;
+        height: auto;
+        margin: 0 auto 50px auto;
+      }
+    }
+  }
+
+  .textGroupOne {
+    text-align: left;
+
+    h2 {
+      color: #000;
+      font-size: 40px;
+      font-weight: 400;
+    }
+
+    p {
+      color: $font-lightgrey;
+      font-size: $main-font-size;
+      line-height: 30px;
+    }
+  }
+}

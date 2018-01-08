@@ -31,6 +31,8 @@ const sections = {
         image: 'android.png',
         style: 'default',
         button: 'View Case Study',
+        orientation: 'left',
+        section: 'hero',
       },
       {
         title: 'App for iOS',
@@ -38,6 +40,7 @@ const sections = {
         image: 'ios.png',
         style: 'alt',
         button: 'View Case Study',
+        section: 'hero',
       }
     ]
   },
@@ -85,6 +88,7 @@ const sections = {
         text: 'Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.',
         image: 'screen-1-1-login.jpg',
         style: 'default',
+        imgStyle: 'hide',
         button: 'Learn more',
         orientation: 'left',
       },
@@ -93,6 +97,7 @@ const sections = {
         text: 'Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.',
         image: 'screen-1-8-list.jpg',
         style: 'alt',
+        imgStyle: 'hide',
         button: 'Learn more',
       },
       {
@@ -100,6 +105,7 @@ const sections = {
         text: 'Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.',
         image: 'screen-3-7-groups.jpg',
         style: 'default',
+        imgStyle: 'hide',
         button: 'Learn more',
         orientation: 'left',
       },
@@ -172,7 +178,7 @@ const sections = {
       {
         title: 'Starter',
         price: 7,
-        description: 'Basic customer support for individuals',
+        description: 'Basic customer support suitable for individuals',
         features: [
           '10 projects',
           '20 Pages',
@@ -196,7 +202,7 @@ const sections = {
       {
         title: 'Plus',
         price: 79,
-        description: 'Premium customer support for medium businesses',
+        description: 'Premium support for medium sized businesses',
         features: [
           'Unlimited projects',
           '100 Pages',

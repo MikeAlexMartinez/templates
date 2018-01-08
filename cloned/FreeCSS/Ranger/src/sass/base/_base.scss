@@ -26,38 +26,24 @@
 }
 .container,
 .grid {
-	margin: 0 auto;
-	width: 1250px;
 	padding-bottom: 70px;
 	
-	@media all and (max-width: 899px) {
+	@media all and (max-width: 991px) {
 		padding: 0px;
 		width: 100%;
 	}
-	@media all and (min-width: 1000px) and (max-width: 1250px) {
+	@media all and (min-width: 992px) and (max-width: 1250px) {
 		margin: 0 auto;
-		width: 1000px;
+		width: 992px;
+
+		.pricing & {
+			width: 100%;
+		}
 	}
-	@media all and (min-width: 1250x) {
+	@media all and (min-width: 1251px) {
 		margin: 0 auto;
 		width: 1250px;
 	}
-}
-.col-1-3,
-.col-2-3 {
-  padding-left: 15px;
-  padding-right: 15px;
-}
-.col-1-3,
-.col-2-3 {
-  display: inline-block;
-  vertical-align: top;
-}
-.col-1-3 {
-  width: 33.33%;
-}
-.col-2-3 {
-  width: 66.66%;
 }
 
 body {
@@ -65,11 +51,23 @@ body {
   font-family: $main-font;
   font-size: $main-font-size;
 }
-.content {
-	@media all and (max-width: 899px) {
+
+// Hacky way to help move adjust content for navigation bar.
+// Needs to be refactored to remove janky reflow on scroll down.
+// Will need to refactor navigation (again! :*( )
+@media all and (max-width: 991px) {
+	.content {
 		position: relative;
-		top: -305px;
+		top: -235px;
 	}
+	.content.reflow {
+		top: -70px;
+	}
+}
+
+.segment:focus,
+.navigation:focus {
+	outline: none;
 }
 
 /*
@@ -107,13 +105,6 @@ body {
 
 /*
  ======================================================
- Typography
- ======================================================
-*/
-
-
-/*
- ======================================================
  Reusable Elements
  ======================================================
 */
@@ -138,30 +129,115 @@ body {
 	}
 
 	&.lrg {
-		padding: 20px 32px;
-		font-size: 20px;
+		padding: 15px 28px;
+		font-size: 18px;
 	}
 
 	&:hover {
 		background-color: $btn-hover;
 		color: #fff;
-		transition: all 0.4s linear;
+		transition: all 0.2s linear;
 	}
 
+	.home &:hover {
+		background-color: transparent;
+		border: solid 1px $icon-color-default;
+	}
 }
 
-// Customise owl carousel dot styles
+/*
+ ======================================================
+ Customise Owl Carousel
+ ======================================================
+*/
 .owl-dots {
 	display: inline-block;
-	margin-top: 40px;
-	margin-bottom: 40px;
+
+	.home & {
+		position: relative;
+		top: -200px;
+	}
+
+	.screenshots & {
+		padding: 50px;
+	}
 }
 .owl-carousel.owl-theme .owl-dots .owl-dot span {
 	background-color: $font-lightgrey;
+
+	.home & {
+		background-color: $box-shadow;
+		background-color: rgba(0,0,0,0.2);		
+	}
 }
 .owl-carousel.owl-theme .owl-dots .owl-dot.active span, 
 .owl-carousel.owl-theme .owl-dots .owl-dot:hover span {
 	background-color: $dot-background-active;
 	border: 2px solid #fff;
+
+	.home & {
+		border: 2px solid #000;
+	}
+}
+
+.home {
+
+	.owl-carousel.owl-theme {
+		max-height: 70vh;
+
+		.owl-prev-relative,
+		.owl-next-relative {
+			visibility: hidden;
+			position: relative;
+			background-color: transparent !important;
+			top: -450px;
+			transform: scale(2);
+			opacity: 0.5;
+		}
+		.owl-prev-relative {
+			padding: 15px;
+		}
+		.owl-next-relative {
+			padding: 15px;
+		}
+
+		&:hover {
+
+			.owl-prev-relative {
+				visibility: visible;
+				left: -42%;
+				transition: all 0.2s linear;
+				
+				&:hover {
+					opacity: 1;
+					left: -41%;
+				}
+			}
+			.owl-next-relative {
+				visibility: visible;
+				right: -42%;
+				
+				transition: all 0.2s linear;
+				&:hover {
+					opacity: 1;
+					right: -41.0%;
+				}
+			}
+		}
+	}
+	.owl-carousel .owl-stage-outer {
+		overflow: visible;
+		height: 70vh;
+	}
+}
+
+/*
+ ======================================================
+ waypoints styling
+ ======================================================
+*/
+
+.hide {
+	visibility: hidden;
 }
 

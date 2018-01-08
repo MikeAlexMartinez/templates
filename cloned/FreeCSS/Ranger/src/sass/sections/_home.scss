@@ -1,13 +1,17 @@
 .home {
   width: 100%;
-  height: $hero-height;
-
   background-color: $bg-purple;
+  
+  @media all and (max-width: 795px) {
+    height: 170vh;
+  }
+  @media all and (min-width: 796px) {
+    height: 75vh;
+  }
 
   #carouselOne {
     z-index: 1;
-    margin-top: 110px;
-    height: 100%;
+    margin-top: 40px;
     width: 100%;
   }
 }

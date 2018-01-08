@@ -1,7 +1,21 @@
 .subheader { 
+
+  @media all and (max-width: 750px) {
+    width: 90%;
+    margin-left: 5%;
+  }
+
+  @media all and (min-width: 750px) and (max-width: 991px) {
+    width: 75%;
+    margin-left: 12.5%;
+  }
+
+  @media all and (min-width: 992px) {
+    width: 60%;
+    margin-left: 20%;
+  }
+  
   padding-top: 70px;
-  width: 60%;
-  margin-left: 20%;
   margin-bottom: 50px;
   line-height: 46px;
   
@@ -15,7 +29,7 @@
     font-size: $header-font-size;
     font-weight: 300;
     color: $font-faded;
-    margin: 100px 0 20px 0;
+    margin: 65px 0 20px 0;
 
     .screenshots &,
     .testimonial & {

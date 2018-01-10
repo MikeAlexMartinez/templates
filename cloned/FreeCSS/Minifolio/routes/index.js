@@ -16,6 +16,8 @@ router.get('/about', function contactPage(req, res) {
 });
 
 router.get('/', function homePage(req, res) {
+  console.log('home request received');
+
   const top = appData.projects.filter((v) => v.section === 'top');
   const bottom = appData.projects.filter((v) => v.section === 'bottom'); 
 

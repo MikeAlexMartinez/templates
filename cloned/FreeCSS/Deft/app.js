@@ -3,6 +3,8 @@
 // Core node modules
 const path = require('path');
 
+const port = process.env.PORT || 3000;
+
 // Third party libs
 const express = require('express');
 const bodyParser = require('body-parser');
@@ -29,4 +31,4 @@ app.use(bodyParser.urlencoded({ extended: true }));
 // my routes
 app.use(routes);
 
-app.listen(3030, () => console.log('App listening on port 3030!'));
+app.listen(port, () => console.log(`App listening on port ${port}!`));

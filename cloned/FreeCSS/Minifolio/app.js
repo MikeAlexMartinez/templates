@@ -30,7 +30,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(routes);
 
 // Let's go!
-app.listen(3010, (err) => {
+app.listen(3000, (err) => {
   if (err) {
     console.log(err);
   } else {

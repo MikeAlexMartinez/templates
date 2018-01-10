@@ -22,7 +22,8 @@
     "npm-run-all": "^4.1.2",
     "vinyl-buffer": "^1.0.0",
     "vinyl-source-stream": "^1.1.0",
-    "mongodb": "^3.0.0-rc0"
+    "mongodb": "^3.0.0-rc0",
+    "puppeteer": "^1.0.0-next.1515568144024"
   },
   "dependencies": {
     "animate.css": "^3.5.2",

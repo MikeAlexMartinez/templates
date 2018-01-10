@@ -1,0 +1,93 @@
+.carouselFeatureGroup {
+  position: relative;
+
+  @media all and (max-width: 795px) {
+    max-height: none;
+  }
+  @media all and (min-width: 796px) {
+    max-height: 80vh
+  }
+
+
+  .imgContainer,
+  .textContainer {
+    display: inline-block;
+    
+    @media all and (max-width: 795px) {
+      display: block;
+    }
+    
+    .imgContainer {
+      position: relative;
+      
+      @media all and (max-width: 795px) {
+        position: absolute;
+        top: 50vh;
+        width: 80%;
+        margin: 10%;
+      }
+      
+      @media all and (min-width: 796px) {
+        width: 40%;
+      }
+    }
+  }
+
+  .textContainer {
+    color: #fff;
+    vertical-align: top;
+    
+    @media all and (max-width: 795px) {
+      position: absolute;
+      top: -50px;
+      text-align: center;
+      width: 90%;
+      margin: 3% 5%;
+      
+      h2 {
+        font-size: 30px;
+        font-weight: 600;
+      }
+      
+      p {
+        font-size: 20px;
+        line-height: 30px;
+      }
+    }
+    
+    @media all and (min-width: 796px) {
+      width: 40%;
+      margin: 5%;
+      text-align: left;
+  
+      h2 {
+        font-size: 40px;
+        font-weight: 600;
+      }
+  
+      p {
+        font-size: 30px;
+        line-height: 45px;
+      }
+      
+    }
+  }
+    
+  img.mobile-img {
+    position: relative;
+    
+    @media all and (max-width: 795px) {
+      top: 25vh;
+      width: 80%;
+      margin: 10%;
+      height: auto;
+    }
+    
+    @media all and (min-width: 796px) {
+      float: right;
+      height: 80vh;
+      width: auto;
+    }
+  }
+
+}

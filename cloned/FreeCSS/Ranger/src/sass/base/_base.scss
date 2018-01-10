@@ -55,7 +55,7 @@ body {
 // Hacky way to help move adjust content for navigation bar.
 // Needs to be refactored to remove janky reflow on scroll down.
 // Will need to refactor navigation (again! :*( )
-@media all and (max-width: 899px) {
+@media all and (max-width: 991px) {
 	.content {
 		position: relative;
 		top: -235px;
@@ -144,6 +144,7 @@ body {
 		border: solid 1px $icon-color-default;
 	}
 }
+
 /*
  ======================================================
  Customise Owl Carousel
@@ -151,12 +152,14 @@ body {
 */
 .owl-dots {
 	display: inline-block;
-	margin-top: 40px;
-	margin-bottom: 40px;
 
 	.home & {
 		position: relative;
 		top: -200px;
+	}
+
+	.screenshots & {
+		padding: 50px;
 	}
 }
 .owl-carousel.owl-theme .owl-dots .owl-dot span {
@@ -178,11 +181,10 @@ body {
 }
 
 .home {
-	.owl-stage-outer,
+
 	.owl-carousel.owl-theme {
-		padding-bottom: 80px;
-	}
-	.owl-carousel.owl-theme {
+		max-height: 70vh;
+
 		.owl-prev-relative,
 		.owl-next-relative {
 			visibility: hidden;
@@ -222,8 +224,20 @@ body {
 				}
 			}
 		}
-		.owl-nav {
-			margin-top: 0;
-		}
+	}
+	.owl-carousel .owl-stage-outer {
+		overflow: visible;
+		height: 70vh;
 	}
 }
+
+/*
+ ======================================================
+ waypoints styling
+ ======================================================
+*/
+
+.hide {
+	visibility: hidden;
+}
+

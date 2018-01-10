@@ -33,6 +33,19 @@ Challenges I forsee in this project will be:
 
 Hopefully the rest will be straight forward! But I will update as (and when) I encounter problems!
 
+- One issue I encountered was getting the positioning of the image in the hero carousel (the carousel at the top of the page) correct.
+  You can see that the phone overhangs the section below it, but is also contained within the carousel. So slides in and out of the page.
+  I discovered that the overflow attritbute was being set within the CSS of the owl.carousel extension and so I needed to overide this setting
+  to get the image to sit properly in the page.
+
+- Another issue I encountered was how I could reuse some styles while adding in some subtle changes. For example, the 'tour' section
+  has three sections each styled the same, except the middle segment is inverted. To do this I added an alt attribute to the section and add alt
+  specific styles to flip the sections around when the page is wide enough.
+
+- Something to improve is my implementation of the navigation bar. Currently the way that I'm handling the transition from having a regular navigation 
+  at the top of the document to one that is fixed to the top of the viewport once you have scrolled to a certain point is causing a rather janky transition.
+  This needs to be amended and smoothed out, with the navigation reimplemented.
+
 
 ## Page Components, Style and Structure
 
@@ -108,7 +121,11 @@ Components I've identified that I will be able to style independently to constru
   For small screen size, three sections stack, otherwise they have 
   consistent sizes on the screen.
 
+  Fade up animation on waypoint.
+
 - Section 3 - App Screenshots
+
+  Fade in.
 
   Navy-grey background
 
@@ -122,6 +139,8 @@ Components I've identified that I will be able to style independently to constru
   Not much adjustment for smaller screen size,  
 
 - Section 4 - "Tour"
+
+  fade image in from left (or right for alt.) 
 
   off-white bg
 
@@ -139,6 +158,10 @@ Components I've identified that I will be able to style independently to constru
 
 - Section 5 - Features
 
+  header fadein.
+
+  features fadein across (delay each fadein)
+
   very light greeny blue.
 
   Same Heading and large summary styling as services
@@ -153,6 +176,10 @@ Components I've identified that I will be able to style independently to constru
     Extreme small (<500) Then 6 of 1.
   
 - Section 6 - Happy Clients say...
+
+  header fadein.
+
+  objects fadein from left to right.
 
   Same heading and large summary styling. With different colors.
 
@@ -197,7 +224,19 @@ Components I've identified that I will be able to style independently to constru
 
 ## Libraries Used by Me
 
-- nothing yet..
+- jQuery
+
+- waypoints
+
+- Owl.Carousel
+
+- Animate.css
+
+- Simple line icons
+
+- Icomoon
+
+- Gulp (plus various gulp plugins)
 
 ## Libraries used by the original designer / developer
 

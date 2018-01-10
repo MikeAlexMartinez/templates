@@ -1,20 +1,32 @@
 .featureGroup {
 
-  &.alt {
-    @media all and (min-width: 992px) {
-      position: relative;
-      height: 680px;
-      width: 100%;
-
-      .imgContainer,
-      .textContainer {
-        position: absolute;
-      }
-      .imgContainer {
-        right: 10%;
-      }
-      .textContainer {
-        left: 10%;
+  .tour & {
+    & {
+      padding: 25px;
+    }
+    &.alt,
+    &:first-child {
+      padding: 50px 0 25px 0;
+    }
+    &:last-child {
+      padding: 25px 0 50px 0;
+    }
+    &.alt {
+      @media all and (min-width: 992px) {
+        position: relative;
+        height: 600px;
+        width: 100%;
+        
+        .imgContainer,
+        .textContainer {
+          position: absolute;
+        }
+        .imgContainer {
+          right: 10%;
+        }
+        .textContainer {
+          left: 10%;
+        }
       }
     }
   }
@@ -29,14 +41,13 @@
       }
     }
   }
+
   .imgContainer {
-    width: 40%;
-    margin-top: 80px;
-    padding: 2% 10% 2% 2%;
-    height: 600px;
+    max-height: 100%;
+    width: 30%;
 
     &.alt {
-      padding: 2% 2% 2% 10%;
+      padding: 0 2% 0 10%;
     }
 
     .tour & {
@@ -44,7 +55,6 @@
       @media all and (max-width: 991px) {
         display: block;
         min-width: 70%;
-        max-width: 700px;
         height: auto;
         margin: 0 auto;
 
@@ -55,17 +65,18 @@
     }
 
     img {
-      max-height: 100%;
-      max-width: 100%;
       object-fit: contain;
 
-      box-shadow: 0px 0px 40px #919191;
+      .tour & {
+        box-shadow: 0px 0px 40px #919191;
+        max-height: 450px;
+      }
     }
   }
   .textContainer {
-    margin-top: 80px;
     vertical-align: top;
     width: 40%;
+    margin-left: 6.5%;
 
     .tour & {
 
@@ -74,6 +85,18 @@
         
         min-width: 70%;
         max-width: 800px;
+        height: auto;
+        margin: 0 auto 50px auto;
+      }
+    }
+
+    .tour & {
+      
+      @media all and (max-width: 695px) {
+        display: block;
+        
+        min-width: 70%;
+        max-width: 600px;
         height: auto;
         margin: 0 auto 50px auto;
       }
@@ -93,44 +116,6 @@
       color: $font-lightgrey;
       font-size: $main-font-size;
       line-height: 30px;
-
-    }
-  }
-
-
-
-
-  // Hero feature group styles
-  .home & {
-    h2 {
-      font-weight: 700;
-      margin-bottom: 20px;
-      margin-top: 0;
-      color: #fff;
-      font-size: 50px;
-      line-height: 50px;
-      color: #fff;
-    }
-    
-    p {
-      font-size: 30px;
-      line-height: 30px;
-      line-height: 42px;
-      font-weight: 100;
-      margin-bottom: 30px;
-      color: white;
-    }
-
-    img {
-      z-index: 7;
-      transform: scale(1.4);
-      overflow: visible;
-      position: relative;
-      top: 40px;
-
-      box-shadow: none;
     }
   }
 }
-
-
